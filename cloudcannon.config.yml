@@ -5,6 +5,7 @@ collections_config:
   pages:
     path: ''
     icon: wysiwyg
+    output: true
     disable_url: false
     disable_add: false
     disable_add_folder: false
