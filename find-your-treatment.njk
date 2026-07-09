@@ -1,0 +1,107 @@
+---
+layout: base.njk
+permalink: find-your-treatment.html
+nav_active: find-your-treatment
+title: "Find Your Treatment | Rosemary Esthetics, Idaho Falls"
+description: "Answer three quick questions and get a personal treatment recommendation from the Rosemary Esthetics menu: facials, lashes, brows, waxing, or back."
+canonical: "https://rosemaryestheticsidaho.com/find-your-treatment.html"
+og_image: "https://rosemaryestheticsidaho.com/img/glow-portrait.webp"
+og_image_width: 1100
+og_image_height: 1466
+---
+<section class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow">60-Second Quiz</div>
+    <h1>Find Your Treatment</h1>
+    <p class="lead editable">Three quick questions and we'll point you to the service your skin is asking for. No email required, just an honest recommendation.</p>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:44px">
+  <div class="wrap quiz" style="max-width:760px">
+    <form id="quizForm" novalidate>
+      <fieldset>
+        <legend><span class="qnum">Question 1 of 3</span>What's your main goal right now?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="goal" value="clear" required><span>Clearer, calmer skin</span></label>
+          <label class="opt"><input type="radio" name="goal" value="relax"><span>Deep relaxation and a reset</span></label>
+          <label class="opt"><input type="radio" name="goal" value="define"><span>Defined brows or lifted lashes</span></label>
+          <label class="opt"><input type="radio" name="goal" value="event"><span>Smooth, glowing skin for an event</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span class="qnum">Question 2 of 3</span>Where should we focus?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="area" value="face" required><span>My face</span></label>
+          <label class="opt"><input type="radio" name="area" value="eyes"><span>Eyes and brows</span></label>
+          <label class="opt"><input type="radio" name="area" value="back"><span>My back and shoulders</span></label>
+          <label class="opt"><input type="radio" name="area" value="smooth"><span>Unwanted facial hair</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span class="qnum">Question 3 of 3</span>How much time do you have?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="time" value="short" required><span>Under 45 minutes</span></label>
+          <label class="opt"><input type="radio" name="time" value="medium"><span>About an hour</span></label>
+          <label class="opt"><input type="radio" name="time" value="long"><span>75+ minutes, the full experience</span></label>
+        </div>
+      </fieldset>
+      <div class="center"><button type="submit" class="btn rose">Get My Recommendation</button>
+      <p id="quizError" role="alert" style="color:var(--rose-deep);font-size:14px;margin-top:14px"></p></div>
+    </form>
+    <div id="quizResult" class="reveal" hidden>
+      <div class="reco">
+        <div class="eyebrow">Your Match</div>
+        <h2 id="recoName"></h2>
+        <div class="pd" id="recoPrice"></div>
+        <p class="why" id="recoWhy"></p>
+        <div class="cta">
+          <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book It Now</a>
+          <a id="recoLink" href="services.html" class="btn ghost">Learn More</a>
+        </div>
+        <p style="font-size:13px;color:var(--fg-soft);margin-top:20px">Want to compare? <a href="services.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">See the full menu</a> or <a href="javascript:location.reload()" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">retake the quiz</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var f=document.getElementById('quizForm');
+  function pick(n){var el=f.querySelector('input[name="'+n+'"]:checked');return el?el.value:null}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=pick('goal'),a=pick('area'),t=pick('time'),err=document.getElementById('quizError');
+    if(!g||!a||!t){err.textContent='Please answer all three questions first.';return}
+    err.textContent='';
+    var R;
+    if(a==='back'){
+      R=(g==='clear')?['Back Reset Treatment','$75 &middot; 1 hour','A deep-cleansing back facial that targets congestion and breakouts in all the spots you can’t reach.','services-back.html']
+                     :['Heated Stone Back Treatment','$85 &middot; 1 hour','Deep cleansing plus warm stone massage over the back and shoulders. The most relaxing hour on the menu.','services-back.html'];
+    } else if(a==='smooth'){
+      R=['Full Face Wax','$30','Quick, gentle waxing with soothing aftercare, smooth results that outlast shaving by weeks.','services-waxing.html'];
+    } else if(a==='eyes'||g==='define'){
+      R=(t==='long')?['Eyebrow and Eyelash Package','$85 &middot; 1h15','Lash lift and tint plus brow lamination and tint in one visit, the full eye-opening refresh at a bundle price.','services-brows.html']
+        :(t==='short')?['Eyelash Lift','$35 &middot; 30 minutes','Your natural lashes, curled from the root in half an hour. Zero daily effort for 6–8 weeks.','services-lashes.html']
+        :['Eyelash Lift and Tint','$55 &middot; 45 minutes','Lifted and darkened natural lashes, like waking up with mascara on, for 6–8 weeks.','services-lashes.html'];
+    } else if(g==='event'){
+      R=(t==='long')?['Smooth + Glow Facial (Dermaplane)','$90 &middot; 1h30','Dermaplaning removes peach fuzz and dead skin so you glow in photos and makeup applies flawlessly.','services-facials.html']
+        :(t==='short')?['Skin Reset Facial','$40 &middot; 35 minutes','A fast, effective mini facial to brighten and refresh before the big day.','services-facials.html']
+        :['Signature Facial','$80 &middot; 1h15','A fully customized facial to cleanse, exfoliate, and restore that lit-from-within look.','services-facials.html'];
+    } else {
+      R=(t==='short')?['Skin Reset Facial','$40 &middot; 35 minutes','A quick but complete mini facial, perfect for maintenance between fuller appointments.','services-facials.html']
+        :(t==='long')?((g==='relax')?['Signature Facial + Gua Sha','$85 &middot; 1h15+','The customized Signature Facial with gua sha sculpting added on. Pure calm, from the first cleanse to the last massage stroke.','services-facials.html']
+                                    :['Smooth + Glow Facial (Dermaplane)','$90 &middot; 1h30','The deepest refresh on the menu, dermaplaning plus a fully customized facial.','services-facials.html'])
+        :['Signature Facial','$80 &middot; 1h15','A fully customized facial built around your skin and your goals, our most loved service.','services-facials.html'];
+    }
+    var extra=(g==='clear')?' Ask about adding LED light therapy, new at the studio and just $10, to support clear, calm skin.':'';
+    document.getElementById('recoName').innerHTML=R[0];
+    document.getElementById('recoPrice').innerHTML=R[1];
+    document.getElementById('recoWhy').innerHTML=R[2]+extra;
+    document.getElementById('recoLink').setAttribute('href',R[3]);
+    f.hidden=true;
+    var res=document.getElementById('quizResult');res.hidden=false;
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+})();
+</script>
+
+{% include "book-cta.njk" %}

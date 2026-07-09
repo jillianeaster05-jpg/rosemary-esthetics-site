@@ -1,0 +1,43 @@
+---
+layout: base.njk
+permalink: services-brows.html
+nav_active: services
+title: "Eyebrow Lamination and Tint in Idaho Falls | Rosemary Esthetics"
+description: "Brow lamination and tinting in Idaho Falls: Eyebrow Lamination $25, Lamination & Tint $40, Brow Tint $15, Eyebrow and Eyelash Package $85. Book online."
+canonical: "https://rosemaryestheticsidaho.com/services-brows.html"
+og_image: "https://rosemaryestheticsidaho.com/img/glow-portrait.webp"
+og_image_width: 1100
+og_image_height: 1466
+---
+<section class="pagehero">
+  <div class="wrap">
+    <p class="crumb"><a href="services.html">Services</a> &nbsp;/&nbsp; Brows</p>
+
+    <h1>Eyebrow Lamination and Tint</h1>
+    <p class="lead editable">Fuller, fluffier, perfectly styled brows that stay in place for weeks. Lamination gently sets your brow hairs in a brushed-up shape, and a tint adds definition and depth.</p>
+    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book Brows</a></div>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:46px">
+  <div class="wrap split rev" style="align-items:start">
+    <div>
+      <div class="eyebrow">Pricing</div>
+      <h2 style="margin-top:6px">Brows Menu</h2>
+      <div class="plist"><div class="price-row"><span>Eyebrow Lamination and Tint</span><span class="pr"><b>{{ site.services.brows[0].price }}</b> &middot; {{ site.services.brows[0].duration }}</span></div><div class="price-row"><span>Eyebrow Lamination</span><span class="pr"><b>{{ site.services.brows[1].price }}</b> &middot; {{ site.services.brows[1].duration }}</span></div><div class="price-row"><span>Brow Tint</span><span class="pr"><b>{{ site.services.brows[2].price }}</b> &middot; {{ site.services.brows[2].duration }}</span></div><div class="price-row"><span>Eyebrow and Eyelash Package</span><span class="pr"><b>{{ site.services.brows[3].price }}</b> &middot; {{ site.services.brows[3].duration }}</span></div></div>
+      <div class="eyebrow" style="margin-top:38px">Good to Know</div>
+      <ul class="goodlist editable"><li><b>The package deal:</b> the Eyebrow and Eyelash Package bundles a lash lift and tint with brow lamination and tint at a savings.</li><li><b>Patch test:</b> sometimes required for tints and lamination, especially for sensitive skin. Message first if you're unsure.</li><li><b>Keep them dry</b> for 24 hours after, then brush up daily with a clean spoolie.</li><li><b>Great before events,</b> book 3&ndash;5 days ahead of photos for the most settled look.</li></ul>
+
+    </div>
+    <div class="frame portrait" style="position:sticky;top:100px"><img class="editable" data-editable="image" src="img/glow-portrait.webp" alt="Client with defined brows and glowing skin at Rosemary Esthetics" width="1100" height="1466" loading="lazy"></div>
+  </div>
+</section>
+<section class="reveal">
+  <div class="wrap" style="max-width:760px">
+    <div class="sec-head"><div class="eyebrow">Your Visit</div><h2>What to expect</h2></div>
+    <ol class="steps editable"><li><b>Brow mapping</b><p>We look at your face shape and natural growth to choose a shape you'll love.</p></li><li><b>Laminate</b><p>A gentle setting solution smooths and redirects brow hairs into a fuller, lifted shape.</p></li><li><b>Tint and tidy</b><p>Optional tint for depth, plus a quick shape-up so everything is crisp.</p></li><li><b>Aftercare</b><p>Keep brows dry for 24 hours. Results typically last 4&ndash;6 weeks with simple daily brushing.</p></li></ol>
+    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Your Brow Visit</a></div>
+    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">Explore more: <a href="services-lashes.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Lashes</a> &middot; <a href="services-waxing.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Waxing</a> &middot; <a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Facials</a></p>
+  </div>
+</section>
+
+{% include "book-cta.njk" %}

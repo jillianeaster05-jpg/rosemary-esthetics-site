@@ -1,0 +1,43 @@
+---
+layout: base.njk
+permalink: services-waxing.html
+nav_active: services
+title: "Facial Waxing in Idaho Falls | Rosemary Esthetics"
+description: "Gentle facial and underarm waxing in Idaho Falls: full face $30, brow shape $20, lip or chin $8, underarm $20. Quick visits, soothing aftercare."
+canonical: "https://rosemaryestheticsidaho.com/services-waxing.html"
+og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
+og_image_width: 1600
+og_image_height: 2131
+---
+<section class="pagehero">
+  <div class="wrap">
+    <p class="crumb"><a href="services.html">Services</a> &nbsp;/&nbsp; Waxing</p>
+
+    <h1>Facial &amp; Underarm Waxing</h1>
+    <p class="lead editable">Quick, gentle waxing with skin-soothing aftercare. Smooth results that last weeks longer than shaving, in appointments short enough for a lunch break.</p>
+    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book Waxing</a></div>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:46px">
+  <div class="wrap split rev" style="align-items:start">
+    <div>
+      <div class="eyebrow">Pricing</div>
+      <h2 style="margin-top:6px">Waxing Menu</h2>
+      <div class="plist"><div class="price-row"><span>Full Face</span><span class="pr"><b>{{ site.services.waxing[0].price }}</b></span></div><div class="price-row"><span>Eyebrow Shape/Wax</span><span class="pr"><b>{{ site.services.waxing[1].price }}</b></span></div><div class="price-row"><span>Lip</span><span class="pr"><b>{{ site.services.waxing[2].price }}</b></span></div><div class="price-row"><span>Chin</span><span class="pr"><b>{{ site.services.waxing[3].price }}</b></span></div><div class="price-row"><span>Underarm</span><span class="pr"><b>{{ site.services.waxing[4].price }}</b></span></div></div>
+      <div class="eyebrow" style="margin-top:38px">Good to Know</div>
+      <ul class="goodlist editable"><li><b>Hair length:</b> about 2 weeks of growth (roughly 1/4 inch) gives the best result.</li><li><b>Skip retinol</b> and strong exfoliants near the area for several days before waxing.</li><li><b>We can't wax</b> over active wounds, sunburn, cold sores, or irritated skin. Reach out if you're unsure.</li><li><b>Aftercare:</b> avoid heavy sun, heat, and heavy makeup on the area for 24 hours.</li></ul>
+
+    </div>
+    <div class="frame portrait" style="position:sticky;top:100px"><img class="editable" data-editable="image" src="img/hero-facial.webp" alt="Relaxing treatment room at Rosemary Esthetics in Idaho Falls" width="1600" height="2131" loading="lazy"></div>
+  </div>
+</section>
+<section class="reveal">
+  <div class="wrap" style="max-width:760px">
+    <div class="sec-head"><div class="eyebrow">Your Visit</div><h2>What to expect</h2></div>
+    <ol class="steps editable"><li><b>Prep</b><p>Skin is cleansed and prepped so wax grips hair, not skin.</p></li><li><b>Wax</b><p>Efficient, gentle technique with wax suited to delicate facial skin.</p></li><li><b>Soothe</b><p>Calming products right after to take down redness fast.</p></li><li><b>Maintain</b><p>Most clients rebook every 3&ndash;5 weeks to stay smooth.</p></li></ol>
+    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Your Waxing Visit</a></div>
+    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">Explore more: <a href="services-brows.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Brows</a> &middot; <a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Facials</a> &middot; <a href="services-lashes.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Lashes</a></p>
+  </div>
+</section>
+
+{% include "book-cta.njk" %}

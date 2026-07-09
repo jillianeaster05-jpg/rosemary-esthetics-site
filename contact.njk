@@ -1,0 +1,84 @@
+---
+layout: base.njk
+permalink: contact.html
+nav_active: contact
+title: "Contact & Directions | Rosemary Esthetics, Idaho Falls"
+description: "Contact Rosemary Esthetics in Idaho Falls: call or text (208) 521-0938, or visit 1096 S Boulevard, Idaho Falls, ID 83402. Hours, map, and directions."
+canonical: "https://rosemaryestheticsidaho.com/contact.html"
+og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
+og_image_width: 1600
+og_image_height: 2131
+---
+<section class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow">Get in Touch</div>
+    <h1>Contact &amp; Directions</h1>
+    <p class="lead editable">Questions about a service, your skin, or booking? Call, text, email, or send a message below. Jillian answers everything personally.</p>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:44px">
+  <div class="wrap">
+    <div class="grid3">
+      <div class="vp"><h3>Call or text</h3><p style="margin-bottom:16px">Texting is often fastest between appointments.</p><a href="tel:{{ site.contact.phone_e164 }}" class="btn ghost" style="width:100%">{{ site.contact.phone_display }}</a></div>
+      <div class="vp"><h3>Email</h3><p style="margin-bottom:16px">For anything longer, or to send photos of your skin goals.</p><a href="mailto:{{ site.contact.email }}" class="btn ghost" style="width:100%;text-transform:none;letter-spacing:.02em">{{ site.contact.email }}</a></div>
+      <div class="vp"><h3>Book online</h3><p style="margin-bottom:16px">The fastest way to a confirmed spot, 24/7 through Square.</p><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose" style="width:100%">Book Now</a></div>
+    </div>
+    <div class="split" style="margin-top:56px;align-items:start">
+      <div>
+        <div class="eyebrow">Send a Message</div>
+        <h2 style="margin-top:6px">We'd love to hear from you</h2>
+        <form class="cf" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contactForm">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
+          <label for="cf-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name">
+          <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email">
+          <label for="cf-phone">Phone</label>
+          <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+          <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="cf-message" name="message" required></textarea>
+          <button type="submit" class="btn rose" style="margin-top:20px">Send Message</button>
+          <p id="formResult" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div>
+        <div class="eyebrow">Visit the Studio</div>
+        <h2 style="margin-top:6px">{{ site.address.street }}</h2>
+        <p style="color:var(--fg-soft);margin:0 0 18px">{{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }} &middot; free lot and street parking &middot; wheelchair-accessible entrance</p>
+        <div class="mapframe"><iframe src="https://www.google.com/maps?q=1096+S+Boulevard,+Idaho+Falls,+ID+83402&output=embed" title="Map to Rosemary Esthetics at 1096 S Boulevard, Idaho Falls" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        <p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&destination=1096+S+Boulevard,+Idaho+Falls,+ID+83402" target="_blank" rel="noopener" class="btn solid">Get Directions</a></p>
+        <div class="eyebrow" style="margin-top:34px">Hours</div>
+        <div class="plist" style="margin-top:12px">
+          <div class="price-row"><span>Monday</span><span class="pr">{{ site.hours.monday }}</span></div>
+          <div class="price-row"><span>Tuesday</span><span class="pr">{{ site.hours.tuesday }}</span></div>
+          <div class="price-row"><span>Wednesday</span><span class="pr">{{ site.hours.wednesday }}</span></div>
+          <div class="price-row"><span>Thursday</span><span class="pr">{{ site.hours.thursday }}</span></div>
+          <div class="price-row"><span>Friday</span><span class="pr">{{ site.hours.friday }}</span></div>
+          <div class="price-row"><span>Saturday</span><span class="pr">{{ site.hours.saturday }}</span></div>
+          <div class="price-row"><span>Sunday</span><span class="pr">{{ site.hours.sunday }}</span></div>
+        </div>
+        <p class="notice">The studio will be closed July 31 &ndash; August 2, 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var f=document.getElementById('contactForm');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var r=document.getElementById('formResult');r.textContent='Sending...';
+    var data=new FormData(f);
+    var enc=new URLSearchParams(data).toString();
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc})
+      .then(function(res){
+        if(res.ok){r.textContent='Thank you! Your message is on its way. We usually reply within one business day.';f.reset();}
+        else{r.textContent='Something went wrong. Please text us at (208) 521-0938 instead.';}
+      })
+      .catch(function(){r.textContent='Something went wrong. Please text us at (208) 521-0938 instead.';});
+  });
+})();
+</script>
+
+{% include "book-cta.njk" %}

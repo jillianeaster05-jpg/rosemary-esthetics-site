@@ -1,0 +1,31 @@
+---
+layout: base.njk
+permalink: privacy.html
+nav_active: privacy
+title: "Privacy Policy | Rosemary Esthetics"
+description: "Privacy policy for the Rosemary Esthetics website: what the contact form collects, how Square handles booking, and how to reach us."
+canonical: "https://rosemaryestheticsidaho.com/privacy.html"
+og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
+og_image_width: 1600
+og_image_height: 2131
+---
+<section class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow">Privacy</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead editable">The short version: we collect only what we need to answer your messages and book your appointments, and we never sell your information.</p>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:44px">
+  <div class="wrap" style="max-width:780px">
+    <div class="polsec"><h2>What we collect</h2>
+      <p class="editable">When you use the contact form, we receive the name, email, phone number, and message you choose to share. We use it only to reply to you. Form submissions are delivered to us by Web3Forms, which processes the submission on our behalf.</p></div>
+    <div class="polsec"><h2>Booking</h2>
+      <p class="editable">Appointments are booked through Square. Any information you enter there (including payment details and intake answers) is handled by Square under <a href="https://squareup.com/us/en/legal/general/privacy" target="_blank" rel="noopener" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Square's privacy policy</a>. We never see or store your card numbers.</p></div>
+    <div class="polsec"><h2>Cookies &amp; analytics</h2>
+      <p class="editable">This website does not set cookies and does not run advertising or analytics trackers. The contact page includes an embedded Google Map, which is loaded from Google and is subject to Google's privacy policy.</p></div>
+    <div class="polsec"><h2>Your choices</h2>
+      <p class="editable">Want us to delete a message you sent us, or update your details? Just ask. Email <a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a> or text <a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a> and we'll take care of it.</p></div>
+    <p style="font-size:13.5px;color:var(--fg-soft)">Effective July 2, 2026 &middot; {{ site.business.name }}, {{ site.address.street }}, {{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }}</p>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+{
+  "business": {
+    "name": "Rosemary Esthetics",
+    "tagline": "love the skin you're in",
+    "owner_name": "Jillian Easter",
+    "owner_title": "Licensed Esthetician"
+  },
+  "contact": {
+    "phone_display": "(208) 521-0938",
+    "phone_e164": "+12085210938",
+    "phone_note": "call or text",
+    "email": "jillianeaster05@gmail.com",
+    "booking_url": "https://rosemary-esthetics-100073.square.site/s/appointments"
+  },
+  "address": {
+    "street": "1096 S Boulevard",
+    "city": "Idaho Falls",
+    "region": "ID",
+    "postal_code": "83402"
+  },
+  "hours": {
+    "display": "Mon & Thu 9–6 · Wed 3–8 · Fri 9–2 · Sat 9–9 · Closed Sun & Tue",
+    "monday": "9:00–6:00",
+    "tuesday": "Closed",
+    "wednesday": "3:00–8:00",
+    "thursday": "9:00–6:00",
+    "friday": "9:00–2:00",
+    "saturday": "9:00–9:00",
+    "sunday": "Closed"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/rosemaryesthetics",
+    "tiktok": "https://www.tiktok.com/@rosemaryesthetics",
+    "facebook": "https://www.facebook.com/profile.php?id=61574276690955"
+  },
+  "policies": {
+    "deposit_pct": "20%",
+    "cancellation_notice": "24 hours",
+    "fee_short_notice": "50%",
+    "fee_same_day": "75%",
+    "fee_no_show": "100%"
+  },
+  "announcement": {
+    "closure_notice": "the studio will be closed July 31 – August 2, 2026."
+  },
+  "payments": "Cash, Venmo, Credit Card, Debit Card, Apple Pay, Google Pay",
+  "services": {
+    "facials": [
+      { "name": "Signature Facial", "price": "$80", "duration": "1h15" },
+      { "name": "Smooth + Glow Facial (Dermaplane)", "price": "$90", "duration": "1h30" },
+      { "name": "Skin Reset Facial", "price": "$40", "duration": "35m" },
+      { "name": "Couples Facial", "price": "$90", "duration": "1h" },
+      { "name": "Gua Sha Sculpting add-on", "price": "$5", "duration": "" },
+      { "name": "LED Light Therapy add-on", "price": "$10", "duration": "" }
+    ],
+    "lashes": [
+      { "name": "Eyelash Lift and Tint", "price": "$55", "duration": "45m" },
+      { "name": "Eyelash Lift", "price": "$35", "duration": "30m" },
+      { "name": "Eyelash Tint", "price": "$20", "duration": "30m" }
+    ],
+    "brows": [
+      { "name": "Eyebrow Lamination and Tint", "price": "$40", "duration": "45m" },
+      { "name": "Eyebrow Lamination", "price": "$25", "duration": "40m" },
+      { "name": "Brow Tint", "price": "$15", "duration": "20m" },
+      { "name": "Eyebrow and Eyelash Package", "price": "$85", "duration": "1h15" }
+    ],
+    "waxing": [
+      { "name": "Full Face", "price": "$30", "duration": "" },
+      { "name": "Eyebrow Shape/Wax", "price": "$20", "duration": "" },
+      { "name": "Lip", "price": "$8", "duration": "" },
+      { "name": "Chin", "price": "$8", "duration": "" },
+      { "name": "Underarm", "price": "$20", "duration": "" }
+    ],
+    "back": [
+      { "name": "Heated Stone Back Treatment", "price": "$85", "duration": "1h" },
+      { "name": "Back Reset Treatment", "price": "$75", "duration": "1h" }
+    ],
+    "led": [
+      { "name": "LED Light Therapy add-on", "price": "$10", "duration": "" }
+    ],
+    "addons": [
+      { "name": "Gua Sha Sculpting", "price": "$5", "duration": "" },
+      { "name": "LED Light Therapy", "price": "$10", "duration": "" }
+    ]
+  }
+}

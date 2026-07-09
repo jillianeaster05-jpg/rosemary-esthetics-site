@@ -1,0 +1,84 @@
+---
+layout: base.njk
+permalink: policies-faq.html
+nav_active: policies
+title: "Policies & FAQ | Rosemary Esthetics"
+description: "Booking policies and FAQ for Rosemary Esthetics in Idaho Falls: 20% deposit, 24-hour cancellation notice, facial prep, patch tests, and more."
+canonical: "https://rosemaryestheticsidaho.com/policies-faq.html"
+og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
+og_image_width: 1600
+og_image_height: 2131
+extra_jsonld:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "Are you taking new clients?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Yes! New clients are always welcome at Rosemary Esthetics. Book online through Square, or call or text (208) 521-0938 with any questions before your first visit."
+    - "@type": "Question"
+      name: "How do I book an appointment?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "All booking happens online through Square. Pick your service, choose a time, and pay a 20% deposit to hold your spot. The deposit goes toward your service total."
+    - "@type": "Question"
+      name: "How should I prep for a facial?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Arrive with clean skin if you can, pause retinol and strong exfoliants for a few days beforehand, and avoid fresh sun exposure. We'll handle the rest."
+    - "@type": "Question"
+      name: "Do I need a patch test for tints or lamination?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Sometimes. A patch test may be required for lash or brow tints and lamination, especially if you have sensitive skin or a history of reactions. Reach out before booking if you're unsure."
+    - "@type": "Question"
+      name: "Is there anything you can't treat?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "For your safety we can't treat active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin. If you're not sure whether that applies to you, reach out before booking."
+    - "@type": "Question"
+      name: "How often should I get a facial?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Every 4 to 6 weeks works beautifully for most skin, matching your skin's natural renewal cycle. Jillian will suggest a cadence that fits your skin and your goals."
+---
+<section class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow">The Fine Print</div>
+    <h1>Policies &amp; FAQ</h1>
+    <p class="lead editable">Everything you need to know before your visit, so there are no surprises, just a relaxing appointment.</p>
+  </div>
+</section>
+<section class="svcs reveal" style="padding-top:44px">
+  <div class="wrap" style="max-width:780px">
+    <div class="polsec"><h2>Deposits</h2>
+      <p class="editable">A <b>{{ site.policies.deposit_pct }} deposit</b> is required to book and holds your spot. Your deposit is applied to your service total at checkout, so it's never an extra cost.</p></div>
+    <div class="polsec"><h2>Cancellations &amp; Rescheduling</h2>
+      <p class="editable">Life happens! Please give at least <b>{{ site.policies.cancellation_notice }}' notice</b> to cancel or reschedule so someone else can take your time.</p>
+      <ul class="editable">
+        <li>Less than 24 hours' notice: <b>{{ site.policies.fee_short_notice }}</b> of the service price</li>
+        <li>Same-day cancellation: <b>{{ site.policies.fee_same_day }}</b> of the service price</li>
+        <li>No-call, no-show: <b>{{ site.policies.fee_no_show }}</b> of the service price</li>
+      </ul></div>
+    <div class="polsec"><h2>Late Arrivals</h2>
+      <p class="editable">Arriving 10&ndash;15 minutes late may mean your service is shortened or needs to be rescheduled, so every client gets their full appointment time.</p></div>
+    <div class="polsec"><h2>Minors</h2>
+      <p class="editable">Clients under 18 are welcome with parent or guardian consent. Teen facials are one of our favorite ways to build healthy skin habits early.</p></div>
+    <div class="polsec"><h2>Health &amp; Safety</h2>
+      <p class="editable">For your safety, we can't perform services over <b>active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin</b>. If you're not sure whether something applies to you, reach out before booking and we'll figure it out together.</p></div>
+    <div class="polsec"><h2>Payments</h2>
+      <p class="editable">We accept {{ site.payments }}.</p></div>
+    <div class="polsec"><h2>Upcoming Closures</h2>
+      <p class="editable">The studio will be closed <b>July 31 &ndash; August 2, 2026</b>. Online booking will show available times around the closure.</p></div>
+    <p style="font-size:14.5px;color:var(--fg-soft);font-style:italic">Questions or concerns about a visit? Please reach out, call or text <a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a> or email <a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a> and we'll make it right.</p>
+  </div>
+</section>
+<section class="reveal">
+  <div class="wrap" style="max-width:780px">
+    <div class="sec-head"><div class="eyebrow">Questions</div><h2>Frequently asked</h2></div>
+    <details class="faq"><summary>Are you taking new clients?</summary><div class="ans editable">Yes! New clients are always welcome at Rosemary Esthetics. Book online through Square, or call or text (208) 521-0938 with any questions before your first visit.</div></details><details class="faq"><summary>How do I book an appointment?</summary><div class="ans editable">All booking happens online through Square. Pick your service, choose a time, and pay a 20% deposit to hold your spot. The deposit goes toward your service total.</div></details><details class="faq"><summary>How should I prep for a facial?</summary><div class="ans editable">Arrive with clean skin if you can, pause retinol and strong exfoliants for a few days beforehand, and avoid fresh sun exposure. We'll handle the rest.</div></details><details class="faq"><summary>Do I need a patch test for tints or lamination?</summary><div class="ans editable">Sometimes. A patch test may be required for lash or brow tints and lamination, especially if you have sensitive skin or a history of reactions. Reach out before booking if you're unsure.</div></details><details class="faq"><summary>Is there anything you can't treat?</summary><div class="ans editable">For your safety we can't treat active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin. If you're not sure whether that applies to you, reach out before booking.</div></details><details class="faq"><summary>How often should I get a facial?</summary><div class="ans editable">Every 4 to 6 weeks works beautifully for most skin, matching your skin's natural renewal cycle. Jillian will suggest a cadence that fits your skin and your goals.</div></details>
+  </div>
+</section>
+
+{% include "book-cta.njk" %}

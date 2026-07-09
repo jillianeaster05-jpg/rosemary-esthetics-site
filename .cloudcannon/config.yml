@@ -1,0 +1,144 @@
+# CloudCannon config for this Eleventy site.
+# Docs: https://cloudcannon.com/documentation/articles/build-configuration-reference/
+
+source: .
+output: _site
+
+ssg: eleventy
+
+paths:
+  static: img
+  uploads: img
+  collections: .
+
+collections_config:
+  pages:
+    path: .
+    glob:
+      - "*.njk"
+      - "!_includes/**"
+      - "!node_modules/**"
+      - "!_netlify-final/**"
+    name: Pages
+    icon: description
+    _inputs:
+      title:
+        type: text
+        comment: Browser tab title / SEO title tag
+      description:
+        type: textarea
+        comment: Meta description (SEO)
+      canonical:
+        type: url
+      og_image:
+        type: image
+      nav_active:
+        type: select
+        options:
+          - home
+          - services
+          - gallery
+          - about
+          - policies
+          - contact
+          - reviews
+          - find-your-treatment
+          - privacy
+
+data_config:
+  site:
+    path: _data/site.json
+    _inputs:
+      business.name:
+        type: text
+      business.tagline:
+        type: text
+        comment: Shown in the header/footer script tagline
+      business.owner_name:
+        type: text
+      business.owner_title:
+        type: text
+      contact.phone_display:
+        type: text
+      contact.phone_e164:
+        type: text
+        comment: E.164 format, e.g. +12085210938 — used for tel: links
+      contact.phone_note:
+        type: text
+      contact.email:
+        type: text
+      contact.booking_url:
+        type: url
+      address.street:
+        type: text
+      address.city:
+        type: text
+      address.region:
+        type: text
+      address.postal_code:
+        type: text
+      hours.display:
+        type: text
+        comment: One-line hours summary shown across the site
+      social.instagram:
+        type: url
+      social.tiktok:
+        type: url
+      social.facebook:
+        type: url
+      policies.deposit_pct:
+        type: text
+      policies.cancellation_notice:
+        type: text
+      policies.fee_short_notice:
+        type: text
+      policies.fee_same_day:
+        type: text
+      policies.fee_no_show:
+        type: text
+      announcement.closure_notice:
+        type: text
+        comment: Shown in every "Book Your Appointment" section
+      payments:
+        type: text
+      services.facials:
+        type: array
+        subtype: object
+        options:
+          structures:
+            values:
+              - name: service
+                icon: spa
+                value:
+                  name: ""
+                  price: ""
+                  duration: ""
+      services.lashes:
+        type: array
+        subtype: object
+      services.brows:
+        type: array
+        subtype: object
+      services.waxing:
+        type: array
+        subtype: object
+      services.back:
+        type: array
+        subtype: object
+      services.led:
+        type: array
+        subtype: object
+      services.addons:
+        type: array
+        subtype: object
+
+_editables:
+  text:
+    - selector: ".editable"
+      comment: Editable prose block (heading/paragraph/description)
+  image:
+    - selector: "[data-editable='image']"
+      comment: Editable image (not logo, nav, or footer images)
+
+editor:
+  default_path: /index.html
