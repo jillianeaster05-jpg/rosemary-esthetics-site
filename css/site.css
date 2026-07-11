@@ -30,16 +30,16 @@
   header.site{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:14px}
   .brandlk{display:inline-flex;align-items:center}
-  .brandlk img{height:44px;width:auto;display:block}
+  .brandlk img{height:40px;width:auto;display:block}
   @media(max-width:780px){.brandlk img{height:36px}}
-  .navlinks{display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .navlinks{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;justify-content:flex-end}
   .navlinks a:not(.btn){font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--fg-soft);transition:color .18s var(--ease);padding:6px 0}
   .navlinks a:not(.btn):hover{color:var(--rose-deep)}
   .navlinks a[aria-current="page"]{color:var(--rose-deep);border-bottom:1px solid var(--rose)}
   .navlinks .btn{min-height:42px;padding:0 22px}
   .navtoggle{display:none;background:none;border:1px solid var(--line);border-radius:2px;padding:10px 14px;cursor:pointer;font-family:"Montserrat",sans-serif;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg);min-height:44px;align-items:center;gap:8px}
   .navtoggle svg{width:16px;height:12px}
-  @media(max-width:920px){
+  @media(max-width:1080px){
     .navtoggle{display:inline-flex}
     .navlinks{display:none;width:100%;flex-direction:column;align-items:stretch;gap:2px;padding:6px 0 16px;text-align:center}
     .navlinks.open{display:flex}
@@ -95,7 +95,7 @@
   .svc .desc{color:var(--fg-soft);font-size:15px;margin:4px 0 12px}
   .svc .more{margin-top:auto;padding-top:16px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--rose-deep)}
   .svc .more:hover{color:var(--char)}
-  .tag{display:inline-block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);border:1px solid var(--sage);border-radius:30px;padding:4px 13px;margin-bottom:6px;font-weight:500}
+  .tag{display:inline-block;align-self:flex-start;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);border:1px solid var(--sage);border-radius:30px;padding:4px 13px;margin-bottom:6px;font-weight:500}
   .tag.new{color:var(--rose-deep);border-color:var(--rose)}
 
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}

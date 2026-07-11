@@ -13,6 +13,8 @@
   "paymentAccepted": "Cash, Venmo, Credit Card, Debit Card, Apple Pay, Google Pay",
   "founder": { "@type": "Person", "name": "Jillian Easter", "jobTitle": "Licensed Esthetician" },
   "address": { "@type": "PostalAddress", "streetAddress": "1096 S Boulevard", "addressLocality": "Idaho Falls", "addressRegion": "ID", "postalCode": "83402", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.4881474, "longitude": -112.0338727 },
+  "hasMap": "https://www.google.com/maps/place/1096+S+Boulevard,+Idaho+Falls,+ID+83402",
   "areaServed": [
     { "@type": "City", "name": "Idaho Falls" },
     { "@type": "City", "name": "Ammon" },

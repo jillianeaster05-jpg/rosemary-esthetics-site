@@ -36,7 +36,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap nav">
-    <a href="index.html" class="brandlk" aria-label="{{ site.business.name }} home"><img src="img/logo-header.png" alt="{{ site.business.name }}" width="1600" height="179" style="height:44px;width:auto;display:block"></a>
+    <a href="index.html" class="brandlk" aria-label="{{ site.business.name }} home"><img src="img/logo-header.png" alt="{{ site.business.name }}" width="1600" height="179" fetchpriority="high" style="width:auto;display:block"></a>
     <button class="navtoggle" aria-expanded="false" aria-controls="mainnav" onclick="var n=document.getElementById('mainnav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="currentColor" stroke-width="1.6"/></svg>Menu</button>
     <nav class="navlinks" id="mainnav" aria-label="Main">
       <a href="index.html"{% if nav_active == 'home' %} aria-current="page"{% endif %}>Home</a>
@@ -73,6 +73,8 @@
     ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});
   },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(e){io.observe(e)});
+  // safety net: never leave content hidden if the observer misses (slow layout, edge cases)
+  setTimeout(function(){els.forEach(function(e){e.classList.add('is-in')});},1600);
 })();
 </script>
 </body>
