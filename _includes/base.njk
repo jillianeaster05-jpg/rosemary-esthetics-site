@@ -45,7 +45,7 @@
       <a href="about.html"{% if nav_active == 'about' %} aria-current="page"{% endif %}>About</a>
       <a href="policies-faq.html"{% if nav_active == 'policies' %} aria-current="page"{% endif %}>Policies</a>
       <a href="contact.html"{% if nav_active == 'contact' %} aria-current="page"{% endif %}>Contact</a>
-      <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book Now</a>
+      <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose" data-tooltip="Secure booking through Square, opens in a new tab" data-tip="bottom">Book Now</a>
     </nav>
   </div>
 </header>
@@ -75,6 +75,16 @@
   els.forEach(function(e){io.observe(e)});
   // safety net: never leave content hidden if the observer misses (slow layout, edge cases)
   setTimeout(function(){els.forEach(function(e){e.classList.add('is-in')});},1600);
+})();
+(function(){
+  // image skeleton / ghost loaders: clear the shimmer once each framed image loads
+  [].slice.call(document.querySelectorAll('.frame')).forEach(function(f){
+    var img=f.querySelector('img');
+    if(!img){f.classList.add('img-loaded');return;}
+    var done=function(){f.classList.add('img-loaded');};
+    if(img.complete && img.naturalWidth>0){done();}
+    else{img.addEventListener('load',done);img.addEventListener('error',done);}
+  });
 })();
 </script>
 </body>

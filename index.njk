@@ -39,7 +39,7 @@ og_image_height: 2131
           <h3>Facials</h3>
           <p class="desc editable">From a quick refresh to a fully customized glow. Cleanse, exfoliate, and restore.</p>
           <div class="price-row"><span>Signature Facial</span><span class="pr">{{ site.services.facials[0].price }} &middot; {{ site.services.facials[0].duration }}</span></div>
-          <div class="price-row"><span>Smooth + Glow Facial (Dermaplane)</span><span class="pr">{{ site.services.facials[1].price }} &middot; {{ site.services.facials[1].duration }}</span></div>
+          <div class="price-row"><span class="tip" data-tooltip="Dermaplaning gently lifts away dull skin and soft peach fuzz for an instantly smoother, brighter finish" tabindex="0">Smooth + Glow Facial (Dermaplane)</span><span class="pr">{{ site.services.facials[1].price }} &middot; {{ site.services.facials[1].duration }}</span></div>
           <div class="price-row"><span>Skin Reset Facial</span><span class="pr">{{ site.services.facials[2].price }} &middot; {{ site.services.facials[2].duration }}</span></div>
           <div class="price-row"><span>Couples Facial</span><span class="pr">{{ site.services.facials[3].price }} &middot; {{ site.services.facials[3].duration }}</span></div>
           <a class="more" href="services-facials.html">Facial details &rarr;</a>
@@ -48,13 +48,13 @@ og_image_height: 2131
       </div>
       <div class="svc"><h3>Lashes</h3>
         <div class="price-row"><span>Eyelash Lift and Tint</span><span class="pr">{{ site.services.lashes[0].price }} &middot; {{ site.services.lashes[0].duration }}</span></div>
-        <div class="price-row"><span>Eyelash Lift</span><span class="pr">{{ site.services.lashes[1].price }} &middot; {{ site.services.lashes[1].duration }}</span></div>
+        <div class="price-row"><span class="tip" data-tooltip="A lash lift is a semi-permanent curl that lifts your natural lashes from the base, no extensions needed" tabindex="0">Eyelash Lift</span><span class="pr">{{ site.services.lashes[1].price }} &middot; {{ site.services.lashes[1].duration }}</span></div>
         <div class="price-row"><span>Eyelash Tint</span><span class="pr">{{ site.services.lashes[2].price }} &middot; {{ site.services.lashes[2].duration }}</span></div>
         <a class="more" href="services-lashes.html">Lash details &rarr;</a>
       </div>
       <div class="svc"><h3>Brows</h3>
         <div class="price-row"><span>Eyebrow Lamination and Tint</span><span class="pr">{{ site.services.brows[0].price }} &middot; {{ site.services.brows[0].duration }}</span></div>
-        <div class="price-row"><span>Eyebrow Lamination</span><span class="pr">{{ site.services.brows[1].price }} &middot; {{ site.services.brows[1].duration }}</span></div>
+        <div class="price-row"><span class="tip" data-tooltip="Brow lamination brushes up and sets your brows for a fuller, fluffy, well-groomed shape" tabindex="0">Eyebrow Lamination</span><span class="pr">{{ site.services.brows[1].price }} &middot; {{ site.services.brows[1].duration }}</span></div>
         <div class="price-row"><span>Eyebrow and Eyelash Package</span><span class="pr">{{ site.services.brows[3].price }} &middot; {{ site.services.brows[3].duration }}</span></div>
         <a class="more" href="services-brows.html">Brow details &rarr;</a>
       </div>
@@ -69,7 +69,7 @@ og_image_height: 2131
         <div class="price-row"><span>Back Reset Treatment</span><span class="pr">{{ site.services.back[1].price }} &middot; {{ site.services.back[1].duration }}</span></div>
         <a class="more" href="services-back.html">Back treatment details &rarr;</a>
       </div>
-      <div class="svc" style="grid-column:1 / -1;align-items:center;text-align:center"><span class="tag new" style="align-self:center">New</span><h3>LED Light Therapy</h3>
+      <div class="svc" style="grid-column:1 / -1;align-items:center;text-align:center"><span class="tag new" style="align-self:center" data-tooltip="Our newest add-on: calming red and blue light therapy" data-tip="bottom" tabindex="0">New</span><h3>LED Light Therapy</h3>
         <p class="desc editable" style="max-width:520px">Calming red and blue light to support clear, healthy-looking skin. Available as a $10 add-on to any facial.</p>
         <a class="more" href="services-led.html">LED details &rarr;</a>
       </div>
@@ -86,7 +86,7 @@ og_image_height: 2131
     <div class="grid3">
       <div class="vp d1"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="19" cy="19" r="15"/><path d="M12 20c3 4 11 4 14-1"/><circle cx="14" cy="15" r="1" fill="currentColor"/><circle cx="24" cy="15" r="1" fill="currentColor"/></svg></div><h3>Personalized to you</h3><p class="editable">Every service starts with your skin and your goals. No one-size-fits-all facials, ever.</p></div>
       <div class="vp d2"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 4c-6 7-11 11-11 19a11 11 0 0 0 22 0c0-8-5-12-11-19z"/></svg></div><h3>Calm, private studio</h3><p class="editable">A quiet, unhurried, judgment-free space in Idaho Falls. Your appointment is your time.</p></div>
-      <div class="vp d3"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8" width="26" height="24" rx="2"/><path d="M6 15h26M13 5v6M25 5v6M15 24l3 3 6-6"/></svg></div><h3>Easy online booking</h3><p class="editable">Book through Square in about a minute. A {{ site.policies.deposit_pct }} deposit holds your spot and applies to your service.</p></div>
+      <div class="vp d3"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8" width="26" height="24" rx="2"/><path d="M6 15h26M13 5v6M25 5v6M15 24l3 3 6-6"/></svg></div><h3>Easy online booking</h3><p class="editable">Book through Square in about a minute. A <span class="tip" data-tooltip="Applied to your service total at checkout, never an extra charge" tabindex="0">{{ site.policies.deposit_pct }} deposit</span> holds your spot and applies to your service.</p></div>
     </div>
   </div>
 </section>

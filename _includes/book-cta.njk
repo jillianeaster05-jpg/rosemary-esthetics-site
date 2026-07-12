@@ -9,7 +9,7 @@
       <div><b>Hours</b>{{ site.hours.display }}</div>
       <div><b>Contact</b><a href="tel:{{ site.contact.phone_e164 }}">{{ site.contact.phone_display }}</a> ({{ site.contact.phone_note }})<br><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
     </div>
-    <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Online</a>
+    <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid" data-tooltip="Opens Square in a new tab to choose your time">Book Online</a>
     <p class="notice">Please note: {{ site.announcement.closure_notice }}</p>
   </div>
 </section>
