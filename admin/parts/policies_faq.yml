@@ -1,0 +1,90 @@
+      - name: policies_faq
+        label: "Policies & FAQ page"
+        file: "_data/pages/policies_faq.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Deposits"
+            name: deposits
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the deposit amount", name: intro, widget: string, hint: "The deposit percent itself comes from Business Facts, not here. Keep the trailing space, for example \"A \"." }
+              - { label: "Word after the deposit amount", name: unit_word, widget: string, hint: "Shown in bold right after the deposit percent, normally deposit." }
+              - { label: "Paragraph, part after the deposit amount", name: outro, widget: text }
+          - label: "Cancellations & Rescheduling"
+            name: cancellations
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph, part before the notice period", name: intro, widget: string, hint: "The notice period itself comes from Business Facts, not here. Keep the trailing space." }
+              - { label: "Text right after the notice period", name: unit_word, widget: string, hint: "Shown in bold right after the notice period, normally an apostrophe and the word notice, for example \"' notice\". No leading space." }
+              - { label: "Paragraph, part after the notice period", name: outro, widget: text }
+              - { label: "Less than 24 hours label", name: fee_short_label, widget: string, hint: "The fee percent itself comes from Business Facts." }
+              - { label: "Same-day label", name: fee_same_day_label, widget: string }
+              - { label: "No-show label", name: fee_no_show_label, widget: string }
+              - { label: "Fee line ending", name: fee_suffix, widget: string, hint: "Repeated after all three fee percents, for example \" of the service price\". Keep the leading space." }
+          - label: "Late Arrivals"
+            name: late_arrivals
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the &ndash; as it is." }
+          - label: "Minors"
+            name: minors
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Health & Safety"
+            name: health_safety
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the <b> and </b> tags as they are around the list of conditions." }
+          - label: "Payments"
+            name: payments
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the accepted payment types", name: intro, widget: string, hint: "The payment types list comes from Business Facts, not here. Keep the trailing space, for example \"We accept \"." }
+              - { label: "Paragraph, part after the accepted payment types", name: outro, widget: string, hint: "Usually just a period." }
+          - label: "Upcoming Closures"
+            name: upcoming_closures
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the <b> and </b> tags and the &ndash; as they are. Update the dates when the closure changes." }
+          - label: "Contact line (below the policy list)"
+            name: contact_line
+            widget: object
+            fields:
+              - { label: "Part before the phone link", name: intro, widget: string, hint: "The phone number comes from Business Facts. Keep the trailing space." }
+              - { label: "Part between the phone and email links", name: mid, widget: string, hint: "Keep the spaces on both sides." }
+              - { label: "Part after the email link", name: outro, widget: string, hint: "The email address comes from Business Facts." }
+          - label: "Frequently Asked Questions"
+            name: faq
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Questions and answers"
+                name: items
+                widget: list
+                label_singular: "Question"
+                summary: "{{fields.question}}"
+                fields:
+                  - { label: "Question", name: question, widget: string }
+                  - { label: "Answer", name: answer, widget: text, hint: "Shown on the page and also sent to Google as this question's answer. Keep any <b> tags as they are." }
+                  - { label: "Answer for Google only (optional)", name: plain_answer, widget: text, required: false, hint: "Only fill this in if the answer above has formatting and the plain wording Google should read is different. Leave blank to let Google use the answer above with formatting removed." }

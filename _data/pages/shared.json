@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "skip_text": "Skip to content",
+    "menu_text": "Menu",
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "policies": "Policies",
+    "contact": "Contact",
+    "book_now": "Book Now"
+  },
+  "footer": {
+    "reviews": "Reviews",
+    "find_your_treatment": "Find Your Treatment",
+    "policies_faq": "Policies & FAQ",
+    "privacy": "Privacy",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "facebook": "Facebook",
+    "copyright_year": "2026",
+    "copyright_state": "Idaho"
+  },
+  "mobile_bar": {
+    "call_text": "Call"
+  },
+  "book_cta": {
+    "eyebrow": "Currently Accepting New Clients",
+    "heading": "Book Your Appointment",
+    "paragraph_intro": "Online booking through Square. Pick your service, choose a time, and you're set. A ",
+    "paragraph_unit_word": "deposit",
+    "paragraph_outro": " holds your spot and goes toward your service.",
+    "location_label": "Location",
+    "hours_label": "Hours",
+    "contact_label": "Contact",
+    "button_text": "Book Online",
+    "notice_prefix": "Please note: "
+  }
+}

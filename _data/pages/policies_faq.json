@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Policies & FAQ | Rosemary Esthetics",
+    "description": "Booking policies and FAQ for Rosemary Esthetics in Idaho Falls: 20% deposit, 24-hour cancellation notice, facial prep, patch tests, and more."
+  },
+  "hero": {
+    "eyebrow": "The Fine Print",
+    "heading": "Policies &amp; FAQ",
+    "body": "Everything you need to know before your visit, so there are no surprises, just a relaxing appointment."
+  },
+  "deposits": {
+    "heading": "Deposits",
+    "intro": "A ",
+    "unit_word": "deposit",
+    "outro": " is required to book and holds your spot. Your deposit is applied to your service total at checkout, so it's never an extra cost."
+  },
+  "cancellations": {
+    "heading": "Cancellations &amp; Rescheduling",
+    "intro": "Life happens! Please give at least ",
+    "unit_word": "' notice",
+    "outro": " to cancel or reschedule so someone else can take your time.",
+    "fee_short_label": "Less than 24 hours' notice",
+    "fee_same_day_label": "Same-day cancellation",
+    "fee_no_show_label": "No-call, no-show",
+    "fee_suffix": " of the service price"
+  },
+  "late_arrivals": {
+    "heading": "Late Arrivals",
+    "body": "Arriving 10&ndash;15 minutes late may mean your service is shortened or needs to be rescheduled, so every client gets their full appointment time."
+  },
+  "minors": {
+    "heading": "Minors",
+    "body": "Clients under 18 are welcome with parent or guardian consent. Teen facials are one of our favorite ways to build healthy skin habits early."
+  },
+  "health_safety": {
+    "heading": "Health &amp; Safety",
+    "body": "For your safety, we can't perform services over <b>active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin</b>. If you're not sure whether something applies to you, reach out before booking and we'll figure it out together."
+  },
+  "payments": {
+    "heading": "Payments",
+    "intro": "We accept ",
+    "outro": "."
+  },
+  "upcoming_closures": {
+    "heading": "Upcoming Closures",
+    "body": "The studio will be closed <b>July 31 &ndash; August 2, 2026</b>. Online booking will show available times around the closure."
+  },
+  "contact_line": {
+    "intro": "Questions or concerns about a visit? Please reach out, call or text ",
+    "mid": " or email ",
+    "outro": " and we'll make it right."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "heading": "Frequently asked",
+    "items": [
+      {
+        "question": "Where is Rosemary Esthetics located?",
+        "answer": "Rosemary Esthetics is at 1096 S Boulevard, Idaho Falls, ID 83402, with free lot and street parking and a wheelchair-accessible entrance. We see clients from Idaho Falls and nearby Ammon, Iona, Ucon, Rigby, and Shelley."
+      },
+      {
+        "question": "What services does Rosemary Esthetics offer in Idaho Falls?",
+        "answer": "Customized facials and dermaplaning, lash lifts and tints, brow lamination and tint, facial waxing, back treatments, and LED light therapy, all by appointment with licensed esthetician Jillian Easter."
+      },
+      {
+        "question": "Are you taking new clients?",
+        "answer": "Yes! New clients are always welcome at Rosemary Esthetics. Book online through Square, or call or text (208) 521-0938 with any questions before your first visit."
+      },
+      {
+        "question": "How do I book an appointment?",
+        "answer": "All booking happens online through Square. Pick your service, choose a time, and pay a 20% deposit to hold your spot. The deposit goes toward your service total."
+      },
+      {
+        "question": "How should I prep for a facial?",
+        "answer": "Arrive with clean skin if you can, pause retinol and strong exfoliants for a few days beforehand, and avoid fresh sun exposure. We'll handle the rest."
+      },
+      {
+        "question": "Do I need a patch test for tints or lamination?",
+        "answer": "Sometimes. A patch test may be required for lash or brow tints and lamination, especially if you have sensitive skin or a history of reactions. Reach out before booking if you're unsure."
+      },
+      {
+        "question": "Is there anything you can't treat?",
+        "answer": "For your safety we can't treat active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin. If you're not sure whether that applies to you, reach out before booking."
+      },
+      {
+        "question": "How often should I get a facial?",
+        "answer": "Every 4 to 6 weeks works beautifully for most skin, matching your skin's natural renewal cycle. Jillian will suggest a cadence that fits your skin and your goals."
+      }
+    ]
+  }
+}
