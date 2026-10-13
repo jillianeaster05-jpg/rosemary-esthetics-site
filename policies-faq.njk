@@ -41,8 +41,8 @@ og_image_height: 2131
       <p class="editable">{{ pages.policies_faq.health_safety.body | safe }}</p></div>
     <div class="polsec"><h2>{{ pages.policies_faq.payments.heading | safe }}</h2>
       <p class="editable">{{ pages.policies_faq.payments.intro | safe }}{{ site.payments }}{{ pages.policies_faq.payments.outro | safe }}</p></div>
-    <div class="polsec"><h2>{{ pages.policies_faq.upcoming_closures.heading | safe }}</h2>
-      <p class="editable">{{ pages.policies_faq.upcoming_closures.body | safe }}</p></div>
+    {% if pages.policies_faq.upcoming_closures.body %}<div class="polsec"><h2>{{ pages.policies_faq.upcoming_closures.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.upcoming_closures.body | safe }}</p></div>{% endif %}
     <p style="font-size:14.5px;color:var(--fg-soft);font-style:italic">{{ pages.policies_faq.contact_line.intro | safe }}<a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a>{{ pages.policies_faq.contact_line.mid | safe }}<a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a>{{ pages.policies_faq.contact_line.outro | safe }}</p>
   </div>
 </section>

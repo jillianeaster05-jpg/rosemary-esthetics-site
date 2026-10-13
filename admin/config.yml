@@ -1175,7 +1175,7 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Paragraph", name: body, widget: text, hint: "Keep the <b> and </b> tags and the &ndash; as they are. Update the dates when the closure changes." }
+              - { label: "Paragraph", name: body, widget: text, required: false, hint: "Leave blank when there is no closure and this whole section disappears. Example: The studio will be closed <b>July 31 &ndash; August 2</b>. Online booking will show available times around the closure." }
           - label: "Contact line (below the policy list)"
             name: contact_line
             widget: object
@@ -1271,7 +1271,7 @@ collections:
                   - { label: "Friday label", name: friday_label, widget: string }
                   - { label: "Saturday label", name: saturday_label, widget: string }
                   - { label: "Sunday label", name: sunday_label, widget: string }
-              - { label: "Closure notice", name: notice, widget: text, hint: "Shown under the hours. Keep &ndash; as it is, it shows as a dash. This currently repeats the closure notice already set in Business info and prices; check with the studio before editing, so the two do not say different things." }
+              - { label: "Closure notice", name: notice, widget: text, required: false, hint: "Shown under the hours. Leave blank when there is no closure and the line disappears. When you add one, also update the closure notice in Business info and prices and the Upcoming Closures section on the Policies page." }
           - label: "Contact form status messages"
             name: form_feedback
             widget: object

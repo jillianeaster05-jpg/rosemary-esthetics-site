@@ -59,7 +59,7 @@ og_image_height: 2131
           <div class="price-row"><span>{{ pages.contact.visit.hours.saturday_label | safe }}</span><span class="pr">{{ site.hours.saturday }}</span></div>
           <div class="price-row"><span>{{ pages.contact.visit.hours.sunday_label | safe }}</span><span class="pr">{{ site.hours.sunday }}</span></div>
         </div>
-        <p class="notice">{{ pages.contact.visit.notice | safe }}</p>
+        {% if pages.contact.visit.notice %}<p class="notice">{{ pages.contact.visit.notice | safe }}</p>{% endif %}
       </div>
     </div>
   </div>
