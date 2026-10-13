@@ -2,97 +2,54 @@
 layout: base.njk
 permalink: policies-faq.html
 nav_active: policies
-title: "Policies & FAQ | Rosemary Esthetics"
-description: "Booking policies and FAQ for Rosemary Esthetics in Idaho Falls: 20% deposit, 24-hour cancellation notice, facial prep, patch tests, and more."
+eleventyComputed:
+  title: "{{ pages.policies_faq.meta.title | safe }}"
+  description: "{{ pages.policies_faq.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/policies-faq.html"
 og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
 og_image_width: 1600
 og_image_height: 2131
-extra_jsonld:
-  "@context": "https://schema.org"
-  "@type": "FAQPage"
-  mainEntity:
-    - "@type": "Question"
-      name: "Where is Rosemary Esthetics located?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Rosemary Esthetics is at 1096 S Boulevard, Idaho Falls, ID 83402, with free lot and street parking and a wheelchair-accessible entrance. We see clients from Idaho Falls and nearby Ammon, Iona, Ucon, Rigby, and Shelley."
-    - "@type": "Question"
-      name: "What services does Rosemary Esthetics offer in Idaho Falls?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Customized facials and dermaplaning, lash lifts and tints, brow lamination and tint, facial waxing, back treatments, and LED light therapy, all by appointment with licensed esthetician Jillian Easter."
-    - "@type": "Question"
-      name: "Are you taking new clients?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Yes! New clients are always welcome at Rosemary Esthetics. Book online through Square, or call or text (208) 521-0938 with any questions before your first visit."
-    - "@type": "Question"
-      name: "How do I book an appointment?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "All booking happens online through Square. Pick your service, choose a time, and pay a 20% deposit to hold your spot. The deposit goes toward your service total."
-    - "@type": "Question"
-      name: "How should I prep for a facial?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Arrive with clean skin if you can, pause retinol and strong exfoliants for a few days beforehand, and avoid fresh sun exposure. We'll handle the rest."
-    - "@type": "Question"
-      name: "Do I need a patch test for tints or lamination?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Sometimes. A patch test may be required for lash or brow tints and lamination, especially if you have sensitive skin or a history of reactions. Reach out before booking if you're unsure."
-    - "@type": "Question"
-      name: "Is there anything you can't treat?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "For your safety we can't treat active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin. If you're not sure whether that applies to you, reach out before booking."
-    - "@type": "Question"
-      name: "How often should I get a facial?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Every 4 to 6 weeks works beautifully for most skin, matching your skin's natural renewal cycle. Jillian will suggest a cadence that fits your skin and your goals."
 ---
 <section class="pagehero">
   <div class="wrap">
-    <div class="eyebrow">The Fine Print</div>
-    <h1>Policies &amp; FAQ</h1>
-    <p class="lead editable">Everything you need to know before your visit, so there are no surprises, just a relaxing appointment.</p>
+    <div class="eyebrow">{{ pages.policies_faq.hero.eyebrow | safe }}</div>
+    <h1>{{ pages.policies_faq.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.policies_faq.hero.body | safe }}</p>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap" style="max-width:780px">
-    <div class="polsec"><h2>Deposits</h2>
-      <p class="editable">A <b>{{ site.policies.deposit_pct }} deposit</b> is required to book and holds your spot. Your deposit is applied to your service total at checkout, so it's never an extra cost.</p></div>
-    <div class="polsec"><h2>Cancellations &amp; Rescheduling</h2>
-      <p class="editable">Life happens! Please give at least <b>{{ site.policies.cancellation_notice }}' notice</b> to cancel or reschedule so someone else can take your time.</p>
+    <div class="polsec"><h2>{{ pages.policies_faq.deposits.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.deposits.intro | safe }}<b>{{ site.policies.deposit_pct }} {{ pages.policies_faq.deposits.unit_word | safe }}</b>{{ pages.policies_faq.deposits.outro | safe }}</p></div>
+    <div class="polsec"><h2>{{ pages.policies_faq.cancellations.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.cancellations.intro | safe }}<b>{{ site.policies.cancellation_notice }}{{ pages.policies_faq.cancellations.unit_word | safe }}</b>{{ pages.policies_faq.cancellations.outro | safe }}</p>
       <ul class="editable">
-        <li>Less than 24 hours' notice: <b>{{ site.policies.fee_short_notice }}</b> of the service price</li>
-        <li>Same-day cancellation: <b>{{ site.policies.fee_same_day }}</b> of the service price</li>
-        <li>No-call, no-show: <b>{{ site.policies.fee_no_show }}</b> of the service price</li>
+        <li>{{ pages.policies_faq.cancellations.fee_short_label | safe }}: <b>{{ site.policies.fee_short_notice }}</b>{{ pages.policies_faq.cancellations.fee_suffix | safe }}</li>
+        <li>{{ pages.policies_faq.cancellations.fee_same_day_label | safe }}: <b>{{ site.policies.fee_same_day }}</b>{{ pages.policies_faq.cancellations.fee_suffix | safe }}</li>
+        <li>{{ pages.policies_faq.cancellations.fee_no_show_label | safe }}: <b>{{ site.policies.fee_no_show }}</b>{{ pages.policies_faq.cancellations.fee_suffix | safe }}</li>
       </ul></div>
     <!-- ===== DRAFT: Refunds section - PENDING JILLIAN APPROVAL. Do NOT publish until approved. To go live: remove this comment wrapper (the opening line above and the END line below). Approval doc: "12 - Reports & Handoffs/Rosemary-Refund-Cancellation-Policy-DRAFT.md"
     <div class="polsec"><h2>Refunds</h2>
       <p class="editable">Your <b>{{ site.policies.deposit_pct }} deposit</b> is non-refundable, but it is never wasted as long as you give at least 24 hours' notice: it moves with you to your rescheduled appointment and still goes toward your service. If you cancel with less than 24 hours' notice, cancel same-day, or do not show, the deposit is kept and the cancellation fee above applies.</p>
       <p class="editable">Because every service is personalized and performed in the moment, completed services are not refundable. Your happiness still matters to us: if something does not feel right, reach out within 7 days and we will make it right, whether that is an adjustment or a plan for your next visit.</p></div>
     ===== END DRAFT Refunds ===== -->
-    <div class="polsec"><h2>Late Arrivals</h2>
-      <p class="editable">Arriving 10&ndash;15 minutes late may mean your service is shortened or needs to be rescheduled, so every client gets their full appointment time.</p></div>
-    <div class="polsec"><h2>Minors</h2>
-      <p class="editable">Clients under 18 are welcome with parent or guardian consent. Teen facials are one of our favorite ways to build healthy skin habits early.</p></div>
-    <div class="polsec"><h2>Health &amp; Safety</h2>
-      <p class="editable">For your safety, we can't perform services over <b>active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin</b>. If you're not sure whether something applies to you, reach out before booking and we'll figure it out together.</p></div>
-    <div class="polsec"><h2>Payments</h2>
-      <p class="editable">We accept {{ site.payments }}.</p></div>
-    <div class="polsec"><h2>Upcoming Closures</h2>
-      <p class="editable">The studio will be closed <b>July 31 &ndash; August 2, 2026</b>. Online booking will show available times around the closure.</p></div>
-    <p style="font-size:14.5px;color:var(--fg-soft);font-style:italic">Questions or concerns about a visit? Please reach out, call or text <a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a> or email <a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a> and we'll make it right.</p>
+    <div class="polsec"><h2>{{ pages.policies_faq.late_arrivals.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.late_arrivals.body | safe }}</p></div>
+    <div class="polsec"><h2>{{ pages.policies_faq.minors.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.minors.body | safe }}</p></div>
+    <div class="polsec"><h2>{{ pages.policies_faq.health_safety.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.health_safety.body | safe }}</p></div>
+    <div class="polsec"><h2>{{ pages.policies_faq.payments.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.payments.intro | safe }}{{ site.payments }}{{ pages.policies_faq.payments.outro | safe }}</p></div>
+    <div class="polsec"><h2>{{ pages.policies_faq.upcoming_closures.heading | safe }}</h2>
+      <p class="editable">{{ pages.policies_faq.upcoming_closures.body | safe }}</p></div>
+    <p style="font-size:14.5px;color:var(--fg-soft);font-style:italic">{{ pages.policies_faq.contact_line.intro | safe }}<a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a>{{ pages.policies_faq.contact_line.mid | safe }}<a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a>{{ pages.policies_faq.contact_line.outro | safe }}</p>
   </div>
 </section>
 <section class="reveal">
   <div class="wrap" style="max-width:780px">
-    <div class="sec-head"><div class="eyebrow">Questions</div><h2>Frequently asked</h2></div>
-    <details class="faq"><summary>Where is Rosemary Esthetics located?</summary><div class="ans editable">Rosemary Esthetics is at 1096 S Boulevard, Idaho Falls, ID 83402, with free lot and street parking and a wheelchair-accessible entrance. We see clients from Idaho Falls and nearby Ammon, Iona, Ucon, Rigby, and Shelley.</div></details><details class="faq"><summary>What services does Rosemary Esthetics offer in Idaho Falls?</summary><div class="ans editable">Customized facials and dermaplaning, lash lifts and tints, brow lamination and tint, facial waxing, back treatments, and LED light therapy, all by appointment with licensed esthetician Jillian Easter.</div></details><details class="faq"><summary>Are you taking new clients?</summary><div class="ans editable">Yes! New clients are always welcome at Rosemary Esthetics. Book online through Square, or call or text (208) 521-0938 with any questions before your first visit.</div></details><details class="faq"><summary>How do I book an appointment?</summary><div class="ans editable">All booking happens online through Square. Pick your service, choose a time, and pay a 20% deposit to hold your spot. The deposit goes toward your service total.</div></details><details class="faq"><summary>How should I prep for a facial?</summary><div class="ans editable">Arrive with clean skin if you can, pause retinol and strong exfoliants for a few days beforehand, and avoid fresh sun exposure. We'll handle the rest.</div></details><details class="faq"><summary>Do I need a patch test for tints or lamination?</summary><div class="ans editable">Sometimes. A patch test may be required for lash or brow tints and lamination, especially if you have sensitive skin or a history of reactions. Reach out before booking if you're unsure.</div></details><details class="faq"><summary>Is there anything you can't treat?</summary><div class="ans editable">For your safety we can't treat active wounds, sunburned skin, contagious skin conditions, cold sores, or irritated skin. If you're not sure whether that applies to you, reach out before booking.</div></details><details class="faq"><summary>How often should I get a facial?</summary><div class="ans editable">Every 4 to 6 weeks works beautifully for most skin, matching your skin's natural renewal cycle. Jillian will suggest a cadence that fits your skin and your goals.</div></details>
+    <div class="sec-head"><div class="eyebrow">{{ pages.policies_faq.faq.eyebrow | safe }}</div><h2>{{ pages.policies_faq.faq.heading | safe }}</h2></div>
+    {% for item in pages.policies_faq.faq.items %}<details class="faq"><summary>{{ item.question | safe }}</summary><div class="ans editable">{{ item.answer | safe }}</div></details>{% endfor %}
   </div>
 </section>
 

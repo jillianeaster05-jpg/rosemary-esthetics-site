@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Privacy Policy | Rosemary Esthetics",
+    "description": "Privacy policy for the Rosemary Esthetics website: what the contact form collects, how Square handles booking, and how to reach us."
+  },
+  "hero": {
+    "eyebrow": "Privacy",
+    "heading": "Privacy Policy",
+    "body": "The short version: we collect only what we need to answer your messages and book your appointments, and we never sell your information."
+  },
+  "collect": {
+    "heading": "What we collect",
+    "body": "When you use the contact form, we receive the name, email, phone number, and message you choose to share. We use it only to reply to you. Form submissions are delivered to us through Netlify Forms, our website host, which processes the submission on our behalf."
+  },
+  "booking": {
+    "heading": "Booking",
+    "intro": "Appointments are booked through Square. Any information you enter there (including payment details and intake answers) is handled by Square under ",
+    "link_text": "Square's privacy policy",
+    "outro": ". We never see or store your card numbers."
+  },
+  "cookies": {
+    "heading": "Cookies &amp; analytics",
+    "body": "This website does not set cookies and does not run advertising or analytics trackers. The contact page includes an embedded Google Map, which is loaded from Google and is subject to Google's privacy policy."
+  },
+  "choices": {
+    "heading": "Your choices",
+    "intro": "Want us to delete a message you sent us, or update your details? Just ask. Email ",
+    "mid": " or text ",
+    "outro": " and we'll take care of it."
+  },
+  "effective_date_line": "Effective July 2, 2026"
+}
