@@ -52,16 +52,16 @@
       { "name": "Skin Reset Facial", "price": "$40", "duration": "35m" },
       { "name": "Couples Facial", "price": "$90", "duration": "1h" },
       { "name": "Gua Sha Sculpting add-on", "price": "$5", "duration": "" },
-      { "name": "LED Light Therapy add-on", "price": "$10", "duration": "" }
+      { "name": "LED Light Therapy add-on", "price": "$5", "duration": "" },
+      { "name": "Dermaplane add-on", "price": "$20", "duration": "30m" }
     ],
     "lashes": [
       { "name": "Eyelash Lift and Tint", "price": "$55", "duration": "45m" },
-      { "name": "Eyelash Lift", "price": "$35", "duration": "30m" },
-      { "name": "Eyelash Tint", "price": "$20", "duration": "30m" }
+      { "name": "Eyelash Lift", "price": "$45", "duration": "30m" }
     ],
     "brows": [
-      { "name": "Eyebrow Lamination and Tint", "price": "$40", "duration": "45m" },
-      { "name": "Eyebrow Lamination", "price": "$25", "duration": "40m" },
+      { "name": "Eyebrow Lamination and Tint", "price": "$55", "duration": "45m" },
+      { "name": "Eyebrow Lamination", "price": "$45", "duration": "40m" },
       { "name": "Brow Tint", "price": "$15", "duration": "20m" },
       { "name": "Eyebrow and Eyelash Package", "price": "$85", "duration": "1h15" }
     ],
@@ -77,11 +77,12 @@
       { "name": "Back Reset Treatment", "price": "$75", "duration": "1h" }
     ],
     "led": [
-      { "name": "LED Light Therapy add-on", "price": "$10", "duration": "" }
+      { "name": "LED Light Therapy add-on", "price": "$5", "duration": "" }
     ],
     "addons": [
       { "name": "Gua Sha Sculpting", "price": "$5", "duration": "" },
-      { "name": "LED Light Therapy", "price": "$10", "duration": "" }
+      { "name": "LED Light Therapy", "price": "$5", "duration": "" },
+      { "name": "Dermaplane add-on", "price": "$20", "duration": "30m" }
     ]
   }
 }

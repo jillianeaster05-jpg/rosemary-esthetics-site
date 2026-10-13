@@ -45,11 +45,10 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smooth + Glow Facial (Dermaplane)" }, "price": "90", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Reset Facial" }, "price": "40", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Couples Facial" }, "price": "90", "priceCurrency": "USD" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyelash Lift" }, "price": "35", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyelash Lift" }, "price": "45", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyelash Lift and Tint" }, "price": "55", "priceCurrency": "USD" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyelash Tint" }, "price": "20", "priceCurrency": "USD" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyebrow Lamination" }, "price": "25", "priceCurrency": "USD" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyebrow Lamination and Tint" }, "price": "40", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyebrow Lamination" }, "price": "45", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyebrow Lamination and Tint" }, "price": "55", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brow Tint" }, "price": "15", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eyebrow and Eyelash Package" }, "price": "85", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Face Wax" }, "price": "30", "priceCurrency": "USD" },
@@ -60,7 +59,8 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heated Stone Back Treatment" }, "price": "85", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Back Reset Treatment" }, "price": "75", "priceCurrency": "USD" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gua Sha Sculpting Add-on" }, "price": "5", "priceCurrency": "USD" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LED Light Therapy" }, "price": "10", "priceCurrency": "USD" }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LED Light Therapy" }, "price": "5", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dermaplane Add-on" }, "price": "20", "priceCurrency": "USD" }
     ]
   }
 }
