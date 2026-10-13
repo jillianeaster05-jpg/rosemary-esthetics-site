@@ -3,21 +3,18 @@
 # fields here; the CMS commits the changes back to _data/site.json and the
 # per-page files under _data/pages/, and the site rebuilds automatically.
 #
-# Source of truth: this site will live in Jillian's own GitHub repo. The CMS
-# commits edits straight back to it. Login is GitHub OAuth handled by Jillian's
-# own sveltia-cms-auth worker on Cloudflare (base_url below), so there is no
-# dependency on Netlify's deprecated Git Gateway and nothing is locked to the
-# studio.
-#
-# repo and base_url below are PLACEHOLDERS. Jillian's GitHub account and her
-# Cloudflare worker are not set up yet. SVELTIA-SWITCH-CHECKLIST.md (in
-# 09 - Website) walks through creating both and fills in the real values here.
+# Source of truth: this site lives in Jillian's own GitHub repo. The CMS
+# commits edits straight back to it. Login is GitHub OAuth through Netlify's
+# built-in OAuth client: a GitHub OAuth app in Jillian's GitHub, registered in
+# her Netlify under Project configuration > Security > OAuth. There is no
+# base_url on purpose; leaving it out is what tells Sveltia to use Netlify.
+# Nothing here is locked to the studio. If Netlify ever retires that OAuth
+# client, deploy sveltia-cms-auth on Cloudflare and add its URL as base_url.
 
 backend:
   name: github
-  repo: JILLIAN-GITHUB-USERNAME/rosemary-esthetics-site   # PLACEHOLDER, see SVELTIA-SWITCH-CHECKLIST.md
+  repo: jillianeaster05-jpg/rosemary-esthetics-site
   branch: main
-  base_url: https://sveltia-cms-auth.JILLIAN-CLOUDFLARE-SUBDOMAIN.workers.dev   # PLACEHOLDER, see SVELTIA-SWITCH-CHECKLIST.md
 
 site_url: https://rosemaryestheticsidaho.com
 display_url: https://rosemaryestheticsidaho.com
