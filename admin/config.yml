@@ -1,0 +1,180 @@
+# Rosemary Esthetics: content editor configuration (Sveltia CMS).
+# Maps the visual editor onto the site's content files. Jillian edits friendly
+# fields here; the CMS commits the changes back to _data/site.json and the
+# per-page files under _data/pages/, and the site rebuilds automatically.
+#
+# Source of truth: this site will live in Jillian's own GitHub repo. The CMS
+# commits edits straight back to it. Login is GitHub OAuth handled by Jillian's
+# own sveltia-cms-auth worker on Cloudflare (base_url below), so there is no
+# dependency on Netlify's deprecated Git Gateway and nothing is locked to the
+# studio.
+#
+# repo and base_url below are PLACEHOLDERS. Jillian's GitHub account and her
+# Cloudflare worker are not set up yet. SVELTIA-SWITCH-CHECKLIST.md (in
+# 09 - Website) walks through creating both and fills in the real values here.
+
+backend:
+  name: github
+  repo: JILLIAN-GITHUB-USERNAME/rosemary-esthetics-site   # PLACEHOLDER, see SVELTIA-SWITCH-CHECKLIST.md
+  branch: main
+  base_url: https://sveltia-cms-auth.JILLIAN-CLOUDFLARE-SUBDOMAIN.workers.dev   # PLACEHOLDER, see SVELTIA-SWITCH-CHECKLIST.md
+
+site_url: https://rosemaryestheticsidaho.com
+display_url: https://rosemaryestheticsidaho.com
+publish_mode: simple
+
+# Where an uploaded photo would be stored. Jillian can add photos later from
+# the same editor.
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  # ---- Business info and prices (one editable document) ----
+  - name: business
+    label: "Business info and prices"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: "Business info and prices"
+        file: "_data/site.json"
+        fields:
+          - label: "Business"
+            name: business
+            widget: object
+            hint: "Shows in the header, in search results, and in the site's business listing."
+            fields:
+              - { label: "Business name", name: name, widget: string }
+              - { label: "Tagline", name: tagline, widget: string, hint: "Short line under the business name, e.g. on the homepage." }
+              - { label: "Owner name", name: owner_name, widget: string }
+              - { label: "Owner title", name: owner_title, widget: string, hint: "e.g. Licensed Esthetician" }
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Phone (shown to people)", name: phone_display, widget: string, hint: "How the phone number is printed on the site, e.g. (208) 521-0938." }
+              - { label: "Phone (for click-to-call links)", name: phone_e164, widget: string, hint: "Format only, do not change the number itself without also updating Phone (shown to people) to match: a plus sign, the country code, then the digits with no spaces, dashes or parentheses. Example: +12085210938." }
+              - { label: "Phone note", name: phone_note, widget: string, hint: "Short note next to the phone number, e.g. call or text." }
+              - { label: "Email", name: email, widget: string }
+              - { label: "Booking link", name: booking_url, widget: string, hint: "The Square booking page people land on when they click Book Now." }
+          - label: "Address"
+            name: address
+            widget: object
+            fields:
+              - { label: "Street", name: street, widget: string }
+              - { label: "City", name: city, widget: string }
+              - { label: "State", name: region, widget: string }
+              - { label: "ZIP code", name: postal_code, widget: string }
+          - label: "Hours"
+            name: hours
+            widget: object
+            fields:
+              - { label: "Hours (shown as one line)", name: display, widget: string, hint: "The short summary line shown on the site, e.g. Mon & Thu 9-6, Wed 3-8, Fri 9-2, Sat 9-9, Closed Sun & Tue. Keep this in sync with the day-by-day hours below." }
+              - { label: "Monday", name: monday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Tuesday", name: tuesday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Wednesday", name: wednesday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Thursday", name: thursday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Friday", name: friday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Saturday", name: saturday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+              - { label: "Sunday", name: sunday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
+          - label: "Social links"
+            name: social
+            widget: object
+            fields:
+              - { label: "Instagram URL", name: instagram, widget: string }
+              - { label: "TikTok URL", name: tiktok, widget: string }
+              - { label: "Facebook URL", name: facebook, widget: string }
+              - { label: "Google review link", name: google_review, widget: string, hint: "The direct link that opens the Google review box." }
+          - label: "Policies"
+            name: policies
+            widget: object
+            fields:
+              - { label: "Deposit percent", name: deposit_pct, widget: string, hint: "e.g. 20%" }
+              - { label: "Cancellation notice", name: cancellation_notice, widget: string, hint: "e.g. 24 hours" }
+              - { label: "Late cancellation fee", name: fee_short_notice, widget: string, hint: "e.g. 50%" }
+              - { label: "Same-day cancellation fee", name: fee_same_day, widget: string, hint: "e.g. 75%" }
+              - { label: "No-show fee", name: fee_no_show, widget: string, hint: "e.g. 100%" }
+          - label: "Announcement"
+            name: announcement
+            widget: object
+            fields:
+              - { label: "Closure notice", name: closure_notice, widget: string, required: false, hint: "A short note shown on the site about an upcoming closure, e.g. the studio will be closed July 31 - August 2, 2026. Leave blank when there is no closure to announce." }
+          - { label: "Payments accepted", name: payments, widget: string, hint: "Plain text list shown on the site, e.g. Cash, Venmo, Credit Card, Debit Card, Apple Pay, Google Pay." }
+          - label: "Services and prices"
+            name: services
+            widget: object
+            hint: "Prices and durations here must match Square exactly. Square is the source of truth: check the Square booking menu before changing a price, and if the site and Square ever disagree, fix this to match Square."
+            fields:
+              - label: "Facials"
+                name: facials
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $80." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "Lashes"
+                name: lashes
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $55." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "Brows"
+                name: brows
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $55." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "Waxing"
+                name: waxing
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $20." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "Back treatments"
+                name: back
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $85." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "LED light therapy"
+                name: led
+                widget: list
+                label_singular: "service"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $5." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+              - label: "Add-ons"
+                name: addons
+                widget: list
+                label_singular: "add-on"
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "Match Square exactly, including the dollar sign, e.g. $5." }
+                  - { label: "Duration", name: duration, widget: string, required: false, hint: "e.g. 1h15 or 30m. Leave blank if this item has no set duration in Square." }
+
+  # ---- Pages (one entry per page, pasted in by the studio) ----
+  - name: pages
+    label: "Pages"
+    delete: false
+    editor:
+      preview: false
+    files:
+      # PAGES-PARTS-GO-HERE

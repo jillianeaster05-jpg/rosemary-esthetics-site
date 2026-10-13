@@ -2,3 +2,4 @@ _netlify-final/
 node_modules/
 _site/
 README.md
+admin/parts/
