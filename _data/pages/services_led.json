@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "LED Light Therapy in Idaho Falls | Rosemary Esthetics",
+    "description": "New at Rosemary Esthetics in Idaho Falls: LED light therapy, a $5 add-on. Calming light sessions that support clear, healthy-looking skin."
+  },
+  "hero": {
+    "crumb_label": "Services",
+    "crumb_current": "LED Light Therapy",
+    "tag_new": "New at the studio",
+    "heading": "LED Light Therapy",
+    "lead": "The newest treatment at the studio. Gentle, non-invasive light therapy that feels like nothing more than warm relaxation, and supports calm, clear, healthy-looking skin over a series of sessions.",
+    "cta": "Book an LED Session"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "LED Light Therapy Menu"
+  },
+  "good_to_know": {
+    "eyebrow": "Good to Know",
+    "items": [
+      { "text": "<b>LED Light Therapy add-on: {{PRICE}}.</b> Just add it to any facial at your visit or when booking." },
+      { "text": "<b>Zero downtime.</b> No needles, no heat damage, no recovery. You can go straight back to your day." },
+      { "text": "<b>Best as an add-on:</b> a lovely finishing touch on any facial." },
+      { "text": "<b>Tell us first</b> if you're using photosensitizing medication, so we can make sure LED is right for you." }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Your Visit",
+    "heading": "What to expect",
+    "steps": [
+      { "title": "Cleanse", "body": "Skin is cleansed so light reaches it effectively." },
+      { "title": "Light session", "body": "You relax under the LED panel with eye protection. It's completely painless, most clients find it deeply calming." },
+      { "title": "Finish", "body": "Serum, moisturizer, and SPF to lock in the session." },
+      { "title": "Repeat", "body": "LED works best as a series. We'll suggest a simple cadence at your visit." }
+    ],
+    "cta": "Book Your LED Session",
+    "explore_label": "Explore more: ",
+    "explore_links": {
+      "facials": "Facials",
+      "back": "Back Treatments",
+      "brows": "Brows"
+    }
+  }
+}

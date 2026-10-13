@@ -1,0 +1,61 @@
+      - name: services_led
+        label: "LED Light Therapy page"
+        file: "_data/pages/services_led.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Breadcrumb link back to Services", name: crumb_label, widget: string, hint: "The small link at the very top of the page, before the slash." }
+              - { label: "Breadcrumb current page name", name: crumb_current, widget: string, hint: "The small text at the very top of the page, after the slash." }
+              - { label: "New badge text", name: tag_new, widget: string, hint: "The small pink badge above the heading." }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the top paragraph." }
+          - label: "Pricing section"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "item"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Item text", name: text, widget: text, hint: "Keep the <b> tags around the bolded lead-in words. The first item has {{PRICE}} inside it. Leave {{PRICE}} exactly as it is, do not type a dollar amount there. The page fills it in automatically from the price list above, which must match Square." }
+          - label: "What to expect section"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the steps." }
+              - { label: "Explore more label", name: explore_label, widget: string, hint: "The text right before the Facials / Back Treatments / Brows links at the bottom of the page. Keep the trailing space." }
+              - label: "Explore more link text"
+                name: explore_links
+                widget: object
+                fields:
+                  - { label: "Facials link text", name: facials, widget: string }
+                  - { label: "Back Treatments link text", name: back, widget: string }
+                  - { label: "Brows link text", name: brows, widget: string }
