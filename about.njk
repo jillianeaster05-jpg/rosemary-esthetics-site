@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: about.html
 nav_active: about
-title: "About Jillian | Licensed Esthetician in Idaho Falls"
-description: "Meet Jillian Easter, the licensed esthetician behind Rosemary Esthetics in Idaho Falls. Austin Kade Academy graduate, certified in lashes and brows."
+eleventyComputed:
+  title: "{{ pages.about.meta.title | safe }}"
+  description: "{{ pages.about.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/about.html"
 og_image: "https://rosemaryestheticsidaho.com/img/jillian-portrait.webp"
 og_image_width: 533
@@ -11,52 +12,45 @@ og_image_height: 1286
 ---
 <section class="pagehero">
   <div class="wrap">
-    <div class="eyebrow">About</div>
-    <h1>Meet Jillian</h1>
-    <p class="lead editable">Licensed esthetician, founder of Rosemary Esthetics, and firm believer that skincare should feel as good as it looks.</p>
+    <div class="eyebrow">{{ pages.about.hero.eyebrow | safe }}</div>
+    <h1>{{ pages.about.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.about.hero.lead | safe }}</p>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap split">
-    <div class="frame portrait sq"><img src="img/jillian-portrait.webp" alt="Jillian Easter, licensed esthetician and owner of Rosemary Esthetics in Idaho Falls" width="533" height="1286" loading="eager"></div>
+    <div class="frame portrait sq"><img src="img/jillian-portrait.webp" alt="{{ pages.about.story.image_alt | safe }}" width="533" height="1286" loading="eager"></div>
     <div>
-      <div class="eyebrow">My Story</div>
-      <h2>Why I started Rosemary Esthetics</h2>
-      <p class="editable">After struggling with my own skin and confidence, I discovered how much skincare can impact the way you feel. I started Rosemary Esthetics to help others feel beautiful, confident, and comfortable in their own skin.</p>
-      <p class="editable">Every service is personalized to your skin and your goals. I believe skincare should be both results-driven and relaxing, so I focus on creating an experience that feels calming from the moment you walk in.</p>
-      <p class="editable">I just love getting to know my clients. Some of my favorite conversations happen in the treatment room, and it's so rewarding to watch your confidence grow with each visit.</p>
-      <p class="editable">When I'm not in the studio, I'm with family, outdoors, or spoiling my dachshund, Raydar.</p>
-      <div class="sign" aria-hidden="true">Jillian</div>
+      <div class="eyebrow">{{ pages.about.story.eyebrow | safe }}</div>
+      <h2>{{ pages.about.story.heading | safe }}</h2>
+      <p class="editable">{{ pages.about.story.para1 | safe }}</p>
+      <p class="editable">{{ pages.about.story.para2 | safe }}</p>
+      <p class="editable">{{ pages.about.story.para3 | safe }}</p>
+      <p class="editable">{{ pages.about.story.para4 | safe }}</p>
+      <div class="sign" aria-hidden="true">{{ pages.about.story.signature | safe }}</div>
     </div>
   </div>
 </section>
 <section class="reveal">
   <div class="wrap split rev">
     <div>
-      <div class="eyebrow">Credentials</div>
-      <h2>Trained, licensed &amp; certified</h2>
+      <div class="eyebrow">{{ pages.about.credentials.eyebrow | safe }}</div>
+      <h2>{{ pages.about.credentials.heading | safe }}</h2>
       <ul class="goodlist editable">
-        <li><b>Licensed Esthetician</b> in the state of Idaho</li>
-        <li><b>Graduate of Austin Kade Academy</b></li>
-        <li><b>Associate Degrees in Art &amp; Science,</b> High Honors, College of Eastern Idaho</li>
-        <li><b>Barbicide certified</b> (sanitation and safety)</li>
-        <li><b>Skin Script certified</b> (professional skincare line)</li>
-        <li><b>Lash lift &amp; brow lamination certified</b></li>
-        <li><b>AHA, BHA &amp; enzyme certified</b> (chemical exfoliation)</li>
-        <li><b>Eyelash extension certified</b></li>
-      </ul>
+{% for item in pages.about.credentials.items %}        <li>{{ item | safe }}</li>
+{% endfor %}      </ul>
     </div>
-    <div class="frame portrait"><img src="img/glow-portrait.webp" alt="Glowing, healthy skin after a facial at Rosemary Esthetics in Idaho Falls" width="1100" height="1466" loading="lazy"></div>
+    <div class="frame portrait"><img src="img/glow-portrait.webp" alt="{{ pages.about.credentials.image_alt | safe }}" width="1100" height="1466" loading="lazy"></div>
   </div>
 </section>
 <section class="svcs reveal">
   <div class="wrap" style="max-width:760px">
-    <div class="sec-head"><div class="eyebrow">The Studio</div><h2>Comfortable for everyone</h2><p class="editable">The studio at {{ site.address.street }} is a calm, private space in the heart of Idaho Falls.</p></div>
+    <div class="sec-head"><div class="eyebrow">{{ pages.about.studio.eyebrow | safe }}</div><h2>{{ pages.about.studio.heading | safe }}</h2><p class="editable">{{ pages.about.studio.intro_before | safe }}{{ site.address.street }}{{ pages.about.studio.intro_after | safe }}</p></div>
     <div class="grid3 two">
-      <div class="vp"><h3>Easy to get to</h3><p class="editable">Free parking lot and street parking right outside, with a wheelchair-accessible entrance, restroom, and parking.</p></div>
-      <div class="vp"><h3>Everyone is welcome</h3><p class="editable">An LGBTQ+ friendly studio with a gender-neutral restroom and free Wi-Fi. Come as you are.</p></div>
+      <div class="vp"><h3>{{ pages.about.studio.vp1_heading | safe }}</h3><p class="editable">{{ pages.about.studio.vp1_body | safe }}</p></div>
+      <div class="vp"><h3>{{ pages.about.studio.vp2_heading | safe }}</h3><p class="editable">{{ pages.about.studio.vp2_body | safe }}</p></div>
     </div>
-    <div class="center" style="margin-top:34px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book With Jillian</a></div>
+    <div class="center" style="margin-top:34px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.about.studio.cta | safe }}</a></div>
   </div>
 </section>
 

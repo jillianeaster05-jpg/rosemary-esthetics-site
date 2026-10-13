@@ -1,0 +1,31 @@
+      - name: gallery
+        label: "Gallery page"
+        file: "_data/pages/gallery.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, before the Instagram link", name: lead_before, widget: text }
+              - { label: "Instagram link text", name: lead_link_text, widget: string }
+              - { label: "Paragraph, after the Instagram link", name: lead_after, widget: string, hint: "Usually just a period." }
+          - label: "Gallery photos"
+            name: tiles
+            widget: list
+            label_singular: "Photo"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Photo", name: src, widget: string, hint: "File path under img/. Technical, ask your developer before changing." }
+              - { label: "Photo description (for screen readers)", name: alt, widget: string }
+              - { label: "Photo width in pixels", name: width, widget: number, hint: "Technical, ask your developer before changing." }
+              - { label: "Photo height in pixels", name: height, widget: number, hint: "Technical, ask your developer before changing." }
+              - { label: "Caption shown under the photo", name: caption, widget: string, hint: "Keep any &amp; as it is." }
+          - { label: "Bottom button text", name: cta, widget: string }
