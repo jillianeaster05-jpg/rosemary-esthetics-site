@@ -47,8 +47,8 @@ og_image_height: 2131
         <div class="eyebrow">{{ pages.contact.visit.eyebrow | safe }}</div>
         <h2 style="margin-top:6px">{{ site.address.street }}</h2>
         <p style="color:var(--fg-soft);margin:0 0 18px">{{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }} &middot; {{ pages.contact.visit.parking_note | safe }}</p>
-        <div class="mapframe"><iframe src="https://www.google.com/maps?q=1096+S+Boulevard,+Idaho+Falls,+ID+83402&output=embed" title="{{ pages.contact.visit.map_title | safe }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
-        <p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&destination=1096+S+Boulevard,+Idaho+Falls,+ID+83402" target="_blank" rel="noopener" class="btn solid" data-tooltip="{{ pages.contact.visit.directions_tooltip | safe }}">{{ pages.contact.visit.directions_cta | safe }}</a></p>
+        <div class="mapframe"><iframe src="https://www.google.com/maps?q=1096+S+Boulevard,+Idaho+Falls,+ID+83402&output=embed" title="{{ pages.contact.visit.map_title | replace('"', '&quot;') | safe }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        <p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&destination=1096+S+Boulevard,+Idaho+Falls,+ID+83402" target="_blank" rel="noopener" class="btn solid" data-tooltip="{{ pages.contact.visit.directions_tooltip | replace('"', '&quot;') | safe }}">{{ pages.contact.visit.directions_cta | safe }}</a></p>
         <div class="eyebrow" style="margin-top:34px">{{ pages.contact.visit.hours.eyebrow | safe }}</div>
         <div class="plist" style="margin-top:12px">
           <div class="price-row"><span>{{ pages.contact.visit.hours.monday_label | safe }}</span><span class="pr">{{ site.hours.monday }}</span></div>
@@ -69,15 +69,15 @@ og_image_height: 2131
   var f=document.getElementById('contactForm');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var r=document.getElementById('formResult');r.textContent={{ pages.contact.form_feedback.sending | dump | safe }};
+    var r=document.getElementById('formResult');r.textContent={{ pages.contact.form_feedback.sending | jsString | safe }};
     var data=new FormData(f);
     var enc=new URLSearchParams(data).toString();
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc})
       .then(function(res){
-        if(res.ok){r.textContent={{ pages.contact.form_feedback.success | dump | safe }};f.reset();}
-        else{r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | dump | safe }};}
+        if(res.ok){r.textContent={{ pages.contact.form_feedback.success | jsString | safe }};f.reset();}
+        else{r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | jsString | safe }};}
       })
-      .catch(function(){r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | dump | safe }};});
+      .catch(function(){r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | jsString | safe }};});
   });
 })();
 </script>

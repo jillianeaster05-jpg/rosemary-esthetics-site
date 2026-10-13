@@ -29,7 +29,7 @@ og_image_height: 1466
       <ul class="goodlist editable">{% for item in pages.services_facials.good_to_know.items %}<li>{{ item | safe }}</li>{% endfor %}</ul>
 
     </div>
-    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/facial-mask.webp" alt="{{ pages.services_facials.image.alt | safe }}" width="1100" height="1466" loading="lazy"></div>
+    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/facial-mask.webp" alt="{{ pages.services_facials.image.alt | replace('"', '&quot;') | safe }}" width="1100" height="1466" loading="lazy"></div>
   </div>
 </section>
 <section class="reveal">

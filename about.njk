@@ -19,7 +19,7 @@ og_image_height: 1286
 </section>
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap split">
-    <div class="frame portrait sq"><img src="img/jillian-portrait.webp" alt="{{ pages.about.story.image_alt | safe }}" width="533" height="1286" loading="eager"></div>
+    <div class="frame portrait sq"><img src="img/jillian-portrait.webp" alt="{{ pages.about.story.image_alt | replace('"', '&quot;') | safe }}" width="533" height="1286" loading="eager"></div>
     <div>
       <div class="eyebrow">{{ pages.about.story.eyebrow | safe }}</div>
       <h2>{{ pages.about.story.heading | safe }}</h2>
@@ -40,7 +40,7 @@ og_image_height: 1286
 {% for item in pages.about.credentials.items %}        <li>{{ item | safe }}</li>
 {% endfor %}      </ul>
     </div>
-    <div class="frame portrait"><img src="img/glow-portrait.webp" alt="{{ pages.about.credentials.image_alt | safe }}" width="1100" height="1466" loading="lazy"></div>
+    <div class="frame portrait"><img src="img/glow-portrait.webp" alt="{{ pages.about.credentials.image_alt | replace('"', '&quot;') | safe }}" width="1100" height="1466" loading="lazy"></div>
   </div>
 </section>
 <section class="svcs reveal">

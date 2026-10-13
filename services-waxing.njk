@@ -29,7 +29,7 @@ og_image_height: 2131
       <ul class="goodlist editable">{% for item in pages.services_waxing.good_to_know.items %}<li>{{ item | safe }}</li>{% endfor %}</ul>
 
     </div>
-    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/hero-facial.webp" alt="{{ pages.services_waxing.image.alt | safe }}" width="1600" height="2131" loading="lazy"></div>
+    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/hero-facial.webp" alt="{{ pages.services_waxing.image.alt | replace('"', '&quot;') | safe }}" width="1600" height="2131" loading="lazy"></div>
   </div>
 </section>
 <section class="reveal">

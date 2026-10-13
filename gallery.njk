@@ -20,7 +20,7 @@ og_image_height: 1466
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap">
     <div class="gal-grid">
-{% for t in pages.gallery.tiles %}      <figure class="gcard"><div class="frame"><img src="{{ t.src }}" alt="{{ t.alt | safe }}" width="{{ t.width }}" height="{{ t.height }}" loading="lazy"></div><figcaption class="editable">{{ t.caption | safe }}</figcaption></figure>
+{% for t in pages.gallery.tiles %}      <figure class="gcard"><div class="frame"><img src="{{ t.src }}" alt="{{ t.alt | replace('"', '&quot;') | safe }}" width="{{ t.width }}" height="{{ t.height }}" loading="lazy"></div><figcaption class="editable">{{ t.caption | safe }}</figcaption></figure>
 {% endfor %}    </div>
     <div class="center" style="margin-top:40px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.gallery.cta | safe }}</a></div>
   </div>

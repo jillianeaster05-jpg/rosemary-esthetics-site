@@ -10,6 +10,6 @@
       <div><b>{{ pages.shared.book_cta.contact_label | safe }}</b><a href="tel:{{ site.contact.phone_e164 }}">{{ site.contact.phone_display }}</a> ({{ site.contact.phone_note }})<br><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
     </div>
     <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid" data-tooltip="Opens Square in a new tab to choose your time">{{ pages.shared.book_cta.button_text | safe }}</a>
-    <p class="notice">{{ pages.shared.book_cta.notice_prefix | safe }}{{ site.announcement.closure_notice }}</p>
+    {% if site.announcement.closure_notice %}<p class="notice">{{ pages.shared.book_cta.notice_prefix | safe }}{{ site.announcement.closure_notice }}</p>{% endif %}
   </div>
 </section>

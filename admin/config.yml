@@ -218,14 +218,14 @@ collections:
             fields:
               - { label: "Small heading above the title", name: eyebrow, widget: string, hint: "Can be overridden on individual pages; this is the default." }
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Paragraph, part before the deposit amount", name: paragraph_intro, widget: string, hint: "The deposit percent itself comes from Business Facts, not here. Keep the trailing space." }
+              - { label: "Paragraph, part before the deposit amount", name: paragraph_intro, widget: string, hint: "The deposit percent itself comes from Business info and prices, not here. Keep the trailing space." }
               - { label: "Word after the deposit amount", name: paragraph_unit_word, widget: string, hint: "The single word right after the deposit percent, normally deposit." }
               - { label: "Paragraph, part after the deposit amount", name: paragraph_outro, widget: text, hint: "Keep the leading space." }
               - { label: "Location label", name: location_label, widget: string, hint: "Bold word above the address." }
               - { label: "Hours label", name: hours_label, widget: string, hint: "Bold word above the hours." }
               - { label: "Contact label", name: contact_label, widget: string, hint: "Bold word above the phone and email." }
               - { label: "Book button text", name: button_text, widget: string }
-              - { label: "Notice line prefix", name: notice_prefix, widget: string, hint: "Comes right before the closure notice from Business Facts. Keep the trailing space, for example \"Please note: \"." }
+              - { label: "Notice line prefix", name: notice_prefix, widget: string, hint: "Comes right before the closure notice from Business info and prices. Keep the trailing space, for example \"Please note: \"." }
 
       - name: home
         label: "Home page"
@@ -530,7 +530,7 @@ collections:
                 name: items
                 widget: list
                 label_singular: "Item"
-                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line. Keep any &ndash; or &middot; as it is, they show as a dash or a dot." }
           - label: "What to expect steps"
             name: visit
             widget: object
@@ -598,7 +598,7 @@ collections:
                 name: items
                 widget: list
                 label_singular: "Item"
-                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line. Keep any &ndash; or &middot; as it is, they show as a dash or a dot." }
           - label: "What to expect steps"
             name: visit
             widget: object
@@ -666,7 +666,7 @@ collections:
                 name: items
                 widget: list
                 label_singular: "Item"
-                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line. Keep any &ndash; or &middot; as it is, they show as a dash or a dot." }
           - label: "What to expect steps"
             name: visit
             widget: object
@@ -734,7 +734,7 @@ collections:
                 name: items
                 widget: list
                 label_singular: "Item"
-                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line. Keep any &ndash; or &middot; as it is, they show as a dash or a dot." }
           - label: "What to expect steps"
             name: visit
             widget: object
@@ -1021,91 +1021,91 @@ collections:
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Back area, any other goal"
                     name: back_relax
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Unwanted facial hair"
                     name: smooth
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Eyes and brows area, 75+ minutes"
                     name: eyes_long
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Eyes and brows area, under 45 minutes"
                     name: eyes_short
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Eyes and brows area, about an hour"
                     name: eyes_medium
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Event-ready skin goal, 75+ minutes"
                     name: event_long
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Event-ready skin goal, under 45 minutes"
                     name: event_short
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Event-ready skin goal, about an hour"
                     name: event_medium
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Face area, no special goal, under 45 minutes"
                     name: default_short
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Face area, goal is relaxation, 75+ minutes"
                     name: default_long_relax
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Face area, other goal, 75+ minutes"
                     name: default_long_other
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
                   - label: "Face area, no special goal, about an hour"
                     name: default_medium
                     widget: object
                     fields:
                       - { label: "Service name", name: name, widget: string }
-                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string, hint: "Must match Square. Keep the &middot; between the price and the time as it is, it shows as a small dot." }
                       - { label: "Why this one", name: why, widget: text }
 
       - name: policies_faq
@@ -1130,7 +1130,7 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Paragraph, part before the deposit amount", name: intro, widget: string, hint: "The deposit percent itself comes from Business Facts, not here. Keep the trailing space, for example \"A \"." }
+              - { label: "Paragraph, part before the deposit amount", name: intro, widget: string, hint: "The deposit percent itself comes from Business info and prices, not here. Keep the trailing space, for example \"A \"." }
               - { label: "Word after the deposit amount", name: unit_word, widget: string, hint: "Shown in bold right after the deposit percent, normally deposit." }
               - { label: "Paragraph, part after the deposit amount", name: outro, widget: text }
           - label: "Cancellations & Rescheduling"
@@ -1138,10 +1138,10 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
-              - { label: "Paragraph, part before the notice period", name: intro, widget: string, hint: "The notice period itself comes from Business Facts, not here. Keep the trailing space." }
+              - { label: "Paragraph, part before the notice period", name: intro, widget: string, hint: "The notice period itself comes from Business info and prices, not here. Keep the trailing space." }
               - { label: "Text right after the notice period", name: unit_word, widget: string, hint: "Shown in bold right after the notice period, normally an apostrophe and the word notice, for example \"' notice\". No leading space." }
               - { label: "Paragraph, part after the notice period", name: outro, widget: text }
-              - { label: "Less than 24 hours label", name: fee_short_label, widget: string, hint: "The fee percent itself comes from Business Facts." }
+              - { label: "Less than 24 hours label", name: fee_short_label, widget: string, hint: "The fee percent itself comes from Business info and prices." }
               - { label: "Same-day label", name: fee_same_day_label, widget: string }
               - { label: "No-show label", name: fee_no_show_label, widget: string }
               - { label: "Fee line ending", name: fee_suffix, widget: string, hint: "Repeated after all three fee percents, for example \" of the service price\". Keep the leading space." }
@@ -1168,7 +1168,7 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Paragraph, part before the accepted payment types", name: intro, widget: string, hint: "The payment types list comes from Business Facts, not here. Keep the trailing space, for example \"We accept \"." }
+              - { label: "Paragraph, part before the accepted payment types", name: intro, widget: string, hint: "The payment types list comes from Business info and prices, not here. Keep the trailing space, for example \"We accept \"." }
               - { label: "Paragraph, part after the accepted payment types", name: outro, widget: string, hint: "Usually just a period." }
           - label: "Upcoming Closures"
             name: upcoming_closures
@@ -1180,9 +1180,9 @@ collections:
             name: contact_line
             widget: object
             fields:
-              - { label: "Part before the phone link", name: intro, widget: string, hint: "The phone number comes from Business Facts. Keep the trailing space." }
+              - { label: "Part before the phone link", name: intro, widget: string, hint: "The phone number comes from Business info and prices. Keep the trailing space." }
               - { label: "Part between the phone and email links", name: mid, widget: string, hint: "Keep the spaces on both sides." }
-              - { label: "Part after the email link", name: outro, widget: string, hint: "The email address comes from Business Facts." }
+              - { label: "Part after the email link", name: outro, widget: string, hint: "The email address comes from Business info and prices." }
           - label: "Frequently Asked Questions"
             name: faq
             widget: object
@@ -1271,14 +1271,14 @@ collections:
                   - { label: "Friday label", name: friday_label, widget: string }
                   - { label: "Saturday label", name: saturday_label, widget: string }
                   - { label: "Sunday label", name: sunday_label, widget: string }
-              - { label: "Closure notice", name: notice, widget: text, hint: "Shown under the hours. Keep &ndash; as it is, it shows as a dash. This currently repeats the closure notice already set in the main site settings; check with the studio before editing, so the two do not say different things." }
+              - { label: "Closure notice", name: notice, widget: text, hint: "Shown under the hours. Keep &ndash; as it is, it shows as a dash. This currently repeats the closure notice already set in Business info and prices; check with the studio before editing, so the two do not say different things." }
           - label: "Contact form status messages"
             name: form_feedback
             widget: object
             fields:
               - { label: "Sending message", name: sending, widget: string, hint: "Shown for a moment while the form submits." }
               - { label: "Success message", name: success, widget: string }
-              - { label: "Error message", name: error, widget: string, hint: "Shown if the form fails to send. Leave {{PHONE}} exactly as it is, do not type a phone number there. The page fills it in automatically from the phone number in the main site settings." }
+              - { label: "Error message", name: error, widget: string, hint: "Shown if the form fails to send. Leave {{PHONE}} exactly as it is, do not type a phone number there. The page fills it in automatically from the phone number in Business info and prices." }
 
       - name: privacy
         label: "Privacy page"
@@ -1322,7 +1322,7 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Paragraph, part before the email link", name: intro, widget: text, hint: "Keep the trailing space. Ends right before the email address, which comes from Business Facts." }
+              - { label: "Paragraph, part before the email link", name: intro, widget: text, hint: "Keep the trailing space. Ends right before the email address, which comes from Business info and prices." }
               - { label: "Paragraph, part between the email and phone links", name: mid, widget: string, hint: "Keep the spaces on both sides." }
               - { label: "Paragraph, part after the phone link", name: outro, widget: text }
           - label: "Effective-date line"

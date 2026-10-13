@@ -25,7 +25,7 @@ og_image_height: 2131
     </div>
     <div class="trust"><span>{{ pages.home.hero.trust_1 | safe }}</span><span class="dot"></span><span>{{ pages.home.hero.trust_2 | safe }}</span><span class="dot"></span><span>{{ pages.home.hero.trust_3 | safe }}</span></div>
   </div>
-  <div class="wrap"><div class="frame heroimg"><img src="img/hero-facial.webp" alt="{{ pages.home.hero.image_alt | safe }}" width="1600" height="2131" loading="eager" fetchpriority="high" style="height:380px"></div></div>
+  <div class="wrap"><div class="frame heroimg"><img src="img/hero-facial.webp" alt="{{ pages.home.hero.image_alt | replace('"', '&quot;') | safe }}" width="1600" height="2131" loading="eager" fetchpriority="high" style="height:380px"></div></div>
 </section>
 
 <div class="band" aria-hidden="true"><div class="track">{% for item in pages.home.band_items %}<span>{{ item | safe }}</span>{% endfor %}{% for item in pages.home.band_items %}<span>{{ item | safe }}</span>{% endfor %}</div></div>
@@ -40,21 +40,21 @@ og_image_height: 2131
           <h3>{{ pages.home.services.facials.heading | safe }}</h3>
           <p class="desc editable">{{ pages.home.services.facials.desc | safe }}</p>
           <div class="price-row"><span>{{ site.services.facials[0].name }}</span><span class="pr">{{ site.services.facials[0].price }} &middot; {{ site.services.facials[0].duration }}</span></div>
-          <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.facials.row1_tooltip | safe }}" tabindex="0">{{ site.services.facials[1].name }}</span><span class="pr">{{ site.services.facials[1].price }} &middot; {{ site.services.facials[1].duration }}</span></div>
+          <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.facials.row1_tooltip | replace('"', '&quot;') | safe }}" tabindex="0">{{ site.services.facials[1].name }}</span><span class="pr">{{ site.services.facials[1].price }} &middot; {{ site.services.facials[1].duration }}</span></div>
           <div class="price-row"><span>{{ site.services.facials[2].name }}</span><span class="pr">{{ site.services.facials[2].price }} &middot; {{ site.services.facials[2].duration }}</span></div>
           <div class="price-row"><span>{{ site.services.facials[3].name }}</span><span class="pr">{{ site.services.facials[3].price }} &middot; {{ site.services.facials[3].duration }}</span></div>
           <a class="more" href="services-facials.html">{{ pages.home.services.facials.link_text | safe }}</a>
         </div>
-        <div class="frame" style="height:250px"><img src="img/facial-mask.webp" alt="{{ pages.home.services.facials.image_alt | safe }}" width="1100" height="1466" loading="lazy"></div>
+        <div class="frame" style="height:250px"><img src="img/facial-mask.webp" alt="{{ pages.home.services.facials.image_alt | replace('"', '&quot;') | safe }}" width="1100" height="1466" loading="lazy"></div>
       </div>
       <div class="svc"><h3>{{ pages.home.services.lashes.heading | safe }}</h3>
         <div class="price-row"><span>{{ site.services.lashes[0].name }}</span><span class="pr">{{ site.services.lashes[0].price }} &middot; {{ site.services.lashes[0].duration }}</span></div>
-        <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.lashes.row1_tooltip | safe }}" tabindex="0">{{ site.services.lashes[1].name }}</span><span class="pr">{{ site.services.lashes[1].price }} &middot; {{ site.services.lashes[1].duration }}</span></div>
+        <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.lashes.row1_tooltip | replace('"', '&quot;') | safe }}" tabindex="0">{{ site.services.lashes[1].name }}</span><span class="pr">{{ site.services.lashes[1].price }} &middot; {{ site.services.lashes[1].duration }}</span></div>
         <a class="more" href="services-lashes.html">{{ pages.home.services.lashes.link_text | safe }}</a>
       </div>
       <div class="svc"><h3>{{ pages.home.services.brows.heading | safe }}</h3>
         <div class="price-row"><span>{{ site.services.brows[0].name }}</span><span class="pr">{{ site.services.brows[0].price }} &middot; {{ site.services.brows[0].duration }}</span></div>
-        <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.brows.row1_tooltip | safe }}" tabindex="0">{{ site.services.brows[1].name }}</span><span class="pr">{{ site.services.brows[1].price }} &middot; {{ site.services.brows[1].duration }}</span></div>
+        <div class="price-row"><span class="tip" data-tooltip="{{ pages.home.services.brows.row1_tooltip | replace('"', '&quot;') | safe }}" tabindex="0">{{ site.services.brows[1].name }}</span><span class="pr">{{ site.services.brows[1].price }} &middot; {{ site.services.brows[1].duration }}</span></div>
         <div class="price-row"><span>{{ site.services.brows[3].name }}</span><span class="pr">{{ site.services.brows[3].price }} &middot; {{ site.services.brows[3].duration }}</span></div>
         <a class="more" href="services-brows.html">{{ pages.home.services.brows.link_text | safe }}</a>
       </div>
@@ -69,7 +69,7 @@ og_image_height: 2131
         <div class="price-row"><span>{{ site.services.back[1].name }}</span><span class="pr">{{ site.services.back[1].price }} &middot; {{ site.services.back[1].duration }}</span></div>
         <a class="more" href="services-back.html">{{ pages.home.services.back.link_text | safe }}</a>
       </div>
-      <div class="svc" style="grid-column:1 / -1;align-items:center;text-align:center"><span class="tag new" style="align-self:center" data-tooltip="{{ pages.home.services.led.tag_new_tooltip | safe }}" data-tip="bottom" tabindex="0">{{ pages.home.services.led.tag_new | safe }}</span><h3>{{ pages.home.services.led.heading | safe }}</h3>
+      <div class="svc" style="grid-column:1 / -1;align-items:center;text-align:center"><span class="tag new" style="align-self:center" data-tooltip="{{ pages.home.services.led.tag_new_tooltip | replace('"', '&quot;') | safe }}" data-tip="bottom" tabindex="0">{{ pages.home.services.led.tag_new | safe }}</span><h3>{{ pages.home.services.led.heading | safe }}</h3>
         <p class="desc editable" style="max-width:520px">{{ pages.home.services.led.desc_before | safe }}{{ site.services.led[0].price }}{{ pages.home.services.led.desc_after | safe }}</p>
         <a class="more" href="services-led.html">{{ pages.home.services.led.link_text | safe }}</a>
       </div>
@@ -86,14 +86,14 @@ og_image_height: 2131
     <div class="grid3">
       <div class="vp d1"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="19" cy="19" r="15"/><path d="M12 20c3 4 11 4 14-1"/><circle cx="14" cy="15" r="1" fill="currentColor"/><circle cx="24" cy="15" r="1" fill="currentColor"/></svg></div><h3>{{ pages.home.experience.vp1_heading | safe }}</h3><p class="editable">{{ pages.home.experience.vp1_body | safe }}</p></div>
       <div class="vp d2"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 4c-6 7-11 11-11 19a11 11 0 0 0 22 0c0-8-5-12-11-19z"/></svg></div><h3>{{ pages.home.experience.vp2_heading | safe }}</h3><p class="editable">{{ pages.home.experience.vp2_body | safe }}</p></div>
-      <div class="vp d3"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8" width="26" height="24" rx="2"/><path d="M6 15h26M13 5v6M25 5v6M15 24l3 3 6-6"/></svg></div><h3>{{ pages.home.experience.vp3_heading | safe }}</h3><p class="editable">{{ pages.home.experience.vp3_body_before | safe }}<span class="tip" data-tooltip="{{ pages.home.experience.vp3_tooltip | safe }}" tabindex="0">{{ site.policies.deposit_pct }}{{ pages.home.experience.vp3_body_after | safe }}</span>{{ pages.home.experience.vp3_body_end | safe }}</p></div>
+      <div class="vp d3"><div class="ic"><svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8" width="26" height="24" rx="2"/><path d="M6 15h26M13 5v6M25 5v6M15 24l3 3 6-6"/></svg></div><h3>{{ pages.home.experience.vp3_heading | safe }}</h3><p class="editable">{{ pages.home.experience.vp3_body_before | safe }}<span class="tip" data-tooltip="{{ pages.home.experience.vp3_tooltip | replace('"', '&quot;') | safe }}" tabindex="0">{{ site.policies.deposit_pct }}{{ pages.home.experience.vp3_body_after | safe }}</span>{{ pages.home.experience.vp3_body_end | safe }}</p></div>
     </div>
   </div>
 </section>
 
 <section class="svcs reveal">
   <div class="wrap split">
-    <div class="frame portrait"><img src="img/jillian-portrait.webp" alt="Jillian Easter, licensed esthetician and owner of Rosemary Esthetics in Idaho Falls" width="533" height="1286" loading="lazy"></div>
+    <div class="frame portrait"><img src="img/jillian-portrait.webp" alt="{{ pages.home.intro.image_alt | replace('"', '&quot;') | safe }}" width="533" height="1286" loading="lazy"></div>
     <div>
       <div class="eyebrow">{{ pages.home.intro.eyebrow | safe }}</div>
       <h2>{{ pages.home.intro.heading | safe }}</h2>
@@ -109,9 +109,9 @@ og_image_height: 2131
   <div class="wrap">
     <div class="sec-head"><div class="eyebrow">{{ pages.home.studio.eyebrow | safe }}</div><h2>{{ pages.home.studio.heading | safe }}</h2></div>
     <div class="gal-grid">
-      <figure class="gcard"><div class="frame"><img src="img/dermaplane-detail.webp" alt="{{ pages.home.studio.image1_alt | safe }}" width="1100" height="1465" loading="lazy"></div></figure>
-      <figure class="gcard"><div class="frame"><img src="img/lash-lift-1.webp" alt="{{ pages.home.studio.image2_alt | safe }}" width="1100" height="1466" loading="lazy"></div></figure>
-      <figure class="gcard"><div class="frame"><img src="img/glow-portrait.webp" alt="{{ pages.home.studio.image3_alt | safe }}" width="1100" height="1466" loading="lazy"></div></figure>
+      <figure class="gcard"><div class="frame"><img src="img/dermaplane-detail.webp" alt="{{ pages.home.studio.image1_alt | replace('"', '&quot;') | safe }}" width="1100" height="1465" loading="lazy"></div></figure>
+      <figure class="gcard"><div class="frame"><img src="img/lash-lift-1.webp" alt="{{ pages.home.studio.image2_alt | replace('"', '&quot;') | safe }}" width="1100" height="1466" loading="lazy"></div></figure>
+      <figure class="gcard"><div class="frame"><img src="img/glow-portrait.webp" alt="{{ pages.home.studio.image3_alt | replace('"', '&quot;') | safe }}" width="1100" height="1466" loading="lazy"></div></figure>
     </div>
     <div class="center" style="margin-top:34px"><a href="gallery.html" class="btn ghost">{{ pages.home.studio.link_text | safe }}</a></div>
   </div>

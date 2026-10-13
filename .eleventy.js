@@ -12,6 +12,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
+  // Prints editor-supplied text as a JavaScript string literal. "<" is escaped so a typed
+  // "</script>" cannot end the inline script it sits in.
+  eleventyConfig.addFilter("jsString", (v) => JSON.stringify(String(v == null ? "" : v)).replace(/</g, "\\u003c"));
+
   // Sveltia CMS (the client's content editor) lives at /admin/. Copy its two files
   // verbatim; the admin folder is ignored below so Eleventy never renders them as pages.
   eleventyConfig.addPassthroughCopy("admin/index.html");
