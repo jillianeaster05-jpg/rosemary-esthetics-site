@@ -177,4 +177,1155 @@ collections:
     editor:
       preview: false
     files:
-      # PAGES-PARTS-GO-HERE
+      - name: shared
+        label: "Header, footer and booking box (every page)"
+        file: "_data/pages/shared.json"
+        fields:
+          - label: "Top navigation menu"
+            name: nav
+            widget: object
+            fields:
+              - { label: "Skip-to-content link (screen readers only)", name: skip_text, widget: string, hint: "Not seen by most visitors. Leave as is unless asked to change it." }
+              - { label: "Mobile menu button", name: menu_text, widget: string, hint: "The word on the menu button on phones." }
+              - { label: "Home link", name: home, widget: string }
+              - { label: "Services link", name: services, widget: string }
+              - { label: "Gallery link", name: gallery, widget: string }
+              - { label: "About link", name: about, widget: string }
+              - { label: "Policies link", name: policies, widget: string }
+              - { label: "Contact link", name: contact, widget: string }
+              - { label: "Book Now button", name: book_now, widget: string, hint: "Used in the top menu, the footer, and the phone bottom bar. One change updates all three." }
+          - label: "Footer (extra links and bottom lines)"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Reviews link", name: reviews, widget: string }
+              - { label: "Find Your Treatment link", name: find_your_treatment, widget: string }
+              - { label: "Policies & FAQ link", name: policies_faq, widget: string }
+              - { label: "Privacy link", name: privacy, widget: string }
+              - { label: "Instagram link text", name: instagram, widget: string }
+              - { label: "TikTok link text", name: tiktok, widget: string }
+              - { label: "Facebook link text", name: facebook, widget: string }
+              - { label: "Copyright year", name: copyright_year, widget: string, hint: "The year shown next to the copyright symbol at the very bottom of every page. Update each January." }
+              - { label: "Copyright state name", name: copyright_state, widget: string, hint: "Spelled-out state name shown at the very bottom of every page, for example Idaho." }
+          - label: "Phone bottom bar (mobile only)"
+            name: mobile_bar
+            widget: object
+            fields:
+              - { label: "Call button", name: call_text, widget: string, hint: "Shown only on phones, next to Book Now." }
+          - label: "Booking box (bottom of every page)"
+            name: book_cta
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string, hint: "Can be overridden on individual pages; this is the default." }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the deposit amount", name: paragraph_intro, widget: string, hint: "The deposit percent itself comes from Business Facts, not here. Keep the trailing space." }
+              - { label: "Word after the deposit amount", name: paragraph_unit_word, widget: string, hint: "The single word right after the deposit percent, normally deposit." }
+              - { label: "Paragraph, part after the deposit amount", name: paragraph_outro, widget: text, hint: "Keep the leading space." }
+              - { label: "Location label", name: location_label, widget: string, hint: "Bold word above the address." }
+              - { label: "Hours label", name: hours_label, widget: string, hint: "Bold word above the hours." }
+              - { label: "Contact label", name: contact_label, widget: string, hint: "Bold word above the phone and email." }
+              - { label: "Book button text", name: button_text, widget: string }
+              - { label: "Notice line prefix", name: notice_prefix, widget: string, hint: "Comes right before the closure notice from Business Facts. Keep the trailing space, for example \"Please note: \"." }
+
+      - name: home
+        label: "Home page"
+        file: "_data/pages/home.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &nbsp; between the two words as it is. It keeps the name on one line." }
+              - { label: "Paragraph", name: lead, widget: text, hint: "Keep the <b> tags as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+              - { label: "View services button text", name: cta_services, widget: string }
+              - { label: "Trust line, part 1", name: trust_1, widget: string }
+              - { label: "Trust line, part 2", name: trust_2, widget: string }
+              - { label: "Trust line, part 3", name: trust_3, widget: string }
+              - { label: "Hero photo description (for screen readers)", name: image_alt, widget: string }
+          - label: "Scrolling word banner"
+            name: band_items
+            widget: list
+            label_singular: "Word"
+            summary: "{{fields.value}}"
+            field: { name: value, widget: string, label: "Word" }
+          - label: "Treatments and Pricing section"
+            name: services
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: intro, widget: text }
+              - label: "Facials card"
+                name: facials
+                widget: object
+                fields:
+                  - { label: "Small badge text", name: tag, widget: string }
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Card description", name: desc, widget: text }
+                  - { label: "Tooltip on the dermaplane facial row", name: row1_tooltip, widget: text, hint: "Shown when a visitor hovers or taps the second facial's name." }
+                  - { label: "Link text to facial details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+                  - { label: "Facial photo description (for screen readers)", name: image_alt, widget: string }
+              - label: "Lashes card"
+                name: lashes
+                widget: object
+                fields:
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Tooltip on the eyelash lift row", name: row1_tooltip, widget: text, hint: "Shown when a visitor hovers or taps the lash lift name." }
+                  - { label: "Link text to lash details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+              - label: "Brows card"
+                name: brows
+                widget: object
+                fields:
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Tooltip on the brow lamination row", name: row1_tooltip, widget: text, hint: "Shown when a visitor hovers or taps the brow lamination name." }
+                  - { label: "Link text to brow details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+              - label: "Waxing card"
+                name: waxing
+                widget: object
+                fields:
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Third row name", name: row2_name, widget: string, hint: "This row covers both the Lip and the Chin wax, which share a price. It is typed in here, not pulled from the price list." }
+                  - { label: "Link text to waxing details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+              - label: "Back treatments card"
+                name: back
+                widget: object
+                fields:
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Link text to back treatment details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+              - label: "LED light therapy card"
+                name: led
+                widget: object
+                fields:
+                  - { label: "New badge text", name: tag_new, widget: string }
+                  - { label: "New badge tooltip", name: tag_new_tooltip, widget: text }
+                  - { label: "Card heading", name: heading, widget: string }
+                  - { label: "Description, before the price", name: desc_before, widget: text, hint: "The price itself is pulled from the price list automatically." }
+                  - { label: "Description, after the price", name: desc_after, widget: text }
+                  - { label: "Link text to LED details page", name: link_text, widget: string, hint: "Keep the &rarr; as it is." }
+              - { label: "Book Your Visit button text", name: book_cta, widget: string }
+              - { label: "Quiz prompt, before the link", name: quiz_prompt, widget: string }
+              - { label: "Quiz link text", name: quiz_link_text, widget: string }
+          - label: "Skincare Experience section"
+            name: experience
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Card 1 heading", name: vp1_heading, widget: string }
+              - { label: "Card 1 body", name: vp1_body, widget: text }
+              - { label: "Card 2 heading", name: vp2_heading, widget: string }
+              - { label: "Card 2 body", name: vp2_body, widget: text }
+              - { label: "Card 3 heading", name: vp3_heading, widget: string }
+              - { label: "Card 3 body, before the deposit amount", name: vp3_body_before, widget: text, hint: "The deposit percentage is pulled in automatically." }
+              - { label: "Card 3 tooltip on the deposit amount", name: vp3_tooltip, widget: text }
+              - { label: "Card 3 body, right after the deposit amount", name: vp3_body_after, widget: string, hint: "Usually just the word deposit with a leading space." }
+              - { label: "Card 3 body, to the end", name: vp3_body_end, widget: text }
+          - label: "Meet Jillian section"
+            name: intro
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph 1", name: para1, widget: text }
+              - { label: "Paragraph 2", name: para2, widget: text }
+              - { label: "Link text to the About page", name: link_text, widget: string }
+              - { label: "Jillian photo description (for screen readers)", name: image_alt, widget: string }
+              - { label: "Signature text", name: signature, widget: string }
+          - label: "Studio photos section"
+            name: studio
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Photo 1 description (for screen readers)", name: image1_alt, widget: string }
+              - { label: "Photo 2 description (for screen readers)", name: image2_alt, widget: string }
+              - { label: "Photo 3 description (for screen readers)", name: image3_alt, widget: string }
+              - { label: "Link text to the gallery page", name: link_text, widget: string }
+          - label: "Follow Along (Instagram) section"
+            name: social
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, before the Instagram link", name: body_before, widget: text }
+              - { label: "Instagram link text", name: instagram_link_text, widget: string }
+              - { label: "Paragraph, between the two links", name: body_middle, widget: text }
+              - { label: "Google review link text", name: review_link_text, widget: string }
+              - { label: "Paragraph, after the review link", name: body_after, widget: string, hint: "Usually just a period." }
+              - { label: "Instagram button text", name: btn_instagram, widget: string }
+              - { label: "Google review button text", name: btn_review, widget: string }
+
+      - name: about
+        label: "About page"
+        file: "_data/pages/about.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+          - label: "My Story section"
+            name: story
+            widget: object
+            fields:
+              - { label: "Jillian photo description (for screen readers)", name: image_alt, widget: string }
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph 1", name: para1, widget: text }
+              - { label: "Paragraph 2", name: para2, widget: text }
+              - { label: "Paragraph 3", name: para3, widget: text }
+              - { label: "Paragraph 4", name: para4, widget: text }
+              - { label: "Signature text", name: signature, widget: string }
+          - label: "Credentials section"
+            name: credentials
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - label: "Credential list"
+                name: items
+                widget: list
+                label_singular: "Credential"
+                summary: "{{fields.value}}"
+                field: { name: value, widget: string, label: "Credential", hint: "Keep any <b> tags and &amp; as they are." }
+              - { label: "Second photo description (for screen readers)", name: image_alt, widget: string }
+          - label: "Comfortable for Everyone section"
+            name: studio
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph, before the street address", name: intro_before, widget: string, hint: "The street address is pulled in automatically." }
+              - { label: "Intro paragraph, after the street address", name: intro_after, widget: string }
+              - { label: "Card 1 heading", name: vp1_heading, widget: string }
+              - { label: "Card 1 body", name: vp1_body, widget: text }
+              - { label: "Card 2 heading", name: vp2_heading, widget: string }
+              - { label: "Card 2 body", name: vp2_body, widget: text }
+              - { label: "Book button text", name: cta, widget: string }
+
+      - name: services
+        label: "Services page (hub)"
+        file: "_data/pages/services.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; entity as it is." }
+              - { label: "Paragraph, part before the deposit amount", name: lead_before, widget: text, hint: "The deposit percentage itself is filled in automatically after this text and before the next field." }
+              - { label: "Paragraph, part after the deposit amount", name: lead_after, widget: text }
+              - { label: "Book button text", name: cta_book, widget: string }
+              - { label: "Find Your Treatment button text", name: cta_find, widget: string }
+          - label: "Service category sections"
+            name: services
+            widget: object
+            fields:
+              - { label: "Read more link text (used on every category)", name: more_text, widget: string, hint: "Keep the &amp; and &rarr; entities as they are." }
+              - label: "Facials section"
+                name: facials
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "Lashes section"
+                name: lashes
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "Brows section"
+                name: brows
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "Waxing section"
+                name: waxing
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "Back Treatments section"
+                name: back
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "LED Light Therapy section"
+                name: led
+                widget: object
+                fields:
+                  - { label: "Small badge word before the heading (for example New)", name: tag, widget: string }
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+              - label: "Add-ons section"
+                name: addons
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Short description", name: body, widget: text }
+
+      - name: services_facials
+        label: "Facials page"
+        file: "_data/pages/services_facials.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Breadcrumb"
+            name: crumb
+            widget: object
+            fields:
+              - { label: "Parent page link text (Services)", name: parent, widget: string }
+              - { label: "Current page name (Facials)", name: current, widget: string }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; entity as it is." }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Pricing block labels"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Photo"
+            name: image
+            widget: object
+            fields:
+              - { label: "Alt text (describes the photo for screen readers and search engines)", name: alt, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the list", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "Item"
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+          - label: "What to expect steps"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Explore more links"
+            name: related
+            widget: object
+            fields:
+              - { label: "Label before the links", name: label, widget: string }
+              - { label: "Lashes link text", name: lashes, widget: string }
+              - { label: "Brows link text", name: brows, widget: string }
+              - { label: "LED Light Therapy link text", name: led, widget: string }
+
+      - name: services_lashes
+        label: "Lashes page"
+        file: "_data/pages/services_lashes.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Breadcrumb"
+            name: crumb
+            widget: object
+            fields:
+              - { label: "Parent page link text (Services)", name: parent, widget: string }
+              - { label: "Current page name (Lashes)", name: current, widget: string }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; entity as it is." }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Pricing block labels"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Photo"
+            name: image
+            widget: object
+            fields:
+              - { label: "Alt text (describes the photo for screen readers and search engines)", name: alt, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the list", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "Item"
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+          - label: "What to expect steps"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Explore more links"
+            name: related
+            widget: object
+            fields:
+              - { label: "Label before the links", name: label, widget: string }
+              - { label: "Brows link text", name: brows, widget: string }
+              - { label: "Facials link text", name: facials, widget: string }
+              - { label: "Waxing link text", name: waxing, widget: string }
+
+      - name: services_brows
+        label: "Brows page"
+        file: "_data/pages/services_brows.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Breadcrumb"
+            name: crumb
+            widget: object
+            fields:
+              - { label: "Parent page link text (Services)", name: parent, widget: string }
+              - { label: "Current page name (Brows)", name: current, widget: string }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Pricing block labels"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Photo"
+            name: image
+            widget: object
+            fields:
+              - { label: "Alt text (describes the photo for screen readers and search engines)", name: alt, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the list", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "Item"
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+          - label: "What to expect steps"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Explore more links"
+            name: related
+            widget: object
+            fields:
+              - { label: "Label before the links", name: label, widget: string }
+              - { label: "Lashes link text", name: lashes, widget: string }
+              - { label: "Waxing link text", name: waxing, widget: string }
+              - { label: "Facials link text", name: facials, widget: string }
+
+      - name: services_waxing
+        label: "Waxing page"
+        file: "_data/pages/services_waxing.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Breadcrumb"
+            name: crumb
+            widget: object
+            fields:
+              - { label: "Parent page link text (Services)", name: parent, widget: string }
+              - { label: "Current page name (Waxing)", name: current, widget: string }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; entity as it is." }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Pricing block labels"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Photo"
+            name: image
+            widget: object
+            fields:
+              - { label: "Alt text (describes the photo for screen readers and search engines)", name: alt, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the list", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "Item"
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+          - label: "What to expect steps"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Explore more links"
+            name: related
+            widget: object
+            fields:
+              - { label: "Label before the links", name: label, widget: string }
+              - { label: "Brows link text", name: brows, widget: string }
+              - { label: "Facials link text", name: facials, widget: string }
+              - { label: "Lashes link text", name: lashes, widget: string }
+
+      - name: services_back
+        label: "Back Treatments page"
+        file: "_data/pages/services_back.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Breadcrumb link back to Services", name: crumb_label, widget: string, hint: "The small link at the very top of the page, before the slash." }
+              - { label: "Breadcrumb current page name", name: crumb_current, widget: string, hint: "The small text at the very top of the page, after the slash." }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the top paragraph." }
+          - label: "Pricing section"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "item"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Item text", name: text, widget: text, hint: "Keep the <b> tags around the bolded lead-in words, and keep &ndash; and other HTML codes as they are." }
+          - label: "What to expect section"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the steps." }
+              - { label: "Explore more label", name: explore_label, widget: string, hint: "The text right before the Facials / LED Light Therapy / Waxing links at the bottom of the page. Keep the trailing space." }
+              - label: "Explore more link text"
+                name: explore_links
+                widget: object
+                fields:
+                  - { label: "Facials link text", name: facials, widget: string }
+                  - { label: "LED Light Therapy link text", name: led, widget: string }
+                  - { label: "Waxing link text", name: waxing, widget: string }
+
+      - name: services_led
+        label: "LED Light Therapy page"
+        file: "_data/pages/services_led.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Breadcrumb link back to Services", name: crumb_label, widget: string, hint: "The small link at the very top of the page, before the slash." }
+              - { label: "Breadcrumb current page name", name: crumb_current, widget: string, hint: "The small text at the very top of the page, after the slash." }
+              - { label: "New badge text", name: tag_new, widget: string, hint: "The small pink badge above the heading." }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the top paragraph." }
+          - label: "Pricing section"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "item"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Item text", name: text, widget: text, hint: "Keep the <b> tags around the bolded lead-in words. The first item has {{PRICE}} inside it. Leave {{PRICE}} exactly as it is, do not type a dollar amount there. The page fills it in automatically from the price list above, which must match Square." }
+          - label: "What to expect section"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text }
+              - { label: "Book button text", name: cta, widget: string, hint: "The button under the steps." }
+              - { label: "Explore more label", name: explore_label, widget: string, hint: "The text right before the Facials / Back Treatments / Brows links at the bottom of the page. Keep the trailing space." }
+              - label: "Explore more link text"
+                name: explore_links
+                widget: object
+                fields:
+                  - { label: "Facials link text", name: facials, widget: string }
+                  - { label: "Back Treatments link text", name: back, widget: string }
+                  - { label: "Brows link text", name: brows, widget: string }
+
+      - name: gallery
+        label: "Gallery page"
+        file: "_data/pages/gallery.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, before the Instagram link", name: lead_before, widget: text }
+              - { label: "Instagram link text", name: lead_link_text, widget: string }
+              - { label: "Paragraph, after the Instagram link", name: lead_after, widget: string, hint: "Usually just a period." }
+          - label: "Gallery photos"
+            name: tiles
+            widget: list
+            label_singular: "Photo"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Photo", name: src, widget: string, hint: "File path under img/. Technical, ask your developer before changing." }
+              - { label: "Photo description (for screen readers)", name: alt, widget: string }
+              - { label: "Photo width in pixels", name: width, widget: number, hint: "Technical, ask your developer before changing." }
+              - { label: "Photo height in pixels", name: height, widget: number, hint: "Technical, ask your developer before changing." }
+              - { label: "Caption shown under the photo", name: caption, widget: string, hint: "Keep any &amp; as it is." }
+          - { label: "Bottom button text", name: cta, widget: string }
+
+      - name: reviews
+        label: "Reviews page"
+        file: "_data/pages/reviews.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+              - { label: "Google review button text", name: cta, widget: string }
+          - label: "Been in recently card"
+            name: card1
+            widget: object
+            fields:
+              - { label: "Card heading", name: heading, widget: string }
+              - { label: "Body, before the review link", name: body_a, widget: string }
+              - { label: "Review link text", name: link_text, widget: string }
+              - { label: "Body, between the review link and the phone number", name: body_b, widget: string, hint: "The phone number is pulled in automatically." }
+              - { label: "Body, between the phone number and the email", name: body_c, widget: string, hint: "The email is pulled in automatically." }
+              - { label: "Body, after the email", name: body_d, widget: string, hint: "Usually just a period." }
+          - label: "Thinking about visiting card"
+            name: card2
+            widget: object
+            fields:
+              - { label: "Card heading", name: heading, widget: string }
+              - { label: "Body, before the Instagram link", name: body_a, widget: string }
+              - { label: "Instagram link text", name: link_a_text, widget: string }
+              - { label: "Body, between the two links", name: body_b, widget: string }
+              - { label: "TikTok link text", name: link_b_text, widget: string }
+              - { label: "Body, after the TikTok link", name: body_c, widget: string }
+          - label: "Follow Along section"
+            name: social
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Instagram button text", name: cta, widget: string }
+
+      - name: find_your_treatment
+        label: "Find Your Treatment quiz page"
+        file: "_data/pages/find_your_treatment.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+          - label: "Quiz"
+            name: quiz
+            widget: object
+            fields:
+              - label: "The three questions"
+                name: questions
+                widget: list
+                label_singular: "question"
+                summary: "{{fields.prompt}}"
+                hint: "There must always be exactly three questions, in this order. Do not add, remove, or reorder them, the quiz logic behind the scenes expects exactly these three in this order."
+                fields:
+                  - { label: "Question counter text", name: qnum, widget: string, hint: "For example Question 1 of 3." }
+                  - { label: "Question text", name: prompt, widget: string }
+                  - label: "Answer choices"
+                    name: options
+                    widget: list
+                    label_singular: "answer"
+                    hint: "Do not add, remove, or reorder answer choices, each one is wired to a specific result behind the scenes. You can fix the wording of an existing choice."
+                    field: { label: "Answer text", name: option, widget: string }
+              - { label: "Submit button text", name: button_label, widget: string }
+              - { label: "Error message", name: error_message, widget: string, hint: "Shown if someone tries to submit without answering all three questions." }
+              - label: "Result card wording"
+                name: result_card
+                widget: object
+                fields:
+                  - { label: "Small label above the result name", name: eyebrow, widget: string }
+                  - { label: "Book button text", name: book_cta, widget: string }
+                  - { label: "Learn more button text", name: learn_more, widget: string }
+                  - { label: "Compare label", name: compare_label, widget: string, hint: "The text right before the See the full menu link. Keep the trailing space." }
+                  - { label: "See the full menu link text", name: compare_link, widget: string }
+                  - { label: "Middle connector text", name: compare_middle, widget: string, hint: "The small word between the two links, for example or. Keep the spaces around it." }
+                  - { label: "Retake the quiz link text", name: retake_link, widget: string }
+              - { label: "Extra note when the goal is clearer, calmer skin", name: extra_clear_goal, widget: string, hint: "Added to the end of the result's why-text whenever someone picks Clearer, calmer skin as their goal. Keep the leading space." }
+              - label: "Results"
+                name: results
+                widget: object
+                hint: "These are the thirteen possible quiz outcomes. Each one is matched by the quiz logic behind the scenes using its field name, so do not rename, add, or remove any of the thirteen results below. You can freely edit the name, price and time, and why-text of each one. Every price and time here must match what is actually charged in Square, since these are typed in separately from the price list on the service pages."
+                fields:
+                  - label: "Back area, goal clearer calmer skin"
+                    name: back_clear
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Back area, any other goal"
+                    name: back_relax
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Unwanted facial hair"
+                    name: smooth
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Eyes and brows area, 75+ minutes"
+                    name: eyes_long
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Eyes and brows area, under 45 minutes"
+                    name: eyes_short
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Eyes and brows area, about an hour"
+                    name: eyes_medium
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Event-ready skin goal, 75+ minutes"
+                    name: event_long
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Event-ready skin goal, under 45 minutes"
+                    name: event_short
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Event-ready skin goal, about an hour"
+                    name: event_medium
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Face area, no special goal, under 45 minutes"
+                    name: default_short
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Face area, goal is relaxation, 75+ minutes"
+                    name: default_long_relax
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Face area, other goal, 75+ minutes"
+                    name: default_long_other
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+                  - label: "Face area, no special goal, about an hour"
+                    name: default_medium
+                    widget: object
+                    fields:
+                      - { label: "Service name", name: name, widget: string }
+                      - { label: "Price and time", name: price_time, widget: string }
+                      - { label: "Why this one", name: why, widget: text }
+
+      - name: policies_faq
+        label: "Policies & FAQ page"
+        file: "_data/pages/policies_faq.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Deposits"
+            name: deposits
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the deposit amount", name: intro, widget: string, hint: "The deposit percent itself comes from Business Facts, not here. Keep the trailing space, for example \"A \"." }
+              - { label: "Word after the deposit amount", name: unit_word, widget: string, hint: "Shown in bold right after the deposit percent, normally deposit." }
+              - { label: "Paragraph, part after the deposit amount", name: outro, widget: text }
+          - label: "Cancellations & Rescheduling"
+            name: cancellations
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph, part before the notice period", name: intro, widget: string, hint: "The notice period itself comes from Business Facts, not here. Keep the trailing space." }
+              - { label: "Text right after the notice period", name: unit_word, widget: string, hint: "Shown in bold right after the notice period, normally an apostrophe and the word notice, for example \"' notice\". No leading space." }
+              - { label: "Paragraph, part after the notice period", name: outro, widget: text }
+              - { label: "Less than 24 hours label", name: fee_short_label, widget: string, hint: "The fee percent itself comes from Business Facts." }
+              - { label: "Same-day label", name: fee_same_day_label, widget: string }
+              - { label: "No-show label", name: fee_no_show_label, widget: string }
+              - { label: "Fee line ending", name: fee_suffix, widget: string, hint: "Repeated after all three fee percents, for example \" of the service price\". Keep the leading space." }
+          - label: "Late Arrivals"
+            name: late_arrivals
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the &ndash; as it is." }
+          - label: "Minors"
+            name: minors
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Health & Safety"
+            name: health_safety
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the <b> and </b> tags as they are around the list of conditions." }
+          - label: "Payments"
+            name: payments
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the accepted payment types", name: intro, widget: string, hint: "The payment types list comes from Business Facts, not here. Keep the trailing space, for example \"We accept \"." }
+              - { label: "Paragraph, part after the accepted payment types", name: outro, widget: string, hint: "Usually just a period." }
+          - label: "Upcoming Closures"
+            name: upcoming_closures
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text, hint: "Keep the <b> and </b> tags and the &ndash; as they are. Update the dates when the closure changes." }
+          - label: "Contact line (below the policy list)"
+            name: contact_line
+            widget: object
+            fields:
+              - { label: "Part before the phone link", name: intro, widget: string, hint: "The phone number comes from Business Facts. Keep the trailing space." }
+              - { label: "Part between the phone and email links", name: mid, widget: string, hint: "Keep the spaces on both sides." }
+              - { label: "Part after the email link", name: outro, widget: string, hint: "The email address comes from Business Facts." }
+          - label: "Frequently Asked Questions"
+            name: faq
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Questions and answers"
+                name: items
+                widget: list
+                label_singular: "Question"
+                summary: "{{fields.question}}"
+                fields:
+                  - { label: "Question", name: question, widget: string }
+                  - { label: "Answer", name: answer, widget: text, hint: "Shown on the page and also sent to Google as this question's answer. Keep any <b> tags as they are." }
+                  - { label: "Answer for Google only (optional)", name: plain_answer, widget: text, required: false, hint: "Only fill this in if the answer above has formatting and the plain wording Google should read is different. Leave blank to let Google use the answer above with formatting removed." }
+
+      - name: contact
+        label: "Contact page"
+        file: "_data/pages/contact.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is, it shows as an ampersand (&)." }
+              - { label: "Paragraph", name: lead, widget: text }
+          - label: "Three quick-contact cards"
+            name: cards
+            widget: object
+            fields:
+              - label: "Call or text card"
+                name: call
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+              - label: "Email card"
+                name: email
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+              - label: "Book online card"
+                name: book
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+                  - { label: "Button text", name: cta, widget: string }
+          - label: "Message form"
+            name: message
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Name field label", name: label_name, widget: string }
+              - { label: "Email field label", name: label_email, widget: string }
+              - { label: "Phone field label", name: label_phone, widget: string }
+              - { label: "Message field label", name: label_message, widget: string }
+              - { label: "Submit button text", name: submit, widget: string }
+          - label: "Visit the Studio section"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Parking and access note", name: parking_note, widget: string, hint: "Shown right after the city, state and zip. Keep the &middot; as it is." }
+              - { label: "Map accessibility title", name: map_title, widget: string, hint: "Not usually visible, read by screen readers for the map." }
+              - { label: "Directions tooltip", name: directions_tooltip, widget: string, hint: "The small popup text on the Get Directions button." }
+              - { label: "Directions button text", name: directions_cta, widget: string }
+              - label: "Hours"
+                name: hours
+                widget: object
+                fields:
+                  - { label: "Small label above the hours", name: eyebrow, widget: string }
+                  - { label: "Monday label", name: monday_label, widget: string }
+                  - { label: "Tuesday label", name: tuesday_label, widget: string }
+                  - { label: "Wednesday label", name: wednesday_label, widget: string }
+                  - { label: "Thursday label", name: thursday_label, widget: string }
+                  - { label: "Friday label", name: friday_label, widget: string }
+                  - { label: "Saturday label", name: saturday_label, widget: string }
+                  - { label: "Sunday label", name: sunday_label, widget: string }
+              - { label: "Closure notice", name: notice, widget: text, hint: "Shown under the hours. Keep &ndash; as it is, it shows as a dash. This currently repeats the closure notice already set in the main site settings; check with the studio before editing, so the two do not say different things." }
+          - label: "Contact form status messages"
+            name: form_feedback
+            widget: object
+            fields:
+              - { label: "Sending message", name: sending, widget: string, hint: "Shown for a moment while the form submits." }
+              - { label: "Success message", name: success, widget: string }
+              - { label: "Error message", name: error, widget: string, hint: "Shown if the form fails to send. Leave {{PHONE}} exactly as it is, do not type a phone number there. The page fills it in automatically from the phone number in the main site settings." }
+
+      - name: privacy
+        label: "Privacy page"
+        file: "_data/pages/privacy.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small heading above the title", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "What we collect"
+            name: collect
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Booking"
+            name: booking
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the link", name: intro, widget: text, hint: "Keep the trailing space." }
+              - { label: "Link text", name: link_text, widget: string, hint: "The clickable words. The link itself goes to Square's privacy policy and stays in the template." }
+              - { label: "Paragraph, part after the link", name: outro, widget: text }
+          - label: "Cookies and analytics"
+            name: cookies
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is." }
+              - { label: "Paragraph", name: body, widget: text }
+          - label: "Your choices"
+            name: choices
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph, part before the email link", name: intro, widget: text, hint: "Keep the trailing space. Ends right before the email address, which comes from Business Facts." }
+              - { label: "Paragraph, part between the email and phone links", name: mid, widget: string, hint: "Keep the spaces on both sides." }
+              - { label: "Paragraph, part after the phone link", name: outro, widget: text }
+          - label: "Effective-date line"
+            name: effective_date_line
+            widget: string
+            hint: "Shown at the very bottom of the page, before the business address. For example \"Effective July 2, 2026\". Update this whenever the privacy policy changes."

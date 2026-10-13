@@ -12,18 +12,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
-  // Sveltia CMS admin shell: publish only these two files at /admin/, verbatim,
-  // with no template processing. admin/parts/*.yml are per-page config snippets
-  // the studio pastes into admin/config.yml by hand; they are never meant to
-  // ship and must never be copied into the built site.
+  // Sveltia CMS (the client's content editor) lives at /admin/. Copy its two files
+  // verbatim; the admin folder is ignored below so Eleventy never renders them as pages.
   eleventyConfig.addPassthroughCopy("admin/index.html");
   eleventyConfig.addPassthroughCopy("admin/config.yml");
 
-  // Don't let Eleventy touch the archived source-of-truth folder, its own
-  // output, or the Sveltia config parts that are not meant to ship.
+  // Don't let Eleventy touch the archived source-of-truth folder, its own output,
+  // or the Sveltia admin files (copied verbatim above, never rendered).
   eleventyConfig.ignores.add("_netlify-final/**");
   eleventyConfig.ignores.add("node_modules/**");
-  eleventyConfig.ignores.add("admin/parts/**");
+  eleventyConfig.ignores.add("admin/**");
 
   return {
     dir: {

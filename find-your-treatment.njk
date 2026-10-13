@@ -71,29 +71,29 @@ og_image_height: 1466
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var g=pick('goal'),a=pick('area'),t=pick('time'),err=document.getElementById('quizError');
-    if(!g||!a||!t){err.textContent='{{ pages.find_your_treatment.quiz.error_message | safe }}';return}
+    if(!g||!a||!t){err.textContent={{ pages.find_your_treatment.quiz.error_message | dump | safe }};return}
     err.textContent='';
     var R;
     if(a==='back'){
-      R=(g==='clear')?['{{ pages.find_your_treatment.quiz.results.back_clear.name | safe }}','{{ pages.find_your_treatment.quiz.results.back_clear.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.back_clear.why | safe }}','services-back.html']
-                     :['{{ pages.find_your_treatment.quiz.results.back_relax.name | safe }}','{{ pages.find_your_treatment.quiz.results.back_relax.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.back_relax.why | safe }}','services-back.html'];
+      R=(g==='clear')?[{{ pages.find_your_treatment.quiz.results.back_clear.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.back_clear.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.back_clear.why | dump | safe }},'services-back.html']
+                     :[{{ pages.find_your_treatment.quiz.results.back_relax.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.back_relax.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.back_relax.why | dump | safe }},'services-back.html'];
     } else if(a==='smooth'){
-      R=['{{ pages.find_your_treatment.quiz.results.smooth.name | safe }}','{{ pages.find_your_treatment.quiz.results.smooth.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.smooth.why | safe }}','services-waxing.html'];
+      R=[{{ pages.find_your_treatment.quiz.results.smooth.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.smooth.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.smooth.why | dump | safe }},'services-waxing.html'];
     } else if(a==='eyes'||g==='define'){
-      R=(t==='long')?['{{ pages.find_your_treatment.quiz.results.eyes_long.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_long.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_long.why | safe }}','services-brows.html']
-        :(t==='short')?['{{ pages.find_your_treatment.quiz.results.eyes_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_short.why | safe }}','services-lashes.html']
-        :['{{ pages.find_your_treatment.quiz.results.eyes_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_medium.why | safe }}','services-lashes.html'];
+      R=(t==='long')?[{{ pages.find_your_treatment.quiz.results.eyes_long.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_long.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_long.why | dump | safe }},'services-brows.html']
+        :(t==='short')?[{{ pages.find_your_treatment.quiz.results.eyes_short.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_short.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_short.why | dump | safe }},'services-lashes.html']
+        :[{{ pages.find_your_treatment.quiz.results.eyes_medium.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_medium.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.eyes_medium.why | dump | safe }},'services-lashes.html'];
     } else if(g==='event'){
-      R=(t==='long')?['{{ pages.find_your_treatment.quiz.results.event_long.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_long.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_long.why | safe }}','services-facials.html']
-        :(t==='short')?['{{ pages.find_your_treatment.quiz.results.event_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_short.why | safe }}','services-facials.html']
-        :['{{ pages.find_your_treatment.quiz.results.event_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_medium.why | safe }}','services-facials.html'];
+      R=(t==='long')?[{{ pages.find_your_treatment.quiz.results.event_long.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_long.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_long.why | dump | safe }},'services-facials.html']
+        :(t==='short')?[{{ pages.find_your_treatment.quiz.results.event_short.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_short.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_short.why | dump | safe }},'services-facials.html']
+        :[{{ pages.find_your_treatment.quiz.results.event_medium.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_medium.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.event_medium.why | dump | safe }},'services-facials.html'];
     } else {
-      R=(t==='short')?['{{ pages.find_your_treatment.quiz.results.default_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_short.why | safe }}','services-facials.html']
-        :(t==='long')?((g==='relax')?['{{ pages.find_your_treatment.quiz.results.default_long_relax.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_relax.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_relax.why | safe }}','services-facials.html']
-                                    :['{{ pages.find_your_treatment.quiz.results.default_long_other.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_other.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_other.why | safe }}','services-facials.html'])
-        :['{{ pages.find_your_treatment.quiz.results.default_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_medium.why | safe }}','services-facials.html'];
+      R=(t==='short')?[{{ pages.find_your_treatment.quiz.results.default_short.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_short.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_short.why | dump | safe }},'services-facials.html']
+        :(t==='long')?((g==='relax')?[{{ pages.find_your_treatment.quiz.results.default_long_relax.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_long_relax.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_long_relax.why | dump | safe }},'services-facials.html']
+                                    :[{{ pages.find_your_treatment.quiz.results.default_long_other.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_long_other.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_long_other.why | dump | safe }},'services-facials.html'])
+        :[{{ pages.find_your_treatment.quiz.results.default_medium.name | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_medium.price_time | dump | safe }},{{ pages.find_your_treatment.quiz.results.default_medium.why | dump | safe }},'services-facials.html'];
     }
-    var extra=(g==='clear')?'{{ pages.find_your_treatment.quiz.extra_clear_goal | safe }}':'';
+    var extra=(g==='clear')?{{ pages.find_your_treatment.quiz.extra_clear_goal | dump | safe }}:'';
     document.getElementById('recoName').innerHTML=R[0];
     document.getElementById('recoPrice').innerHTML=R[1];
     document.getElementById('recoWhy').innerHTML=R[2]+extra;

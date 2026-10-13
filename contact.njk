@@ -69,15 +69,15 @@ og_image_height: 2131
   var f=document.getElementById('contactForm');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var r=document.getElementById('formResult');r.textContent='{{ pages.contact.form_feedback.sending | safe }}';
+    var r=document.getElementById('formResult');r.textContent={{ pages.contact.form_feedback.sending | dump | safe }};
     var data=new FormData(f);
     var enc=new URLSearchParams(data).toString();
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc})
       .then(function(res){
-        if(res.ok){r.textContent='{{ pages.contact.form_feedback.success | safe }}';f.reset();}
-        else{r.textContent='{{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | safe }}';}
+        if(res.ok){r.textContent={{ pages.contact.form_feedback.success | dump | safe }};f.reset();}
+        else{r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | dump | safe }};}
       })
-      .catch(function(){r.textContent='{{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | safe }}';});
+      .catch(function(){r.textContent={{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | dump | safe }};});
   });
 })();
 </script>

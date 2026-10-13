@@ -82,7 +82,7 @@
     "addons": [
       { "name": "Gua Sha Sculpting", "price": "$5", "duration": "" },
       { "name": "LED Light Therapy", "price": "$5", "duration": "" },
-      { "name": "Dermaplane add-on", "price": "$20", "duration": "30m" }
+      { "name": "Dermaplane", "price": "$20", "duration": "30m" }
     ]
   }
 }
