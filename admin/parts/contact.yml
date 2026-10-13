@@ -1,0 +1,80 @@
+      - name: contact
+        label: "Contact page"
+        file: "_data/pages/contact.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string, hint: "Keep the &amp; as it is, it shows as an ampersand (&)." }
+              - { label: "Paragraph", name: lead, widget: text }
+          - label: "Three quick-contact cards"
+            name: cards
+            widget: object
+            fields:
+              - label: "Call or text card"
+                name: call
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+              - label: "Email card"
+                name: email
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+              - label: "Book online card"
+                name: book
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: body, widget: text }
+                  - { label: "Button text", name: cta, widget: string }
+          - label: "Message form"
+            name: message
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Name field label", name: label_name, widget: string }
+              - { label: "Email field label", name: label_email, widget: string }
+              - { label: "Phone field label", name: label_phone, widget: string }
+              - { label: "Message field label", name: label_message, widget: string }
+              - { label: "Submit button text", name: submit, widget: string }
+          - label: "Visit the Studio section"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Parking and access note", name: parking_note, widget: string, hint: "Shown right after the city, state and zip. Keep the &middot; as it is." }
+              - { label: "Map accessibility title", name: map_title, widget: string, hint: "Not usually visible, read by screen readers for the map." }
+              - { label: "Directions tooltip", name: directions_tooltip, widget: string, hint: "The small popup text on the Get Directions button." }
+              - { label: "Directions button text", name: directions_cta, widget: string }
+              - label: "Hours"
+                name: hours
+                widget: object
+                fields:
+                  - { label: "Small label above the hours", name: eyebrow, widget: string }
+                  - { label: "Monday label", name: monday_label, widget: string }
+                  - { label: "Tuesday label", name: tuesday_label, widget: string }
+                  - { label: "Wednesday label", name: wednesday_label, widget: string }
+                  - { label: "Thursday label", name: thursday_label, widget: string }
+                  - { label: "Friday label", name: friday_label, widget: string }
+                  - { label: "Saturday label", name: saturday_label, widget: string }
+                  - { label: "Sunday label", name: sunday_label, widget: string }
+              - { label: "Closure notice", name: notice, widget: text, hint: "Shown under the hours. Keep &ndash; as it is, it shows as a dash. This currently repeats the closure notice already set in the main site settings; check with the studio before editing, so the two do not say different things." }
+          - label: "Contact form status messages"
+            name: form_feedback
+            widget: object
+            fields:
+              - { label: "Sending message", name: sending, widget: string, hint: "Shown for a moment while the form submits." }
+              - { label: "Success message", name: success, widget: string }
+              - { label: "Error message", name: error, widget: string, hint: "Shown if the form fails to send. Leave {{PHONE}} exactly as it is, do not type a phone number there. The page fills it in automatically from the phone number in the main site settings." }

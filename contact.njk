@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: contact.html
 nav_active: contact
-title: "Contact & Directions | Rosemary Esthetics, Idaho Falls"
-description: "Contact Rosemary Esthetics in Idaho Falls: call or text (208) 521-0938, or visit 1096 S Boulevard, Idaho Falls, ID 83402. Hours, map, and directions."
+eleventyComputed:
+  title: "{{ pages.contact.meta.title | safe }}"
+  description: "{{ pages.contact.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/contact.html"
 og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
 og_image_width: 1600
@@ -11,54 +12,54 @@ og_image_height: 2131
 ---
 <section class="pagehero">
   <div class="wrap">
-    <div class="eyebrow">Get in Touch</div>
-    <h1>Contact &amp; Directions</h1>
-    <p class="lead editable">Questions about a service, your skin, or booking? Call, text, email, or send a message below. Jillian answers everything personally.</p>
+    <div class="eyebrow">{{ pages.contact.hero.eyebrow | safe }}</div>
+    <h1>{{ pages.contact.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.contact.hero.lead | safe }}</p>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap">
     <div class="grid3">
-      <div class="vp"><h3>Call or text</h3><p style="margin-bottom:16px">Texting is often fastest between appointments.</p><a href="tel:{{ site.contact.phone_e164 }}" class="btn ghost" style="width:100%">{{ site.contact.phone_display }}</a></div>
-      <div class="vp"><h3>Email</h3><p style="margin-bottom:16px">For anything longer, or to send photos of your skin goals.</p><a href="mailto:{{ site.contact.email }}" class="btn ghost" style="width:100%;text-transform:none;letter-spacing:.02em">{{ site.contact.email }}</a></div>
-      <div class="vp"><h3>Book online</h3><p style="margin-bottom:16px">The fastest way to a confirmed spot, 24/7 through Square.</p><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose" style="width:100%">Book Now</a></div>
+      <div class="vp"><h3>{{ pages.contact.cards.call.heading | safe }}</h3><p style="margin-bottom:16px">{{ pages.contact.cards.call.body | safe }}</p><a href="tel:{{ site.contact.phone_e164 }}" class="btn ghost" style="width:100%">{{ site.contact.phone_display }}</a></div>
+      <div class="vp"><h3>{{ pages.contact.cards.email.heading | safe }}</h3><p style="margin-bottom:16px">{{ pages.contact.cards.email.body | safe }}</p><a href="mailto:{{ site.contact.email }}" class="btn ghost" style="width:100%;text-transform:none;letter-spacing:.02em">{{ site.contact.email }}</a></div>
+      <div class="vp"><h3>{{ pages.contact.cards.book.heading | safe }}</h3><p style="margin-bottom:16px">{{ pages.contact.cards.book.body | safe }}</p><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose" style="width:100%">{{ pages.contact.cards.book.cta | safe }}</a></div>
     </div>
     <div class="split" style="margin-top:56px;align-items:start">
       <div>
-        <div class="eyebrow">Send a Message</div>
-        <h2 style="margin-top:6px">We'd love to hear from you</h2>
+        <div class="eyebrow">{{ pages.contact.message.eyebrow | safe }}</div>
+        <h2 style="margin-top:6px">{{ pages.contact.message.heading | safe }}</h2>
         <form class="cf" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contactForm">
           <input type="hidden" name="form-name" value="contact">
           <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
-          <label for="cf-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <label for="cf-name">{{ pages.contact.message.label_name | safe }} <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="cf-name" name="name" required autocomplete="name">
-          <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <label for="cf-email">{{ pages.contact.message.label_email | safe }} <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="cf-email" name="email" required autocomplete="email">
-          <label for="cf-phone">Phone</label>
+          <label for="cf-phone">{{ pages.contact.message.label_phone | safe }}</label>
           <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
-          <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+          <label for="cf-message">{{ pages.contact.message.label_message | safe }} <span class="req" aria-hidden="true">*</span></label>
           <textarea id="cf-message" name="message" required></textarea>
-          <button type="submit" class="btn rose" style="margin-top:20px">Send Message</button>
+          <button type="submit" class="btn rose" style="margin-top:20px">{{ pages.contact.message.submit | safe }}</button>
           <p id="formResult" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div>
-        <div class="eyebrow">Visit the Studio</div>
+        <div class="eyebrow">{{ pages.contact.visit.eyebrow | safe }}</div>
         <h2 style="margin-top:6px">{{ site.address.street }}</h2>
-        <p style="color:var(--fg-soft);margin:0 0 18px">{{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }} &middot; free lot and street parking &middot; wheelchair-accessible entrance</p>
-        <div class="mapframe"><iframe src="https://www.google.com/maps?q=1096+S+Boulevard,+Idaho+Falls,+ID+83402&output=embed" title="Map to Rosemary Esthetics at 1096 S Boulevard, Idaho Falls" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
-        <p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&destination=1096+S+Boulevard,+Idaho+Falls,+ID+83402" target="_blank" rel="noopener" class="btn solid" data-tooltip="Opens Google Maps directions to the studio">Get Directions</a></p>
-        <div class="eyebrow" style="margin-top:34px">Hours</div>
+        <p style="color:var(--fg-soft);margin:0 0 18px">{{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }} &middot; {{ pages.contact.visit.parking_note | safe }}</p>
+        <div class="mapframe"><iframe src="https://www.google.com/maps?q=1096+S+Boulevard,+Idaho+Falls,+ID+83402&output=embed" title="{{ pages.contact.visit.map_title | safe }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        <p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&destination=1096+S+Boulevard,+Idaho+Falls,+ID+83402" target="_blank" rel="noopener" class="btn solid" data-tooltip="{{ pages.contact.visit.directions_tooltip | safe }}">{{ pages.contact.visit.directions_cta | safe }}</a></p>
+        <div class="eyebrow" style="margin-top:34px">{{ pages.contact.visit.hours.eyebrow | safe }}</div>
         <div class="plist" style="margin-top:12px">
-          <div class="price-row"><span>Monday</span><span class="pr">{{ site.hours.monday }}</span></div>
-          <div class="price-row"><span>Tuesday</span><span class="pr">{{ site.hours.tuesday }}</span></div>
-          <div class="price-row"><span>Wednesday</span><span class="pr">{{ site.hours.wednesday }}</span></div>
-          <div class="price-row"><span>Thursday</span><span class="pr">{{ site.hours.thursday }}</span></div>
-          <div class="price-row"><span>Friday</span><span class="pr">{{ site.hours.friday }}</span></div>
-          <div class="price-row"><span>Saturday</span><span class="pr">{{ site.hours.saturday }}</span></div>
-          <div class="price-row"><span>Sunday</span><span class="pr">{{ site.hours.sunday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.monday_label | safe }}</span><span class="pr">{{ site.hours.monday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.tuesday_label | safe }}</span><span class="pr">{{ site.hours.tuesday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.wednesday_label | safe }}</span><span class="pr">{{ site.hours.wednesday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.thursday_label | safe }}</span><span class="pr">{{ site.hours.thursday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.friday_label | safe }}</span><span class="pr">{{ site.hours.friday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.saturday_label | safe }}</span><span class="pr">{{ site.hours.saturday }}</span></div>
+          <div class="price-row"><span>{{ pages.contact.visit.hours.sunday_label | safe }}</span><span class="pr">{{ site.hours.sunday }}</span></div>
         </div>
-        <p class="notice">The studio will be closed July 31 &ndash; August 2, 2026.</p>
+        <p class="notice">{{ pages.contact.visit.notice | safe }}</p>
       </div>
     </div>
   </div>
@@ -68,15 +69,15 @@ og_image_height: 2131
   var f=document.getElementById('contactForm');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var r=document.getElementById('formResult');r.textContent='Sending...';
+    var r=document.getElementById('formResult');r.textContent='{{ pages.contact.form_feedback.sending | safe }}';
     var data=new FormData(f);
     var enc=new URLSearchParams(data).toString();
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc})
       .then(function(res){
-        if(res.ok){r.textContent='Thank you! Your message is on its way. We usually reply within one business day.';f.reset();}
-        else{r.textContent='Something went wrong. Please text us at (208) 521-0938 instead.';}
+        if(res.ok){r.textContent='{{ pages.contact.form_feedback.success | safe }}';f.reset();}
+        else{r.textContent='{{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | safe }}';}
       })
-      .catch(function(){r.textContent='Something went wrong. Please text us at (208) 521-0938 instead.';});
+      .catch(function(){r.textContent='{{ pages.contact.form_feedback.error | replace("{{PHONE}}", site.contact.phone_display) | safe }}';});
   });
 })();
 </script>

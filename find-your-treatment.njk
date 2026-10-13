@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: find-your-treatment.html
 nav_active: find-your-treatment
-title: "Find Your Treatment | Rosemary Esthetics, Idaho Falls"
-description: "Answer three quick questions and get a personal treatment recommendation from the Rosemary Esthetics menu: facials, lashes, brows, waxing, or back."
+eleventyComputed:
+  title: "{{ pages.find_your_treatment.meta.title | safe }}"
+  description: "{{ pages.find_your_treatment.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/find-your-treatment.html"
 og_image: "https://rosemaryestheticsidaho.com/img/glow-portrait.webp"
 og_image_width: 1100
@@ -11,54 +12,54 @@ og_image_height: 1466
 ---
 <section class="pagehero">
   <div class="wrap">
-    <div class="eyebrow">60-Second Quiz</div>
-    <h1>Find Your Treatment</h1>
-    <p class="lead editable">Three quick questions and we'll point you to the service your skin is asking for. No email required, just an honest recommendation.</p>
+    <div class="eyebrow">{{ pages.find_your_treatment.hero.eyebrow | safe }}</div>
+    <h1>{{ pages.find_your_treatment.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.find_your_treatment.hero.lead | safe }}</p>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:44px">
   <div class="wrap quiz" style="max-width:760px">
     <form id="quizForm" novalidate>
       <fieldset>
-        <legend><span class="qnum">Question 1 of 3</span>What's your main goal right now?</legend>
+        <legend><span class="qnum">{{ pages.find_your_treatment.quiz.questions[0].qnum | safe }}</span>{{ pages.find_your_treatment.quiz.questions[0].prompt | safe }}</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="goal" value="clear" required><span>Clearer, calmer skin</span></label>
-          <label class="opt"><input type="radio" name="goal" value="relax"><span>Deep relaxation and a reset</span></label>
-          <label class="opt"><input type="radio" name="goal" value="define"><span>Defined brows or lifted lashes</span></label>
-          <label class="opt"><input type="radio" name="goal" value="event"><span>Smooth, glowing skin for an event</span></label>
+          <label class="opt"><input type="radio" name="goal" value="clear" required><span>{{ pages.find_your_treatment.quiz.questions[0].options[0] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="goal" value="relax"><span>{{ pages.find_your_treatment.quiz.questions[0].options[1] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="goal" value="define"><span>{{ pages.find_your_treatment.quiz.questions[0].options[2] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="goal" value="event"><span>{{ pages.find_your_treatment.quiz.questions[0].options[3] | safe }}</span></label>
         </div>
       </fieldset>
       <fieldset>
-        <legend><span class="qnum">Question 2 of 3</span>Where should we focus?</legend>
+        <legend><span class="qnum">{{ pages.find_your_treatment.quiz.questions[1].qnum | safe }}</span>{{ pages.find_your_treatment.quiz.questions[1].prompt | safe }}</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="area" value="face" required><span>My face</span></label>
-          <label class="opt"><input type="radio" name="area" value="eyes"><span>Eyes and brows</span></label>
-          <label class="opt"><input type="radio" name="area" value="back"><span>My back and shoulders</span></label>
-          <label class="opt"><input type="radio" name="area" value="smooth"><span>Unwanted facial hair</span></label>
+          <label class="opt"><input type="radio" name="area" value="face" required><span>{{ pages.find_your_treatment.quiz.questions[1].options[0] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="area" value="eyes"><span>{{ pages.find_your_treatment.quiz.questions[1].options[1] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="area" value="back"><span>{{ pages.find_your_treatment.quiz.questions[1].options[2] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="area" value="smooth"><span>{{ pages.find_your_treatment.quiz.questions[1].options[3] | safe }}</span></label>
         </div>
       </fieldset>
       <fieldset>
-        <legend><span class="qnum">Question 3 of 3</span>How much time do you have?</legend>
+        <legend><span class="qnum">{{ pages.find_your_treatment.quiz.questions[2].qnum | safe }}</span>{{ pages.find_your_treatment.quiz.questions[2].prompt | safe }}</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="time" value="short" required><span>Under 45 minutes</span></label>
-          <label class="opt"><input type="radio" name="time" value="medium"><span>About an hour</span></label>
-          <label class="opt"><input type="radio" name="time" value="long"><span>75+ minutes, the full experience</span></label>
+          <label class="opt"><input type="radio" name="time" value="short" required><span>{{ pages.find_your_treatment.quiz.questions[2].options[0] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="time" value="medium"><span>{{ pages.find_your_treatment.quiz.questions[2].options[1] | safe }}</span></label>
+          <label class="opt"><input type="radio" name="time" value="long"><span>{{ pages.find_your_treatment.quiz.questions[2].options[2] | safe }}</span></label>
         </div>
       </fieldset>
-      <div class="center"><button type="submit" class="btn rose">Get My Recommendation</button>
+      <div class="center"><button type="submit" class="btn rose">{{ pages.find_your_treatment.quiz.button_label | safe }}</button>
       <p id="quizError" role="alert" style="color:var(--rose-deep);font-size:14px;margin-top:14px"></p></div>
     </form>
     <div id="quizResult" class="reveal" hidden>
       <div class="reco">
-        <div class="eyebrow">Your Match</div>
+        <div class="eyebrow">{{ pages.find_your_treatment.quiz.result_card.eyebrow | safe }}</div>
         <h2 id="recoName"></h2>
         <div class="pd" id="recoPrice"></div>
         <p class="why" id="recoWhy"></p>
         <div class="cta">
-          <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book It Now</a>
-          <a id="recoLink" href="services.html" class="btn ghost">Learn More</a>
+          <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.find_your_treatment.quiz.result_card.book_cta | safe }}</a>
+          <a id="recoLink" href="services.html" class="btn ghost">{{ pages.find_your_treatment.quiz.result_card.learn_more | safe }}</a>
         </div>
-        <p style="font-size:13px;color:var(--fg-soft);margin-top:20px">Want to compare? <a href="services.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">See the full menu</a> or <a href="javascript:location.reload()" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">retake the quiz</a>.</p>
+        <p style="font-size:13px;color:var(--fg-soft);margin-top:20px">{{ pages.find_your_treatment.quiz.result_card.compare_label | safe }}<a href="services.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.find_your_treatment.quiz.result_card.compare_link | safe }}</a>{{ pages.find_your_treatment.quiz.result_card.compare_middle | safe }}<a href="javascript:location.reload()" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.find_your_treatment.quiz.result_card.retake_link | safe }}</a>.</p>
       </div>
     </div>
   </div>
@@ -70,29 +71,29 @@ og_image_height: 1466
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var g=pick('goal'),a=pick('area'),t=pick('time'),err=document.getElementById('quizError');
-    if(!g||!a||!t){err.textContent='Please answer all three questions first.';return}
+    if(!g||!a||!t){err.textContent='{{ pages.find_your_treatment.quiz.error_message | safe }}';return}
     err.textContent='';
     var R;
     if(a==='back'){
-      R=(g==='clear')?['Back Reset Treatment','$75 &middot; 1 hour','A deep-cleansing back facial that targets congestion and breakouts in all the spots you can’t reach.','services-back.html']
-                     :['Heated Stone Back Treatment','$85 &middot; 1 hour','Deep cleansing plus warm stone massage over the back and shoulders. The most relaxing hour on the menu.','services-back.html'];
+      R=(g==='clear')?['{{ pages.find_your_treatment.quiz.results.back_clear.name | safe }}','{{ pages.find_your_treatment.quiz.results.back_clear.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.back_clear.why | safe }}','services-back.html']
+                     :['{{ pages.find_your_treatment.quiz.results.back_relax.name | safe }}','{{ pages.find_your_treatment.quiz.results.back_relax.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.back_relax.why | safe }}','services-back.html'];
     } else if(a==='smooth'){
-      R=['Full Face Wax','$30','Quick, gentle waxing with soothing aftercare, smooth results that outlast shaving by weeks.','services-waxing.html'];
+      R=['{{ pages.find_your_treatment.quiz.results.smooth.name | safe }}','{{ pages.find_your_treatment.quiz.results.smooth.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.smooth.why | safe }}','services-waxing.html'];
     } else if(a==='eyes'||g==='define'){
-      R=(t==='long')?['Eyebrow and Eyelash Package','$85 &middot; 1h15','Lash lift and tint plus brow lamination and tint in one visit, the full eye-opening refresh at a bundle price.','services-brows.html']
-        :(t==='short')?['Eyelash Lift','$45 &middot; 30 minutes','Your natural lashes, curled from the root in half an hour. Zero daily effort for 6–8 weeks.','services-lashes.html']
-        :['Eyelash Lift and Tint','$55 &middot; 45 minutes','Lifted and darkened natural lashes, like waking up with mascara on, for 6–8 weeks.','services-lashes.html'];
+      R=(t==='long')?['{{ pages.find_your_treatment.quiz.results.eyes_long.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_long.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_long.why | safe }}','services-brows.html']
+        :(t==='short')?['{{ pages.find_your_treatment.quiz.results.eyes_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_short.why | safe }}','services-lashes.html']
+        :['{{ pages.find_your_treatment.quiz.results.eyes_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.eyes_medium.why | safe }}','services-lashes.html'];
     } else if(g==='event'){
-      R=(t==='long')?['Smooth + Glow Facial (Dermaplane)','$90 &middot; 1h30','Dermaplaning removes peach fuzz and dead skin so you glow in photos and makeup applies flawlessly.','services-facials.html']
-        :(t==='short')?['Skin Reset Facial','$40 &middot; 35 minutes','A fast, effective mini facial to brighten and refresh before the big day.','services-facials.html']
-        :['Signature Facial','$80 &middot; 1h15','A fully customized facial to cleanse, exfoliate, and restore that lit-from-within look.','services-facials.html'];
+      R=(t==='long')?['{{ pages.find_your_treatment.quiz.results.event_long.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_long.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_long.why | safe }}','services-facials.html']
+        :(t==='short')?['{{ pages.find_your_treatment.quiz.results.event_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_short.why | safe }}','services-facials.html']
+        :['{{ pages.find_your_treatment.quiz.results.event_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.event_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.event_medium.why | safe }}','services-facials.html'];
     } else {
-      R=(t==='short')?['Skin Reset Facial','$40 &middot; 35 minutes','A quick but complete mini facial, perfect for maintenance between fuller appointments.','services-facials.html']
-        :(t==='long')?((g==='relax')?['Signature Facial + Gua Sha','$85 &middot; 1h15+','The customized Signature Facial with gua sha sculpting added on. Pure calm, from the first cleanse to the last massage stroke.','services-facials.html']
-                                    :['Smooth + Glow Facial (Dermaplane)','$90 &middot; 1h30','The deepest refresh on the menu, dermaplaning plus a fully customized facial.','services-facials.html'])
-        :['Signature Facial','$80 &middot; 1h15','A fully customized facial built around your skin and your goals, our most loved service.','services-facials.html'];
+      R=(t==='short')?['{{ pages.find_your_treatment.quiz.results.default_short.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_short.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_short.why | safe }}','services-facials.html']
+        :(t==='long')?((g==='relax')?['{{ pages.find_your_treatment.quiz.results.default_long_relax.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_relax.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_relax.why | safe }}','services-facials.html']
+                                    :['{{ pages.find_your_treatment.quiz.results.default_long_other.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_other.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_long_other.why | safe }}','services-facials.html'])
+        :['{{ pages.find_your_treatment.quiz.results.default_medium.name | safe }}','{{ pages.find_your_treatment.quiz.results.default_medium.price_time | safe }}','{{ pages.find_your_treatment.quiz.results.default_medium.why | safe }}','services-facials.html'];
     }
-    var extra=(g==='clear')?' Ask about adding LED light therapy, new at the studio and just $5, to support clear, calm skin.':'';
+    var extra=(g==='clear')?'{{ pages.find_your_treatment.quiz.extra_clear_goal | safe }}':'';
     document.getElementById('recoName').innerHTML=R[0];
     document.getElementById('recoPrice').innerHTML=R[1];
     document.getElementById('recoWhy').innerHTML=R[2]+extra;

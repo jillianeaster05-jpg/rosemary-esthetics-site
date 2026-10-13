@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: services-led.html
 nav_active: services
-title: "LED Light Therapy in Idaho Falls | Rosemary Esthetics"
-description: "New at Rosemary Esthetics in Idaho Falls: LED light therapy, a $5 add-on. Calming light sessions that support clear, healthy-looking skin."
+eleventyComputed:
+  title: "{{ pages.services_led.meta.title | safe }}"
+  description: "{{ pages.services_led.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/services-led.html"
 og_image: "https://rosemaryestheticsidaho.com/img/glow-portrait.webp"
 og_image_width: 1100
@@ -11,21 +12,21 @@ og_image_height: 1466
 ---
 <section class="pagehero">
   <div class="wrap">
-    <p class="crumb"><a href="services.html">Services</a> &nbsp;/&nbsp; LED Light Therapy</p>
-    <div style="margin-bottom:10px"><span class="tag new">New at the studio</span></div>
-    <h1>LED Light Therapy</h1>
-    <p class="lead editable">The newest treatment at the studio. Gentle, non-invasive light therapy that feels like nothing more than warm relaxation, and supports calm, clear, healthy-looking skin over a series of sessions.</p>
-    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book an LED Session</a></div>
+    <p class="crumb"><a href="services.html">{{ pages.services_led.hero.crumb_label | safe }}</a> &nbsp;/&nbsp; {{ pages.services_led.hero.crumb_current | safe }}</p>
+    <div style="margin-bottom:10px"><span class="tag new">{{ pages.services_led.hero.tag_new | safe }}</span></div>
+    <h1>{{ pages.services_led.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.services_led.hero.lead | safe }}</p>
+    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.services_led.hero.cta | safe }}</a></div>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:46px">
   <div class="wrap split rev" style="align-items:start">
     <div>
-      <div class="eyebrow">Pricing</div>
-      <h2 style="margin-top:6px">LED Light Therapy Menu</h2>
-      <div class="plist"><div class="price-row"><span>LED Light Therapy add-on</span><span class="pr"><b>{{ site.services.led[0].price }}</b></span></div></div>
-      <div class="eyebrow" style="margin-top:38px">Good to Know</div>
-      <ul class="goodlist editable"><li><b>LED Light Therapy add-on: {{ site.services.led[0].price }}.</b> Just add it to any facial at your visit or when booking.</li><li><b>Zero downtime.</b> No needles, no heat damage, no recovery. You can go straight back to your day.</li><li><b>Best as an add-on:</b> a lovely finishing touch on any facial.</li><li><b>Tell us first</b> if you're using photosensitizing medication, so we can make sure LED is right for you.</li></ul>
+      <div class="eyebrow">{{ pages.services_led.pricing.eyebrow | safe }}</div>
+      <h2 style="margin-top:6px">{{ pages.services_led.pricing.heading | safe }}</h2>
+      <div class="plist">{% for s in site.services.led %}<div class="price-row"><span>{{ s.name }}</span><span class="pr"><b>{{ s.price }}</b>{% if s.duration %} &middot; {{ s.duration }}{% endif %}</span></div>{% endfor %}</div>
+      <div class="eyebrow" style="margin-top:38px">{{ pages.services_led.good_to_know.eyebrow | safe }}</div>
+      <ul class="goodlist editable">{% for item in pages.services_led.good_to_know.items %}<li>{{ item.text | replace("{{PRICE}}", site.services.led[0].price) | safe }}</li>{% endfor %}</ul>
 
     </div>
     <div class="frame portrait" style="position:sticky;top:100px"><img src="img/glow-portrait.webp" alt="Client with calm, glowing skin after a treatment at Rosemary Esthetics" width="1100" height="1466" loading="lazy"></div>
@@ -33,10 +34,10 @@ og_image_height: 1466
 </section>
 <section class="reveal">
   <div class="wrap" style="max-width:760px">
-    <div class="sec-head"><div class="eyebrow">Your Visit</div><h2>What to expect</h2></div>
-    <ol class="steps editable"><li><b>Cleanse</b><p>Skin is cleansed so light reaches it effectively.</p></li><li><b>Light session</b><p>You relax under the LED panel with eye protection. It's completely painless, most clients find it deeply calming.</p></li><li><b>Finish</b><p>Serum, moisturizer, and SPF to lock in the session.</p></li><li><b>Repeat</b><p>LED works best as a series. We'll suggest a simple cadence at your visit.</p></li></ol>
-    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Your LED Session</a></div>
-    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">Explore more: <a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Facials</a> &middot; <a href="services-back.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Back Treatments</a> &middot; <a href="services-brows.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Brows</a></p>
+    <div class="sec-head"><div class="eyebrow">{{ pages.services_led.visit.eyebrow | safe }}</div><h2>{{ pages.services_led.visit.heading | safe }}</h2></div>
+    <ol class="steps editable">{% for step in pages.services_led.visit.steps %}<li><b>{{ step.title | safe }}</b><p>{{ step.body | safe }}</p></li>{% endfor %}</ol>
+    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">{{ pages.services_led.visit.cta | safe }}</a></div>
+    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">{{ pages.services_led.visit.explore_label | safe }}<a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_led.visit.explore_links.facials | safe }}</a> &middot; <a href="services-back.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_led.visit.explore_links.back | safe }}</a> &middot; <a href="services-brows.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_led.visit.explore_links.brows | safe }}</a></p>
   </div>
 </section>
 

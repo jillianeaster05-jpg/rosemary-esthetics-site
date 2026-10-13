@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Contact & Directions | Rosemary Esthetics, Idaho Falls",
+    "description": "Contact Rosemary Esthetics in Idaho Falls: call or text (208) 521-0938, or visit 1096 S Boulevard, Idaho Falls, ID 83402. Hours, map, and directions."
+  },
+  "hero": {
+    "eyebrow": "Get in Touch",
+    "heading": "Contact &amp; Directions",
+    "lead": "Questions about a service, your skin, or booking? Call, text, email, or send a message below. Jillian answers everything personally."
+  },
+  "cards": {
+    "call": {
+      "heading": "Call or text",
+      "body": "Texting is often fastest between appointments."
+    },
+    "email": {
+      "heading": "Email",
+      "body": "For anything longer, or to send photos of your skin goals."
+    },
+    "book": {
+      "heading": "Book online",
+      "body": "The fastest way to a confirmed spot, 24/7 through Square.",
+      "cta": "Book Now"
+    }
+  },
+  "message": {
+    "eyebrow": "Send a Message",
+    "heading": "We'd love to hear from you",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_phone": "Phone",
+    "label_message": "Message",
+    "submit": "Send Message"
+  },
+  "visit": {
+    "eyebrow": "Visit the Studio",
+    "parking_note": "free lot and street parking &middot; wheelchair-accessible entrance",
+    "map_title": "Map to Rosemary Esthetics at 1096 S Boulevard, Idaho Falls",
+    "directions_tooltip": "Opens Google Maps directions to the studio",
+    "directions_cta": "Get Directions",
+    "hours": {
+      "eyebrow": "Hours",
+      "monday_label": "Monday",
+      "tuesday_label": "Tuesday",
+      "wednesday_label": "Wednesday",
+      "thursday_label": "Thursday",
+      "friday_label": "Friday",
+      "saturday_label": "Saturday",
+      "sunday_label": "Sunday"
+    },
+    "notice": "The studio will be closed July 31 &ndash; August 2, 2026."
+  },
+  "form_feedback": {
+    "sending": "Sending...",
+    "success": "Thank you! Your message is on its way. We usually reply within one business day.",
+    "error": "Something went wrong. Please text us at {{PHONE}} instead."
+  }
+}

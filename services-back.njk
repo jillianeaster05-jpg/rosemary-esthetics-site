@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: services-back.html
 nav_active: services
-title: "Back Facials & Treatments in Idaho Falls | Rosemary Esthetics"
-description: "Back treatments in Idaho Falls: Heated Stone Back Treatment $85 and the Back Reset Treatment (a deep-cleansing back facial) $75. Book online at Rosemary Esthetics."
+eleventyComputed:
+  title: "{{ pages.services_back.meta.title | safe }}"
+  description: "{{ pages.services_back.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/services-back.html"
 og_image: "https://rosemaryestheticsidaho.com/img/facial-mask.webp"
 og_image_width: 1100
@@ -11,21 +12,21 @@ og_image_height: 1466
 ---
 <section class="pagehero">
   <div class="wrap">
-    <p class="crumb"><a href="services.html">Services</a> &nbsp;/&nbsp; Back Treatments</p>
+    <p class="crumb"><a href="services.html">{{ pages.services_back.hero.crumb_label | safe }}</a> &nbsp;/&nbsp; {{ pages.services_back.hero.crumb_current | safe }}</p>
 
-    <h1>Back Treatments</h1>
-    <p class="lead editable">Think of it as a facial for your back. Deep cleansing and exfoliation for hard-to-reach skin, finished with warm stones that melt tension away.</p>
-    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book Back Treatments</a></div>
+    <h1>{{ pages.services_back.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.services_back.hero.lead | safe }}</p>
+    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.services_back.hero.cta | safe }}</a></div>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:46px">
   <div class="wrap split rev" style="align-items:start">
     <div>
-      <div class="eyebrow">Pricing</div>
-      <h2 style="margin-top:6px">Back Treatments Menu</h2>
-      <div class="plist"><div class="price-row"><span>Heated Stone Back Treatment</span><span class="pr"><b>{{ site.services.back[0].price }}</b> &middot; {{ site.services.back[0].duration }}</span></div><div class="price-row"><span>Back Reset Treatment</span><span class="pr"><b>{{ site.services.back[1].price }}</b> &middot; {{ site.services.back[1].duration }}</span></div></div>
-      <div class="eyebrow" style="margin-top:38px">Good to Know</div>
-      <ul class="goodlist editable"><li><b>Great for</b> back breakouts, dry patches, and anyone who carries stress in their shoulders.</li><li><b>Wear something easy</b> to change out of. You'll be comfortably draped the whole time.</li><li><b>Event-ready skin:</b> popular before weddings and open-back outfits, book 1&ndash;2 weeks ahead.</li><li><b>Pairs well</b> with a mini facial if you'd like a full reset in one visit.</li></ul>
+      <div class="eyebrow">{{ pages.services_back.pricing.eyebrow | safe }}</div>
+      <h2 style="margin-top:6px">{{ pages.services_back.pricing.heading | safe }}</h2>
+      <div class="plist">{% for s in site.services.back %}<div class="price-row"><span>{{ s.name }}</span><span class="pr"><b>{{ s.price }}</b>{% if s.duration %} &middot; {{ s.duration }}{% endif %}</span></div>{% endfor %}</div>
+      <div class="eyebrow" style="margin-top:38px">{{ pages.services_back.good_to_know.eyebrow | safe }}</div>
+      <ul class="goodlist editable">{% for item in pages.services_back.good_to_know.items %}<li>{{ item.text | safe }}</li>{% endfor %}</ul>
 
     </div>
     <div class="frame portrait" style="position:sticky;top:100px"><img src="img/facial-mask.webp" alt="Spa treatment products prepared for a back treatment at Rosemary Esthetics" width="1100" height="1466" loading="lazy"></div>
@@ -33,10 +34,10 @@ og_image_height: 1466
 </section>
 <section class="reveal">
   <div class="wrap" style="max-width:760px">
-    <div class="sec-head"><div class="eyebrow">Your Visit</div><h2>What to expect</h2></div>
-    <ol class="steps editable"><li><b>Cleanse</b><p>A thorough double cleanse for skin you can't easily reach yourself.</p></li><li><b>Exfoliate and treat</b><p>Exfoliation and targeted care for congestion, dryness, or dullness.</p></li><li><b>Mask and relax</b><p>A customized mask does its work while you simply rest.</p></li><li><b>Warm stones</b><p>The Heated Stone treatment finishes with warm stone massage over the back and shoulders.</p></li></ol>
-    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Your Back Treatment Visit</a></div>
-    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">Explore more: <a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Facials</a> &middot; <a href="services-led.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">LED Light Therapy</a> &middot; <a href="services-waxing.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Waxing</a></p>
+    <div class="sec-head"><div class="eyebrow">{{ pages.services_back.visit.eyebrow | safe }}</div><h2>{{ pages.services_back.visit.heading | safe }}</h2></div>
+    <ol class="steps editable">{% for step in pages.services_back.visit.steps %}<li><b>{{ step.title | safe }}</b><p>{{ step.body | safe }}</p></li>{% endfor %}</ol>
+    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">{{ pages.services_back.visit.cta | safe }}</a></div>
+    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">{{ pages.services_back.visit.explore_label | safe }}<a href="services-facials.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_back.visit.explore_links.facials | safe }}</a> &middot; <a href="services-led.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_back.visit.explore_links.led | safe }}</a> &middot; <a href="services-waxing.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_back.visit.explore_links.waxing | safe }}</a></p>
   </div>
 </section>
 

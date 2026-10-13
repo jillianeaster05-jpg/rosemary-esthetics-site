@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Back Facials & Treatments in Idaho Falls | Rosemary Esthetics",
+    "description": "Back treatments in Idaho Falls: Heated Stone Back Treatment $85 and the Back Reset Treatment (a deep-cleansing back facial) $75. Book online at Rosemary Esthetics."
+  },
+  "hero": {
+    "crumb_label": "Services",
+    "crumb_current": "Back Treatments",
+    "heading": "Back Treatments",
+    "lead": "Think of it as a facial for your back. Deep cleansing and exfoliation for hard-to-reach skin, finished with warm stones that melt tension away.",
+    "cta": "Book Back Treatments"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "Back Treatments Menu"
+  },
+  "good_to_know": {
+    "eyebrow": "Good to Know",
+    "items": [
+      { "text": "<b>Great for</b> back breakouts, dry patches, and anyone who carries stress in their shoulders." },
+      { "text": "<b>Wear something easy</b> to change out of. You'll be comfortably draped the whole time." },
+      { "text": "<b>Event-ready skin:</b> popular before weddings and open-back outfits, book 1&ndash;2 weeks ahead." },
+      { "text": "<b>Pairs well</b> with a mini facial if you'd like a full reset in one visit." }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Your Visit",
+    "heading": "What to expect",
+    "steps": [
+      { "title": "Cleanse", "body": "A thorough double cleanse for skin you can't easily reach yourself." },
+      { "title": "Exfoliate and treat", "body": "Exfoliation and targeted care for congestion, dryness, or dullness." },
+      { "title": "Mask and relax", "body": "A customized mask does its work while you simply rest." },
+      { "title": "Warm stones", "body": "The Heated Stone treatment finishes with warm stone massage over the back and shoulders." }
+    ],
+    "cta": "Book Your Back Treatment Visit",
+    "explore_label": "Explore more: ",
+    "explore_links": {
+      "facials": "Facials",
+      "led": "LED Light Therapy",
+      "waxing": "Waxing"
+    }
+  }
+}
