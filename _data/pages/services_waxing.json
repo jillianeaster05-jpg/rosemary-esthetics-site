@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Facial Waxing in Idaho Falls | Rosemary Esthetics",
+    "description": "Gentle facial and underarm waxing in Idaho Falls: full face $30, brow shape $20, lip or chin $8, underarm $20. Quick visits, soothing aftercare."
+  },
+  "crumb": {
+    "parent": "Services",
+    "current": "Waxing"
+  },
+  "hero": {
+    "heading": "Facial &amp; Underarm Waxing",
+    "body": "Quick, gentle waxing with skin-soothing aftercare. Smooth results that last weeks longer than shaving, in appointments short enough for a lunch break.",
+    "cta_book": "Book Waxing"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "Waxing Menu"
+  },
+  "image": {
+    "alt": "Relaxing treatment room at Rosemary Esthetics in Idaho Falls"
+  },
+  "good_to_know": {
+    "eyebrow": "Good to Know",
+    "items": [
+      "<b>Hair length:</b> about 2 weeks of growth (roughly 1/4 inch) gives the best result.",
+      "<b>Skip retinol</b> and strong exfoliants near the area for several days before waxing.",
+      "<b>We can't wax</b> over active wounds, sunburn, cold sores, or irritated skin. Reach out if you're unsure.",
+      "<b>Aftercare:</b> avoid heavy sun, heat, and heavy makeup on the area for 24 hours."
+    ]
+  },
+  "visit": {
+    "eyebrow": "Your Visit",
+    "heading": "What to expect",
+    "steps": [
+      { "title": "Prep", "body": "Skin is cleansed and prepped so wax grips hair, not skin." },
+      { "title": "Wax", "body": "Efficient, gentle technique with wax suited to delicate facial skin." },
+      { "title": "Soothe", "body": "Calming products right after to take down redness fast." },
+      { "title": "Maintain", "body": "Most clients rebook every 3&ndash;5 weeks to stay smooth." }
+    ],
+    "cta_book": "Book Your Waxing Visit"
+  },
+  "related": {
+    "label": "Explore more:",
+    "brows": "Brows",
+    "facials": "Facials",
+    "lashes": "Lashes"
+  }
+}

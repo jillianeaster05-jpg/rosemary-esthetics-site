@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Services & Pricing | Rosemary Esthetics, Idaho Falls",
+    "description": "Full service menu for Rosemary Esthetics in Idaho Falls: facials from $40, lashes from $45, brows from $15, waxing from $8, back treatments, and LED therapy."
+  },
+  "hero": {
+    "eyebrow": "Service Menu",
+    "heading": "Treatments &amp; Pricing",
+    "lead_before": "Facials, lashes, brows, waxing, and back treatments in Idaho Falls, all personalized to your skin. A ",
+    "lead_after": " deposit holds your spot and goes toward your service.",
+    "cta_book": "Book Now",
+    "cta_find": "Find Your Treatment"
+  },
+  "services": {
+    "more_text": "Details, prep &amp; what to expect &rarr;",
+    "facials": {
+      "heading": "Facials",
+      "body": "Customized, results-driven facials that still feel like a treat."
+    },
+    "lashes": {
+      "heading": "Lashes",
+      "body": "Wake up with lifted, darker lashes. No extensions, no daily curling."
+    },
+    "brows": {
+      "heading": "Brows",
+      "body": "Fuller, styled brows that hold their shape for weeks."
+    },
+    "waxing": {
+      "heading": "Waxing",
+      "body": "Quick, gentle facial and underarm waxing with soothing aftercare."
+    },
+    "back": {
+      "heading": "Back Treatments",
+      "body": "A facial for your back. Deep cleansing, exfoliation, and warm stone relaxation."
+    },
+    "led": {
+      "tag": "New",
+      "heading": "LED Light Therapy",
+      "body": "Calming light therapy that supports clear, healthy-looking skin. Add it to any facial."
+    },
+    "addons": {
+      "heading": "Add-ons",
+      "body": "Small upgrades that make a good facial even better."
+    }
+  }
+}
