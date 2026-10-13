@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Eyelash Lift and Tint in Idaho Falls | Rosemary Esthetics",
+    "description": "Lash lifts and tints in Idaho Falls: Eyelash Lift $45 and Eyelash Lift and Tint $55. Wake up with lifted, darker lashes for weeks. Book online."
+  },
+  "crumb": {
+    "parent": "Services",
+    "current": "Lashes"
+  },
+  "hero": {
+    "heading": "Eyelash Lifts &amp; Tints",
+    "body": "Your natural lashes, lifted and darkened from the root. No extensions, no daily curler, just an effortless wide-awake look that lasts around 6&ndash;8 weeks.",
+    "cta_book": "Book Lashes"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "Lashes Menu"
+  },
+  "image": {
+    "alt": "Freshly lifted and tinted lashes after a lash lift at Rosemary Esthetics"
+  },
+  "good_to_know": {
+    "eyebrow": "Good to Know",
+    "items": [
+      "<b>Come with clean lashes,</b> no mascara or eye makeup if possible.",
+      "<b>Patch test:</b> a quick patch test may be required for tints if you have sensitive skin or allergies. Reach out before booking if unsure.",
+      "<b>Contact lenses</b> should come out for the service, so bring your case.",
+      "<b>Keep them dry</b> for the first 24 hours, no steam, swimming, or rubbing."
+    ]
+  },
+  "visit": {
+    "eyebrow": "Your Visit",
+    "heading": "What to expect",
+    "steps": [
+      { "title": "Settle in", "body": "You'll lie back with your eyes closed for the whole service. Many clients nearly fall asleep." },
+      { "title": "Lift", "body": "A gentle solution sets your natural lashes over a soft silicone shield, curling them from the root." },
+      { "title": "Tint", "body": "An optional tint darkens lashes for a mascara-like effect that lasts for weeks." },
+      { "title": "Aftercare", "body": "Keep lashes dry and makeup-free for 24 hours, then enjoy. Results typically last 6&ndash;8 weeks." }
+    ],
+    "cta_book": "Book Your Lash Visit"
+  },
+  "related": {
+    "label": "Explore more:",
+    "brows": "Brows",
+    "facials": "Facials",
+    "waxing": "Waxing"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Eyebrow Lamination and Tint in Idaho Falls | Rosemary Esthetics",
+    "description": "Brow lamination and tinting in Idaho Falls: Eyebrow Lamination $45, Lamination & Tint $55, Brow Tint $15, Eyebrow and Eyelash Package $85. Book online."
+  },
+  "crumb": {
+    "parent": "Services",
+    "current": "Brows"
+  },
+  "hero": {
+    "heading": "Eyebrow Lamination and Tint",
+    "body": "Fuller, fluffier, perfectly styled brows that stay in place for weeks. Lamination gently sets your brow hairs in a brushed-up shape, and a tint adds definition and depth.",
+    "cta_book": "Book Brows"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "Brows Menu"
+  },
+  "image": {
+    "alt": "Client with defined brows and glowing skin at Rosemary Esthetics"
+  },
+  "good_to_know": {
+    "eyebrow": "Good to Know",
+    "items": [
+      "<b>The package deal:</b> the Eyebrow and Eyelash Package bundles a lash lift and tint with brow lamination and tint at a savings.",
+      "<b>Patch test:</b> sometimes required for tints and lamination, especially for sensitive skin. Message first if you're unsure.",
+      "<b>Keep them dry</b> for 24 hours after, then brush up daily with a clean spoolie.",
+      "<b>Great before events,</b> book 3&ndash;5 days ahead of photos for the most settled look."
+    ]
+  },
+  "visit": {
+    "eyebrow": "Your Visit",
+    "heading": "What to expect",
+    "steps": [
+      { "title": "Brow mapping", "body": "We look at your face shape and natural growth to choose a shape you'll love." },
+      { "title": "Laminate", "body": "A gentle setting solution smooths and redirects brow hairs into a fuller, lifted shape." },
+      { "title": "Tint and tidy", "body": "Optional tint for depth, plus a quick shape-up so everything is crisp." },
+      { "title": "Aftercare", "body": "Keep brows dry for 24 hours. Results typically last 4&ndash;6 weeks with simple daily brushing." }
+    ],
+    "cta_book": "Book Your Brow Visit"
+  },
+  "related": {
+    "label": "Explore more:",
+    "lashes": "Lashes",
+    "waxing": "Waxing",
+    "facials": "Facials"
+  }
+}

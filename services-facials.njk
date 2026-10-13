@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: services-facials.html
 nav_active: services
-title: "Facials & Dermaplaning in Idaho Falls | Rosemary Esthetics"
-description: "Customized facials in Idaho Falls from $40: Signature Facial, Smooth + Glow Facial (Dermaplane), Skin Reset Facial, and Couples Facial. Book online."
+eleventyComputed:
+  title: "{{ pages.services_facials.meta.title | safe }}"
+  description: "{{ pages.services_facials.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/services-facials.html"
 og_image: "https://rosemaryestheticsidaho.com/img/facial-mask.webp"
 og_image_width: 1100
@@ -11,32 +12,32 @@ og_image_height: 1466
 ---
 <section class="pagehero">
   <div class="wrap">
-    <p class="crumb"><a href="services.html">Services</a> &nbsp;/&nbsp; Facials</p>
+    <p class="crumb"><a href="services.html">{{ pages.services_facials.crumb.parent | safe }}</a> &nbsp;/&nbsp; {{ pages.services_facials.crumb.current | safe }}</p>
 
-    <h1>Facials &amp; Dermaplaning</h1>
-    <p class="lead editable">Results-driven facials that still feel like a treat. Every facial is customized to your skin after a quick consultation, whether you're navigating breakouts, chasing a glow, or simply need to exhale.</p>
-    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">Book Facials</a></div>
+    <h1>{{ pages.services_facials.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.services_facials.hero.body | safe }}</p>
+    <div style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn rose">{{ pages.services_facials.hero.cta_book | safe }}</a></div>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:46px">
   <div class="wrap split rev" style="align-items:start">
     <div>
-      <div class="eyebrow">Pricing</div>
-      <h2 style="margin-top:6px">Facials Menu</h2>
-      <div class="plist"><div class="price-row"><span>Signature Facial</span><span class="pr"><b>{{ site.services.facials[0].price }}</b> &middot; {{ site.services.facials[0].duration }}</span></div><div class="price-row"><span>Smooth + Glow Facial (Dermaplane)</span><span class="pr"><b>{{ site.services.facials[1].price }}</b> &middot; {{ site.services.facials[1].duration }}</span></div><div class="price-row"><span>Skin Reset Facial</span><span class="pr"><b>{{ site.services.facials[2].price }}</b> &middot; {{ site.services.facials[2].duration }}</span></div><div class="price-row"><span>Couples Facial</span><span class="pr"><b>{{ site.services.facials[3].price }}</b> &middot; {{ site.services.facials[3].duration }}</span></div><div class="price-row"><span>Gua Sha Sculpting add-on</span><span class="pr"><b>{{ site.services.facials[4].price }}</b></span></div><div class="price-row"><span>LED Light Therapy add-on</span><span class="pr"><b>{{ site.services.facials[5].price }}</b></span></div><div class="price-row"><span>Dermaplane add-on</span><span class="pr"><b>{{ site.services.facials[6].price }}</b> &middot; {{ site.services.facials[6].duration }}</span></div></div>
-      <div class="eyebrow" style="margin-top:38px">Good to Know</div>
-      <ul class="goodlist editable"><li><b>Arrive with clean skin</b> if you can, and skip retinol and strong exfoliants for a few days before your visit.</li><li><b>Avoid fresh sunburn.</b> We can't treat sunburned or irritated skin, so plan around heavy sun days.</li><li><b>Dermaplaning bonus:</b> makeup goes on smoother and skincare absorbs better afterward.</li><li><b>Couples Facial:</b> bring a friend, partner, or mom. Two side-by-side facials in one relaxing hour.</li></ul>
+      <div class="eyebrow">{{ pages.services_facials.pricing.eyebrow | safe }}</div>
+      <h2 style="margin-top:6px">{{ pages.services_facials.pricing.heading | safe }}</h2>
+      <div class="plist">{% for s in site.services.facials %}<div class="price-row"><span>{{ s.name }}</span><span class="pr"><b>{{ s.price }}</b>{% if s.duration %} &middot; {{ s.duration }}{% endif %}</span></div>{% endfor %}</div>
+      <div class="eyebrow" style="margin-top:38px">{{ pages.services_facials.good_to_know.eyebrow | safe }}</div>
+      <ul class="goodlist editable">{% for item in pages.services_facials.good_to_know.items %}<li>{{ item | safe }}</li>{% endfor %}</ul>
 
     </div>
-    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/facial-mask.webp" alt="Hydrating mask being applied during a customized facial at Rosemary Esthetics in Idaho Falls" width="1100" height="1466" loading="lazy"></div>
+    <div class="frame portrait" style="position:sticky;top:100px"><img src="img/facial-mask.webp" alt="{{ pages.services_facials.image.alt | safe }}" width="1100" height="1466" loading="lazy"></div>
   </div>
 </section>
 <section class="reveal">
   <div class="wrap" style="max-width:760px">
-    <div class="sec-head"><div class="eyebrow">Your Visit</div><h2>What to expect</h2></div>
-    <ol class="steps editable"><li><b>Consultation</b><p>We talk through your skin, your goals, and anything you'd like to focus on. Every facial is built around you.</p></li><li><b>Cleanse and exfoliate</b><p>A double cleanse followed by exfoliation matched to your skin. The Smooth + Glow Facial (Dermaplane) adds gentle dermaplaning to remove peach fuzz and dead skin.</p></li><li><b>Treat and mask</b><p>Targeted serums, a customized mask, and plenty of relaxing touches. Add gua sha sculpting or calming LED light for a little extra.</p></li><li><b>Protect and plan</b><p>Moisturizer and SPF to finish, plus simple homecare tips. Most clients love a facial every 4&ndash;6 weeks.</p></li></ol>
-    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">Book Your Facial Visit</a></div>
-    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">Explore more: <a href="services-lashes.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Lashes</a> &middot; <a href="services-brows.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">Brows</a> &middot; <a href="services-led.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">LED Light Therapy</a></p>
+    <div class="sec-head"><div class="eyebrow">{{ pages.services_facials.visit.eyebrow | safe }}</div><h2>{{ pages.services_facials.visit.heading | safe }}</h2></div>
+    <ol class="steps editable">{% for step in pages.services_facials.visit.steps %}<li><b>{{ step.title | safe }}</b><p>{{ step.body | safe }}</p></li>{% endfor %}</ol>
+    <div class="center" style="margin-top:26px"><a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid">{{ pages.services_facials.visit.cta_book | safe }}</a></div>
+    <p class="center" style="font-size:14px;color:var(--fg-soft);margin-top:24px">{{ pages.services_facials.related.label | safe }} <a href="services-lashes.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_facials.related.lashes | safe }}</a> &middot; <a href="services-brows.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_facials.related.brows | safe }}</a> &middot; <a href="services-led.html" style="color:var(--rose-deep);border-bottom:1px solid var(--rose)">{{ pages.services_facials.related.led | safe }}</a></p>
   </div>
 </section>
 

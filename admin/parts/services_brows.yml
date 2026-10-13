@@ -1,0 +1,67 @@
+      - name: services_brows
+        label: "Brows page"
+        file: "_data/pages/services_brows.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Breadcrumb"
+            name: crumb
+            widget: object
+            fields:
+              - { label: "Parent page link text (Services)", name: parent, widget: string }
+              - { label: "Current page name (Brows)", name: current, widget: string }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Pricing block labels"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Photo"
+            name: image
+            widget: object
+            fields:
+              - { label: "Alt text (describes the photo for screen readers and search engines)", name: alt, widget: string }
+          - label: "Good to Know list"
+            name: good_to_know
+            widget: object
+            fields:
+              - { label: "Small label above the list", name: eyebrow, widget: string }
+              - label: "List items"
+                name: items
+                widget: list
+                label_singular: "Item"
+                field: { label: "Item", name: item, widget: text, hint: "Keep the <b> tags as they are. They bold the first part of the line." }
+          - label: "What to expect steps"
+            name: visit
+            widget: object
+            fields:
+              - { label: "Small label above the heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Step title", name: title, widget: string }
+                  - { label: "Step text", name: body, widget: text, hint: "Keep any &ndash; entities as they are." }
+              - { label: "Book button text", name: cta_book, widget: string }
+          - label: "Explore more links"
+            name: related
+            widget: object
+            fields:
+              - { label: "Label before the links", name: label, widget: string }
+              - { label: "Lashes link text", name: lashes, widget: string }
+              - { label: "Waxing link text", name: waxing, widget: string }
+              - { label: "Facials link text", name: facials, widget: string }
