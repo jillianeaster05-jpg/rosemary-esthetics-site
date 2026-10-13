@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "Gallery | Rosemary Esthetics, Idaho Falls",
+    "description": "Photos from real appointments at Rosemary Esthetics in Idaho Falls: facials, dermaplaning, lash lifts, and the studio. More on Instagram."
+  },
+  "hero": {
+    "eyebrow": "Gallery",
+    "heading": "Real Treatments, Real Results",
+    "lead_before": "A look inside the studio, every photo here is from a real appointment at Rosemary Esthetics in Idaho Falls. For daily posts and before-and-afters, follow ",
+    "lead_link_text": "@rosemaryesthetics",
+    "lead_after": "."
+  },
+  "tiles": [
+    { "src": "img/hero-facial.webp", "alt": "Client relaxing during a customized facial in the treatment room", "width": 1600, "height": 2131, "caption": "Customized facial" },
+    { "src": "img/facial-mask.webp", "alt": "Hydrating mask applied during a facial treatment", "width": 1100, "height": 1466, "caption": "Mask treatment" },
+    { "src": "img/dermaplane-detail.webp", "alt": "Close-up detail of a dermaplaning treatment in progress", "width": 1100, "height": 1465, "caption": "Dermaplaning" },
+    { "src": "img/lash-lift-1.webp", "alt": "Lash lift and tint result, lifted dark lashes", "width": 1100, "height": 1466, "caption": "Lash lift &amp; tint" },
+    { "src": "img/lash-lift-2.webp", "alt": "Second angle of a finished lash lift with curled lashes", "width": 1100, "height": 1466, "caption": "Lash lift" },
+    { "src": "img/glow-portrait.webp", "alt": "Client with glowing, hydrated skin after a facial", "width": 1100, "height": 1466, "caption": "Post-facial glow" },
+    { "src": "img/jillian-portrait.webp", "alt": "Jillian Easter, your esthetician at Rosemary Esthetics", "width": 533, "height": 1286, "caption": "Your esthetician" }
+  ],
+  "cta": "Book Your Own Glow"
+}

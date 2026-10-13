@@ -1,0 +1,46 @@
+      - name: reviews
+        label: "Reviews page"
+        file: "_data/pages/reviews.json"
+        fields:
+          - label: "Search result title"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "The blue link in Google results. About 60 characters." }
+              - { label: "Description", name: description, widget: text, hint: "The grey text under the link in Google. About 155 characters." }
+          - label: "Top of page (hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: lead, widget: text }
+              - { label: "Google review button text", name: cta, widget: string }
+          - label: "Been in recently card"
+            name: card1
+            widget: object
+            fields:
+              - { label: "Card heading", name: heading, widget: string }
+              - { label: "Body, before the review link", name: body_a, widget: string }
+              - { label: "Review link text", name: link_text, widget: string }
+              - { label: "Body, between the review link and the phone number", name: body_b, widget: string, hint: "The phone number is pulled in automatically." }
+              - { label: "Body, between the phone number and the email", name: body_c, widget: string, hint: "The email is pulled in automatically." }
+              - { label: "Body, after the email", name: body_d, widget: string, hint: "Usually just a period." }
+          - label: "Thinking about visiting card"
+            name: card2
+            widget: object
+            fields:
+              - { label: "Card heading", name: heading, widget: string }
+              - { label: "Body, before the Instagram link", name: body_a, widget: string }
+              - { label: "Instagram link text", name: link_a_text, widget: string }
+              - { label: "Body, between the two links", name: body_b, widget: string }
+              - { label: "TikTok link text", name: link_b_text, widget: string }
+              - { label: "Body, after the TikTok link", name: body_c, widget: string }
+          - label: "Follow Along section"
+            name: social
+            widget: object
+            fields:
+              - { label: "Small label above heading", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Instagram button text", name: cta, widget: string }

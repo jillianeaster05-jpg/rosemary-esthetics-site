@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "About Jillian | Licensed Esthetician in Idaho Falls",
+    "description": "Meet Jillian Easter, the licensed esthetician behind Rosemary Esthetics in Idaho Falls. Austin Kade Academy graduate, certified in lashes and brows."
+  },
+  "hero": {
+    "eyebrow": "About",
+    "heading": "Meet Jillian",
+    "lead": "Licensed esthetician, founder of Rosemary Esthetics, and firm believer that skincare should feel as good as it looks."
+  },
+  "story": {
+    "image_alt": "Jillian Easter, licensed esthetician and owner of Rosemary Esthetics in Idaho Falls",
+    "eyebrow": "My Story",
+    "heading": "Why I started Rosemary Esthetics",
+    "para1": "After struggling with my own skin and confidence, I discovered how much skincare can impact the way you feel. I started Rosemary Esthetics to help others feel beautiful, confident, and comfortable in their own skin.",
+    "para2": "Every service is personalized to your skin and your goals. I believe skincare should be both results-driven and relaxing, so I focus on creating an experience that feels calming from the moment you walk in.",
+    "para3": "I just love getting to know my clients. Some of my favorite conversations happen in the treatment room, and it's so rewarding to watch your confidence grow with each visit.",
+    "para4": "When I'm not in the studio, I'm with family, outdoors, or spoiling my dachshund, Raydar.",
+    "signature": "Jillian"
+  },
+  "credentials": {
+    "eyebrow": "Credentials",
+    "heading": "Trained, licensed &amp; certified",
+    "items": [
+      "<b>Licensed Esthetician</b> in the state of Idaho",
+      "<b>Graduate of Austin Kade Academy</b>",
+      "<b>Associate Degrees in Art &amp; Science,</b> High Honors, College of Eastern Idaho",
+      "<b>Barbicide certified</b> (sanitation and safety)",
+      "<b>Skin Script certified</b> (professional skincare line)",
+      "<b>Lash lift &amp; brow lamination certified</b>",
+      "<b>AHA, BHA &amp; enzyme certified</b> (chemical exfoliation)",
+      "<b>Eyelash extension certified</b>"
+    ],
+    "image_alt": "Glowing, healthy skin after a facial at Rosemary Esthetics in Idaho Falls"
+  },
+  "studio": {
+    "eyebrow": "The Studio",
+    "heading": "Comfortable for everyone",
+    "intro_before": "The studio at ",
+    "intro_after": " is a calm, private space in the heart of Idaho Falls.",
+    "vp1_heading": "Easy to get to",
+    "vp1_body": "Free parking lot and street parking right outside, with a wheelchair-accessible entrance, restroom, and parking.",
+    "vp2_heading": "Everyone is welcome",
+    "vp2_body": "An LGBTQ+ friendly studio with a gender-neutral restroom and free Wi-Fi. Come as you are.",
+    "cta": "Book With Jillian"
+  }
+}

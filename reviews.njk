@@ -2,8 +2,9 @@
 layout: base.njk
 permalink: reviews.html
 nav_active: reviews
-title: "Reviews | Rosemary Esthetics, Idaho Falls"
-description: "Reviews for Rosemary Esthetics in Idaho Falls. The studio opened in April 2026 and real client reviews are gathering now. See results on Instagram."
+eleventyComputed:
+  title: "{{ pages.reviews.meta.title | safe }}"
+  description: "{{ pages.reviews.meta.description | safe }}"
 canonical: "https://rosemaryestheticsidaho.com/reviews.html"
 og_image: "https://rosemaryestheticsidaho.com/img/hero-facial.webp"
 og_image_width: 1600
@@ -12,26 +13,26 @@ book_eyebrow: "Be One of the First"
 ---
 <section class="pagehero">
   <div class="wrap">
-    <div class="eyebrow">Kind Words</div>
-    <h1>Client Reviews</h1>
-    <p class="lead editable">Rosemary Esthetics opened in April 2026, and reviews from real clients are gathering now. We only ever publish real, first-party reviews, so this page will grow with the studio.</p>
-    <p style="margin-top:22px"><a href="{{ site.social.google_review }}" target="_blank" rel="noopener" class="btn">Leave a Google review</a></p>
+    <div class="eyebrow">{{ pages.reviews.hero.eyebrow | safe }}</div>
+    <h1>{{ pages.reviews.hero.heading | safe }}</h1>
+    <p class="lead editable">{{ pages.reviews.hero.lead | safe }}</p>
+    <p style="margin-top:22px"><a href="{{ site.social.google_review }}" target="_blank" rel="noopener" class="btn">{{ pages.reviews.hero.cta | safe }}</a></p>
   </div>
 </section>
 <section class="svcs reveal" style="padding-top:40px">
   <div class="wrap" style="max-width:760px">
     <div class="grid3 two">
-      <div class="vp"><h3>Been in recently?</h3><p class="editable">It would mean the world. <a href="{{ site.social.google_review }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">Leave a Google review</a> in one tap, or text your thoughts to <a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a> or email <a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a>.</p></div>
-      <div class="vp"><h3>Thinking about visiting?</h3><p class="editable">See real results and daily posts on <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">Instagram</a> and <a href="{{ site.social.tiktok }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">TikTok</a> while this page fills up.</p></div>
+      <div class="vp"><h3>{{ pages.reviews.card1.heading | safe }}</h3><p class="editable">{{ pages.reviews.card1.body_a | safe }}<a href="{{ site.social.google_review }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">{{ pages.reviews.card1.link_text | safe }}</a>{{ pages.reviews.card1.body_b | safe }}<a href="tel:{{ site.contact.phone_e164 }}" style="color:var(--rose-deep)">{{ site.contact.phone_display }}</a>{{ pages.reviews.card1.body_c | safe }}<a href="mailto:{{ site.contact.email }}" style="color:var(--rose-deep)">{{ site.contact.email }}</a>{{ pages.reviews.card1.body_d | safe }}</p></div>
+      <div class="vp"><h3>{{ pages.reviews.card2.heading | safe }}</h3><p class="editable">{{ pages.reviews.card2.body_a | safe }}<a href="{{ site.social.instagram }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">{{ pages.reviews.card2.link_a_text | safe }}</a>{{ pages.reviews.card2.body_b | safe }}<a href="{{ site.social.tiktok }}" target="_blank" rel="noopener" style="color:var(--rose-deep)">{{ pages.reviews.card2.link_b_text | safe }}</a>{{ pages.reviews.card2.body_c | safe }}</p></div>
     </div>
   </div>
 </section>
 <section class="dark reveal">
   <div class="wrap">
-    <div class="eyebrow">Follow Along</div>
-    <h2>@rosemaryesthetics</h2>
-    <p class="editable">Before-and-afters, fresh lash lifts, brow transformations, and studio updates, posted first on Instagram.</p>
-    <p style="margin-top:24px"><a href="{{ site.social.instagram }}" target="_blank" rel="noopener" class="btn">Follow on Instagram</a></p>
+    <div class="eyebrow">{{ pages.reviews.social.eyebrow | safe }}</div>
+    <h2>{{ pages.reviews.social.heading | safe }}</h2>
+    <p class="editable">{{ pages.reviews.social.body | safe }}</p>
+    <p style="margin-top:24px"><a href="{{ site.social.instagram }}" target="_blank" rel="noopener" class="btn">{{ pages.reviews.social.cta | safe }}</a></p>
   </div>
 </section>
 

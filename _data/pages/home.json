@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Rosemary Esthetics | Facials, Lashes & Brows in Idaho Falls, ID",
+    "description": "Licensed esthetician studio in Idaho Falls. Customized facials, dermaplaning, lash lifts, brow lamination, waxing, and new LED light therapy. Book online."
+  },
+  "hero": {
+    "heading": "Rosemary&nbsp;Esthetics",
+    "lead": "<b>Licensed esthetician in Idaho Falls, Idaho.</b> Customized facials, dermaplaning, lashes, brows, waxing, and back treatments. A quiet hour that's just for you.",
+    "cta_book": "Book an Appointment",
+    "cta_services": "View Services",
+    "trust_1": "Licensed Idaho esthetician",
+    "trust_2": "Idaho Falls, ID",
+    "trust_3": "New clients welcome",
+    "image_alt": "Client relaxing during a customized facial at Rosemary Esthetics in Idaho Falls"
+  },
+  "band_items": [
+    "Facials",
+    "Dermaplane",
+    "Eyelash Lifts",
+    "Eyebrow Lamination",
+    "Waxing",
+    "Back Treatments",
+    "LED Light Therapy"
+  ],
+  "services": {
+    "eyebrow": "The Menu",
+    "heading": "Treatments &amp; Pricing",
+    "intro": "Every service is tailored to your skin and your pace. Tap a category for details, prep tips, and what to expect.",
+    "facials": {
+      "tag": "Most loved",
+      "heading": "Facials",
+      "desc": "From a quick refresh to a fully customized glow. Cleanse, exfoliate, and restore.",
+      "row1_tooltip": "Dermaplaning gently lifts away dull skin and soft peach fuzz for an instantly smoother, brighter finish",
+      "link_text": "Facial details &rarr;",
+      "image_alt": "Hydrating mask being applied during a facial at Rosemary Esthetics"
+    },
+    "lashes": {
+      "heading": "Lashes",
+      "row1_tooltip": "A lash lift is a semi-permanent curl that lifts your natural lashes from the base, no extensions needed",
+      "link_text": "Lash details &rarr;"
+    },
+    "brows": {
+      "heading": "Brows",
+      "row1_tooltip": "Brow lamination brushes up and sets your brows for a fuller, fluffy, well-groomed shape",
+      "link_text": "Brow details &rarr;"
+    },
+    "waxing": {
+      "heading": "Waxing",
+      "row2_name": "Lip or Chin",
+      "link_text": "Waxing details &rarr;"
+    },
+    "back": {
+      "heading": "Back Treatments",
+      "link_text": "Back treatment details &rarr;"
+    },
+    "led": {
+      "tag_new": "New",
+      "tag_new_tooltip": "Our newest add-on: calming red and blue light therapy",
+      "heading": "LED Light Therapy",
+      "desc_before": "Calming red and blue light to support clear, healthy-looking skin. Available as a ",
+      "desc_after": " add-on to any facial.",
+      "link_text": "LED details &rarr;"
+    },
+    "book_cta": "Book Your Visit",
+    "quiz_prompt": "Not sure where to start? ",
+    "quiz_link_text": "Take the 60-second treatment quiz"
+  },
+  "experience": {
+    "eyebrow": "The Experience",
+    "heading": "Skincare that feels like a deep breath",
+    "vp1_heading": "Personalized to you",
+    "vp1_body": "Every service starts with your skin and your goals. No one-size-fits-all facials, ever.",
+    "vp2_heading": "Calm, private studio",
+    "vp2_body": "A quiet, unhurried, judgment-free space in Idaho Falls. Your appointment is your time.",
+    "vp3_heading": "Easy online booking",
+    "vp3_body_before": "Book through Square in about a minute. A ",
+    "vp3_tooltip": "Applied to your service total at checkout, never an extra charge",
+    "vp3_body_after": " deposit",
+    "vp3_body_end": " holds your spot and applies to your service."
+  },
+  "intro": {
+    "eyebrow": "Meet Your Esthetician",
+    "heading": "Hi, I'm Jillian",
+    "para1": "After struggling with my own skin and confidence, I discovered how much skincare can impact the way you feel. I started Rosemary Esthetics to help others feel beautiful, confident, and comfortable in their own skin.",
+    "para2": "I'm a licensed esthetician and a graduate of Austin Kade Academy, and every treatment here is personalized, results-driven, and genuinely relaxing.",
+    "link_text": "More About Jillian",
+    "image_alt": "Jillian Easter, licensed esthetician and owner of Rosemary Esthetics in Idaho Falls",
+    "signature": "Jillian"
+  },
+  "studio": {
+    "eyebrow": "The Studio",
+    "heading": "A peek inside",
+    "image1_alt": "Close-up of a dermaplaning treatment in progress",
+    "image2_alt": "Lash lift result with lifted, tinted lashes",
+    "image3_alt": "Client with glowing skin after a facial",
+    "link_text": "View the Gallery"
+  },
+  "social": {
+    "eyebrow": "Follow Along",
+    "heading": "See the latest looks on Instagram",
+    "body_before": "Before-and-afters, fresh lash lifts, and studio updates, posted first at ",
+    "instagram_link_text": "@rosemaryesthetics",
+    "body_middle": ". Reviews from real clients are gathering now, be one of the first to ",
+    "review_link_text": "leave a Google review",
+    "body_after": ".",
+    "btn_instagram": "Follow on Instagram",
+    "btn_review": "Leave a Google review"
+  }
+}

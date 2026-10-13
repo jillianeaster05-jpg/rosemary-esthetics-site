@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Reviews | Rosemary Esthetics, Idaho Falls",
+    "description": "Reviews for Rosemary Esthetics in Idaho Falls. The studio opened in April 2026 and real client reviews are gathering now. See results on Instagram."
+  },
+  "hero": {
+    "eyebrow": "Kind Words",
+    "heading": "Client Reviews",
+    "lead": "Rosemary Esthetics opened in April 2026, and reviews from real clients are gathering now. We only ever publish real, first-party reviews, so this page will grow with the studio.",
+    "cta": "Leave a Google review"
+  },
+  "card1": {
+    "heading": "Been in recently?",
+    "body_a": "It would mean the world. ",
+    "link_text": "Leave a Google review",
+    "body_b": " in one tap, or text your thoughts to ",
+    "body_c": " or email ",
+    "body_d": "."
+  },
+  "card2": {
+    "heading": "Thinking about visiting?",
+    "body_a": "See real results and daily posts on ",
+    "link_a_text": "Instagram",
+    "body_b": " and ",
+    "link_b_text": "TikTok",
+    "body_c": " while this page fills up."
+  },
+  "social": {
+    "eyebrow": "Follow Along",
+    "heading": "@rosemaryesthetics",
+    "body": "Before-and-afters, fresh lash lifts, brow transformations, and studio updates, posted first on Instagram.",
+    "cta": "Follow on Instagram"
+  }
+}
