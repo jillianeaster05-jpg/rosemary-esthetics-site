@@ -2,7 +2,7 @@
   "name": "rosemary-esthetics-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Rosemary Esthetics — Eleventy + CloudCannon client-site template.",
+  "description": "Rosemary Esthetics: Eleventy site edited with Sveltia CMS.",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve"
