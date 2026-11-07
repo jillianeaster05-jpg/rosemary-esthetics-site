@@ -19,7 +19,7 @@
     "postal_code": "83402"
   },
   "hours": {
-    "display": "Mon & Thu 9–6 & Wed 9-6 Fri 9–9· Sat 9–9 · Closed Sun & Tue",
+    "display": "Mon, Thu & Wed 9-6 • Fri 9–9 · Sat 9–9 • Closed Sun & Tue",
     "monday": "9:00–6:00",
     "tuesday": "Closed",
     "wednesday": "9:00-6:00",
