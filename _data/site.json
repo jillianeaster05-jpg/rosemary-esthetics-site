@@ -19,12 +19,12 @@
     "postal_code": "83402"
   },
   "hours": {
-    "display": "Mon & Thu 9–6 · Wed 3–8 · Fri 9–2 · Sat 9–9 · Closed Sun & Tue",
+    "display": "Mon & Thu 9–6 & Wed 9-6 Fri 9–9· Sat 9–9 · Closed Sun & Tue",
     "monday": "9:00–6:00",
     "tuesday": "Closed",
-    "wednesday": "3:00–8:00",
+    "wednesday": "9:00-6:00",
     "thursday": "9:00–6:00",
-    "friday": "9:00–2:00",
+    "friday": "9:00-6:00",
     "saturday": "9:00–9:00",
     "sunday": "Closed"
   },
@@ -47,42 +47,138 @@
   "payments": "Cash, Venmo, Credit Card, Debit Card, Apple Pay, Google Pay",
   "services": {
     "facials": [
-      { "name": "Signature Facial", "price": "$80", "duration": "1h15" },
-      { "name": "Smooth + Glow Facial (Dermaplane)", "price": "$90", "duration": "1h30" },
-      { "name": "Skin Reset Facial", "price": "$40", "duration": "35m" },
-      { "name": "Couples Facial", "price": "$90", "duration": "1h" },
-      { "name": "Gua Sha Sculpting add-on", "price": "$5", "duration": "" },
-      { "name": "LED Light Therapy add-on", "price": "$5", "duration": "" },
-      { "name": "Dermaplane add-on", "price": "$20", "duration": "30m" }
+      {
+        "name": "Signature Facial",
+        "price": "$80",
+        "duration": "1h15"
+      },
+      {
+        "name": "Smooth + Glow Facial (Dermaplane)",
+        "price": "$90",
+        "duration": "1h30"
+      },
+      {
+        "name": "Skin Reset Facial",
+        "price": "$40",
+        "duration": "35m"
+      },
+      {
+        "name": "Couples Facial",
+        "price": "$90",
+        "duration": "1h"
+      },
+      {
+        "name": "Gua Sha Sculpting add-on",
+        "price": "$5",
+        "duration": ""
+      },
+      {
+        "name": "LED Light Therapy add-on",
+        "price": "$5",
+        "duration": ""
+      },
+      {
+        "name": "Dermaplane add-on",
+        "price": "$20",
+        "duration": "30m"
+      }
     ],
     "lashes": [
-      { "name": "Eyelash Lift and Tint", "price": "$55", "duration": "45m" },
-      { "name": "Eyelash Lift", "price": "$45", "duration": "30m" }
+      {
+        "name": "Eyelash Lift and Tint",
+        "price": "$55",
+        "duration": "45m"
+      },
+      {
+        "name": "Eyelash Lift",
+        "price": "$45",
+        "duration": "30m"
+      }
     ],
     "brows": [
-      { "name": "Eyebrow Lamination and Tint", "price": "$55", "duration": "45m" },
-      { "name": "Eyebrow Lamination", "price": "$45", "duration": "40m" },
-      { "name": "Brow Tint", "price": "$15", "duration": "20m" },
-      { "name": "Eyebrow and Eyelash Package", "price": "$85", "duration": "1h15" }
+      {
+        "name": "Eyebrow Lamination and Tint",
+        "price": "$55",
+        "duration": "45m"
+      },
+      {
+        "name": "Eyebrow Lamination",
+        "price": "$45",
+        "duration": "40m"
+      },
+      {
+        "name": "Brow Tint",
+        "price": "$15",
+        "duration": "20m"
+      },
+      {
+        "name": "Eyebrow and Eyelash Package",
+        "price": "$85",
+        "duration": "1h15"
+      }
     ],
     "waxing": [
-      { "name": "Full Face", "price": "$30", "duration": "" },
-      { "name": "Eyebrow Shape/Wax", "price": "$20", "duration": "" },
-      { "name": "Lip", "price": "$8", "duration": "" },
-      { "name": "Chin", "price": "$8", "duration": "" },
-      { "name": "Underarm", "price": "$20", "duration": "" }
+      {
+        "name": "Full Face",
+        "price": "$40",
+        "duration": ""
+      },
+      {
+        "name": "Eyebrow Shape/Wax",
+        "price": "$20",
+        "duration": ""
+      },
+      {
+        "name": "Lip",
+        "price": "$8",
+        "duration": ""
+      },
+      {
+        "name": "Chin",
+        "price": "$8",
+        "duration": ""
+      },
+      {
+        "name": "Underarm",
+        "price": "$20",
+        "duration": ""
+      }
     ],
     "back": [
-      { "name": "Heated Stone Back Treatment", "price": "$85", "duration": "1h" },
-      { "name": "Back Reset Treatment", "price": "$75", "duration": "1h" }
+      {
+        "name": "Heated Stone Back Treatment",
+        "price": "$85",
+        "duration": "1h"
+      },
+      {
+        "name": "Back Reset Treatment",
+        "price": "$75",
+        "duration": "1h"
+      }
     ],
     "led": [
-      { "name": "LED Light Therapy add-on", "price": "$5", "duration": "" }
+      {
+        "name": "LED Light Therapy add-on",
+        "price": "$5",
+        "duration": ""
+      }
     ],
     "addons": [
-      { "name": "Gua Sha Sculpting", "price": "$5", "duration": "" },
-      { "name": "LED Light Therapy", "price": "$5", "duration": "" },
-      { "name": "Dermaplane", "price": "$20", "duration": "30m" }
+      {
+        "name": "Gua Sha Sculpting",
+        "price": "$5",
+        "duration": ""
+      },
+      {
+        "name": "LED Light Therapy",
+        "price": "$5",
+        "duration": ""
+      },
+      {
+        "name": "Dermaplane",
+        "price": "$20",
+        "duration": "30m"
+      }
     ]
   }
 }
