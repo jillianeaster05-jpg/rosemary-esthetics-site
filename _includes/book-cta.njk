@@ -6,7 +6,7 @@
     <p style="color:var(--fg-soft);max-width:500px;margin:6px auto 0">{{ pages.shared.book_cta.paragraph_intro | safe }}{{ site.policies.deposit_pct }} {{ pages.shared.book_cta.paragraph_unit_word | safe }}{{ pages.shared.book_cta.paragraph_outro | safe }}</p>
     <div class="info">
       <div><b>{{ pages.shared.book_cta.location_label | safe }}</b>{{ site.address.street }}<br>{{ site.address.city }}, {{ site.address.region }} {{ site.address.postal_code }}</div>
-      <div><b>{{ pages.shared.book_cta.hours_label | safe }}</b>{{ site.hours.display }}</div>
+      <div><b>{{ pages.shared.book_cta.hours_label | safe }}</b>{{ hours_line }}</div>
       <div><b>{{ pages.shared.book_cta.contact_label | safe }}</b><a href="tel:{{ site.contact.phone_e164 }}">{{ site.contact.phone_display }}</a> ({{ site.contact.phone_note }})<br><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
     </div>
     <a href="{{ site.contact.booking_url }}" target="_blank" rel="noopener" class="btn solid" data-tooltip="Opens Square in a new tab to choose your time">{{ pages.shared.book_cta.button_text | safe }}</a>

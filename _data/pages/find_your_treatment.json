@@ -37,71 +37,71 @@
       "compare_middle": " or ",
       "retake_link": "retake the quiz"
     },
-    "extra_clear_goal": " Ask about adding LED light therapy, new at the studio and just $5, to support clear, calm skin.",
+    "extra_clear_goal": " Ask about adding LED light therapy, new at the studio and just {price:LED Light Therapy}, to support clear, calm skin.",
     "results": {
       "back_clear": {
         "name": "Back Reset Treatment",
-        "price_time": "$75 &middot; 1 hour",
+        "price_time": "{pricetime:Back Reset Treatment}",
         "why": "A deep-cleansing back facial that targets congestion and breakouts in all the spots you can’t reach."
       },
       "back_relax": {
         "name": "Heated Stone Back Treatment",
-        "price_time": "$85 &middot; 1 hour",
+        "price_time": "{pricetime:Heated Stone Back Treatment}",
         "why": "Deep cleansing plus warm stone massage over the back and shoulders. The most relaxing hour on the menu."
       },
       "smooth": {
         "name": "Full Face Wax",
-        "price_time": "$30",
+        "price_time": "{pricetime:Full Face}",
         "why": "Quick, gentle waxing with soothing aftercare, smooth results that outlast shaving by weeks."
       },
       "eyes_long": {
         "name": "Eyebrow and Eyelash Package",
-        "price_time": "$85 &middot; 1h15",
+        "price_time": "{pricetime:Eyebrow and Eyelash Package}",
         "why": "Lash lift and tint plus brow lamination and tint in one visit, the full eye-opening refresh at a bundle price."
       },
       "eyes_short": {
         "name": "Eyelash Lift",
-        "price_time": "$45 &middot; 30 minutes",
+        "price_time": "{pricetime:Eyelash Lift}",
         "why": "Your natural lashes, curled from the root in half an hour. Zero daily effort for 6–8 weeks."
       },
       "eyes_medium": {
         "name": "Eyelash Lift and Tint",
-        "price_time": "$55 &middot; 45 minutes",
+        "price_time": "{pricetime:Eyelash Lift and Tint}",
         "why": "Lifted and darkened natural lashes, like waking up with mascara on, for 6–8 weeks."
       },
       "event_long": {
         "name": "Smooth + Glow Facial (Dermaplane)",
-        "price_time": "$90 &middot; 1h30",
+        "price_time": "{pricetime:Smooth + Glow Facial (Dermaplane)}",
         "why": "Dermaplaning removes peach fuzz and dead skin so you glow in photos and makeup applies flawlessly."
       },
       "event_short": {
         "name": "Skin Reset Facial",
-        "price_time": "$40 &middot; 35 minutes",
+        "price_time": "{pricetime:Skin Reset Facial}",
         "why": "A fast, effective mini facial to brighten and refresh before the big day."
       },
       "event_medium": {
         "name": "Signature Facial",
-        "price_time": "$80 &middot; 1h15",
+        "price_time": "{pricetime:Signature Facial}",
         "why": "A fully customized facial to cleanse, exfoliate, and restore that lit-from-within look."
       },
       "default_short": {
         "name": "Skin Reset Facial",
-        "price_time": "$40 &middot; 35 minutes",
+        "price_time": "{pricetime:Skin Reset Facial}",
         "why": "A quick but complete mini facial, perfect for maintenance between fuller appointments."
       },
       "default_long_relax": {
         "name": "Signature Facial + Gua Sha",
-        "price_time": "$85 &middot; 1h15+",
+        "price_time": "{pricetime:Signature Facial+Gua Sha Sculpting}",
         "why": "The customized Signature Facial with gua sha sculpting added on. Pure calm, from the first cleanse to the last massage stroke."
       },
       "default_long_other": {
         "name": "Smooth + Glow Facial (Dermaplane)",
-        "price_time": "$90 &middot; 1h30",
+        "price_time": "{pricetime:Smooth + Glow Facial (Dermaplane)}",
         "why": "The deepest refresh on the menu, dermaplaning plus a fully customized facial."
       },
       "default_medium": {
         "name": "Signature Facial",
-        "price_time": "$80 &middot; 1h15",
+        "price_time": "{pricetime:Signature Facial}",
         "why": "A fully customized facial built around your skin and your goals, our most loved service."
       }
     }

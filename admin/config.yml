@@ -67,7 +67,7 @@ collections:
             name: hours
             widget: object
             fields:
-              - { label: "Hours (shown as one line)", name: display, widget: string, hint: "The short summary line shown on the site, e.g. Mon & Thu 9-6, Wed 3-8, Fri 9-2, Sat 9-9, Closed Sun & Tue. Keep this in sync with the day-by-day hours below." }
+              - { label: "Hours (shown as one line)", name: display, widget: string, hint: "Leave this blank and the site writes the summary line from the day-by-day hours below, so they always match. Only type here to word it differently.", required: false }
               - { label: "Monday", name: monday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
               - { label: "Tuesday", name: tuesday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }
               - { label: "Wednesday", name: wednesday, widget: string, hint: "e.g. 9:00-6:00, or Closed" }

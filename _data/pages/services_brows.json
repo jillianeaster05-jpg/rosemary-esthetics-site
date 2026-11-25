@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Eyebrow Lamination and Tint in Idaho Falls | Rosemary Esthetics",
-    "description": "Brow lamination and tinting in Idaho Falls: Eyebrow Lamination $45, Lamination & Tint $55, Brow Tint $15, Eyebrow and Eyelash Package $85. Book online."
+    "description": "Brow lamination and tinting in Idaho Falls: Eyebrow Lamination {price:Eyebrow Lamination}, Lamination & Tint {price:Eyebrow Lamination and Tint}, Brow Tint {price:Brow Tint}, Eyebrow and Eyelash Package {price:Eyebrow and Eyelash Package}. Book online."
   },
   "crumb": {
     "parent": "Services",

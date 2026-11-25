@@ -1,4 +1,19 @@
+const facts = require("./lib/facts.js");
+
 module.exports = function (eleventyConfig) {
+  // Business facts (hours, prices, phone, address) live only in _data/site.json, the file the
+  // client edits. lib/facts.js builds everything else from it; see the note at its top.
+  eleventyConfig.addGlobalData("hours_line", () => facts.hoursLine(facts.loadSite()));
+  eleventyConfig.addFilter("withoutAddons", (list) => (list || []).filter((s) => !/add-?on/i.test(s.name)));
+  // Fills {phone}, {price:Name}, {from:section} and the other tokens in page text, in every
+  // built page and in llms.txt, including meta tags and the data Google reads.
+  eleventyConfig.addTransform("facts", function (content) {
+    const out = this.page && this.page.outputPath;
+    if (typeof out !== "string" || !/.(html|txt)$/.test(out)) return content;
+    return facts.fill(content, facts.loadSite());
+  });
+  eleventyConfig.on("eleventy.after", () => facts.reportProblems());
+
   // Static assets: passthrough-copy verbatim, no processing.
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -9,7 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("icon-512.png");
   eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("llms.txt");
+  // llms.txt is built from llms.njk so its facts follow the editor.
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   // Prints editor-supplied text as a JavaScript string literal. "<" is escaped so a typed
@@ -26,6 +41,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("_netlify-final/**");
   eleventyConfig.ignores.add("node_modules/**");
   eleventyConfig.ignores.add("admin/**");
+  eleventyConfig.ignores.add("lib/**");
 
   return {
     dir: {

@@ -1,0 +1,44 @@
+---
+permalink: llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- The plain-text summary AI assistants read. Every fact comes from _data/site.json (Jillian's
+    editor), so it changes when she saves. Do not type prices or hours here. See lib/facts.js. -#}
+{%- macro line(list) -%}
+{%- for s in list %}{{ s.name | safe }} {{ s.price | safe }}{% if s.duration %} ({{ s.duration | safe }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor -%}
+{%- endmacro -%}
+# {{ site.business.name | safe }}
+
+> Licensed esthetician studio in Idaho Falls, Idaho, owned by {{ site.business.owner_name | safe }}. Customized facials, dermaplaning, lash lifts and tints, brow lamination, facial waxing, back treatments, and LED light therapy (new). Tagline: "{{ site.business.tagline | safe }}."
+
+## Business facts
+- Owner: {{ site.business.owner_name | safe }}, {{ site.business.owner_title | safe }} (Idaho), Austin Kade Academy graduate
+- Address: {{ site.address.street | safe }}, {{ site.address.city | safe }}, {{ site.address.region | safe }} {{ site.address.postal_code | safe }}
+- Phone ({{ site.contact.phone_note | safe }}): {{ site.contact.phone_display | safe }}
+- Email: {{ site.contact.email | safe }}
+- Hours: {{ hours_line | safe }}
+- Booking: online via Square at {{ site.contact.booking_url | safe }} ({{ site.policies.deposit_pct | safe }} deposit, applied to service)
+- Payments: {{ site.payments | safe }}
+- Accessibility: wheelchair-accessible entrance, restroom, and parking; free lot and street parking; gender-neutral restroom; LGBTQ+ friendly
+- Social: Instagram {{ site.social.instagram | safe }} | TikTok {{ site.social.tiktok | safe }} | Facebook {{ site.social.facebook | safe }}
+- Reviews: read or leave a Google review at {{ site.social.google_review | safe }}
+
+## Services and pricing
+- Facials: {{ line(site.services.facials | withoutAddons) }}
+- Lashes: {{ line(site.services.lashes) }}
+- Brows: {{ line(site.services.brows) }}
+- Waxing: {{ line(site.services.waxing) }}
+- Back: {{ line(site.services.back) }}
+- Add-ons: {{ line(site.services.addons) }}
+
+## Policies
+- {{ site.policies.deposit_pct | safe }} deposit to book (applies to service). Cancel or reschedule at least {{ site.policies.cancellation_notice | safe }} ahead.
+- Late-cancel fees: under {{ site.policies.cancellation_notice | safe }} = {{ site.policies.fee_short_notice | safe }}, same day = {{ site.policies.fee_same_day | safe }}, no-show = {{ site.policies.fee_no_show | safe }}.
+- Under 18 welcome with parent/guardian consent. Cannot treat active wounds, sunburn, contagious skin conditions, cold sores, or irritated skin.
+
+## Pages
+- Home: https://rosemaryestheticsidaho.com/
+- Services & pricing: https://rosemaryestheticsidaho.com/services.html
+- Facials: https://rosemaryestheticsidaho.com/services-facials.html | Lashes: https://rosemaryestheticsidaho.com/services-lashes.html | Brows: https://rosemaryestheticsidaho.com/services-brows.html | Waxing: https://rosemaryestheticsidaho.com/services-waxing.html | Back: https://rosemaryestheticsidaho.com/services-back.html | LED: https://rosemaryestheticsidaho.com/services-led.html
+- Gallery: https://rosemaryestheticsidaho.com/gallery.html | About: https://rosemaryestheticsidaho.com/about.html | Reviews: https://rosemaryestheticsidaho.com/reviews.html
+- Policies & FAQ: https://rosemaryestheticsidaho.com/policies-faq.html | Contact: https://rosemaryestheticsidaho.com/contact.html | Treatment quiz: https://rosemaryestheticsidaho.com/find-your-treatment.html
